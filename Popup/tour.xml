@@ -1,0 +1,21 @@
+<krpano>
+    <!-- Configuration de la vue du panorama -->
+    <view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2" />
+
+    <!-- Chargement de l'image du panorama -->
+    <image>
+        <cube url="./pano.jpg" />
+    </image>
+
+    <!-- Hotspot cliquable -->
+    <hotspot name="spot1" url="./cam.png" ath="-50" atv="0" onclick="showImage()" />
+    <hotspot name="spot2" url="./map.png" ath="0" atv="0" visible="false" width="1000" height="1000" />
+    <hotspot name="spot3" url="./map.png" ath="50" atv="0" visible="false" width="700" height="700" />
+
+
+    <!-- Action pour afficher la pop-up avec l'image -->
+    <action name="showImage">
+        if(hotspot[spot2].visible, set(hotspot[spot2].visible, false), set(hotspot[spot2].visible, true));
+        if(hotspot[spot3].visible, set(hotspot[spot3].visible, false), set(hotspot[spot3].visible, true));
+    </action>
+</krpano>
