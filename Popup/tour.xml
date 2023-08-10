@@ -8,14 +8,32 @@
     </image>
 
     <!-- Hotspot cliquable -->
-    <hotspot name="spot1" url="./cam.png" ath="-50" atv="0" onclick="showImage()" />
-    <hotspot name="spot2" url="./map.png" ath="0" atv="0" visible="false" width="1000" height="1000" />
-    <hotspot name="spot3" url="./map.png" ath="50" atv="0" visible="false" width="700" height="700" />
+    <hotspot name="spot1" url="./cam.png" ath="-50" atv="0" onclick="showMessage()" />
+    <hotspot name="spot2" url="./Assets/Elements/croix.png" ath="50" atv="0" onclick="showMessage" />
+    <hotspot name="spot3" url="./map.png" ath="50" atv="0" visible="false" width="700" height="700" alpha="1.0" />
 
 
-    <!-- Action pour afficher la pop-up avec l'image -->
+    <hotspot name="textHotspot" ath="0" atv="0" distorted="true">
+        <text style="hotspotTextStyle" html="true" align="center">
+            <![CDATA[
+                <p>This is a sample text.</p>
+            ]]>
+        </text>
+    </hotspot>
+
     <action name="showImage">
-        if(hotspot[spot2].visible, set(hotspot[spot2].visible, false), set(hotspot[spot2].visible, true));
-        if(hotspot[spot3].visible, set(hotspot[spot3].visible, false), set(hotspot[spot3].visible, true));
+        openurl("#popin0", "_self");
+        console.log("Hotspot spot2 visibility set to false.");
     </action>
+    <action name="closeImage">
+    openurl("#popin2", "self");
+    if(krpano.get('url') == '#popin2')
+        openurl("#popin1", "_blank");
+        set(hotspot["spot2"].visible, false);
+    </action>
+
+    <action name="showMessage">
+    js(showMessageFromXML("Bonjour"));
+    </action>
+    
 </krpano>
