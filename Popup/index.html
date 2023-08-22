@@ -11,10 +11,9 @@
 		html { height:100%; }
 		body { height:100%; overflow:hidden; margin:0; padding:0; font-family:Arial,Helvetica,sans-serif; font-size:16px; color:#FFFFFF; background-color:rgba(0, 0, 0, 1); }
 	</style>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <!-- <iframe src="chemin/vers/votre/scene.html" width="800" height="600"></iframe> -->
 <script src="viewer.js"></script>
 
 <div id="pano" style="width:100%;height:100%;">
@@ -22,6 +21,601 @@
 	<script>
 		embedpano({xml:"tour.xml", target:"pano"});
 	</script>
+</div>
+
+
+
+
+<div class="popin" id="popin1">
+    <div class="pince">
+    <img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
+    </div>
+    <div class="imgOeuvre">
+    <img src="./Assets/Oeuvre_1/DeVinci-Homme-de-Vitruve.png" alt="Description de l'image">
+    </div>
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+    <div class="boutonOeuvre">
+        <a href="#popin3">
+            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="backArrow">
+        <img src="./Assets/Elements/retourNoir.svg" alt="Description de l'image">
+    </div>
+    <div class="nextArrow">
+        <a href="#popin2">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="close">
+        <a href="#popin0">
+            <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="citation">
+        <a href="#popin1">
+            <img src="./Assets/Elements/citationOrale.png" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="enSavoirPlus">
+        <a href="#popin2">
+            <img src="./Assets/Elements/enSavoir+.png" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="Titre">
+        <a id="Title">
+            LÉONARD DE VINCI (1452-1519)<br>
+        </a>
+        <a id="SubTitle">
+            et ses mesures « parfaites »<br><br>
+        </a>
+        <a id="Text">
+            <br>Vers 1490, Léonard De Vinci décide de dessiner l’homme<br>
+            « de Vitruve », autrement dit : <span id="changeColor">« l’homme parfait »</span><br>
+            Tout en reprennant les idées de la statuaire de<br>
+            l’Antiquité gréco-romaine, il le dessine dans deux<br>
+            positions, jambes jointes et jambes écartées,<br>
+            bras tendus et bras levés.<br><br>
+            Il le représente avec des proportions calculées<br>
+            <span id="underlineColor">(de manière mathématique)</span> pour que son corps<br>
+            puisse s’inscrire dans les deux formes géométrique<br>
+            « parfaites » que sont le carré et le cercle.<br>
+            Même son nombril est au centre du cercle (d’ailleurs,<br>
+            au pied de l’homme se trouve une échelle de calcul.)<br>
+        </a>
+    </div>
+    <div class="TitreOeuvre">
+        <a id="TitleOeuvre">
+            Léonard de Vinci,<br>
+        </a>
+        <a id="SubTitleOeuvre">
+            Homme de Vitruve,<br>
+            vers 1492<br>
+        </a>
+        <a id="TextOeuvre">
+            Plume, encre<br>
+            et lavis sur papier<br>
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin2">
+    <div class="pince">
+        <img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
+        </div>
+        <div class="imgOeuvre">
+        <img src="./Assets/Oeuvre_1/DeVinci-Homme-de-Vitruve.png" alt="Description de l'image">
+    </div>
+	<div class="scotch">
+		<img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+	</div>
+	<div class="boutonOeuvre">
+		<a href="#popin3">
+			<img src="./Assets/Elements/rond+.png" alt="Description de l'image">
+		</a>
+	</div>
+	<div class="backArrow">
+		<a href="#popin1">
+			<img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+		</a>
+	</div>
+	<div class="nextArrow">
+		<a href="#popin3">
+			<img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+		</a>
+	</div>
+	<div class="close">
+		<a href="#popin0">
+			<img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+		</a>
+	</div>
+	<div class="citation">
+		<a href="#popin1">
+			<img src="./Assets/Elements/citationOrale.png" alt="Description de l'image">
+		</a>
+	</div>
+	<div class="enSavoirPlus2">
+        <a href="#popin1">
+            <img src="./Assets/Elements/enSavoir+.png" alt="Description de l'image">
+        </a>
+    </div>
+	<div class="blocNoteImage">
+		<img src="./Assets/Elements/blocNotes.svg" alt="Description de l'image">
+	</div>
+	<div class="blocNoteImageLine">
+		<img src="./Assets/Elements/cadrillageBleu.svg" alt="Description de l'image">
+	</div>
+	<div class="Titre">
+		<a id="Title">
+			LÉONARD DE VINCI (1452-1519)<br>
+		</a>
+		<a id="SubTitle">
+			et ses mesures « parfaites »<br><br>
+		</a>
+		<div class="blocNote">
+			<a id="blocNoteText">
+				Cette oeuvre s’inspire d’un traité d’architecture<br>
+				antique rédigé par l’architecte et ingénieur militaire<br>
+				Vitruve ( c. 90 - c. 20 avant J.-C.), où ce dernier décrit<br>
+				justement, comment un corps humain idéal, présente des<br>
+				proportions idéales pour le corps humain, mais irréalistes<br>
+				peut servir d’unité de mesure, pour construire des édifices.<br>
+				Pourtant, ce système de mesure est difficile à appliquer.<br><br>
+				<span id="underlineColor">Car en réalité, chaque être humain a une taille et une<br>
+				morphologie différentes.</span><br><br>
+				Impossible de se baser sur un corps « normal » pour<br>
+				concevoir des édifices !<br>
+			</a>
+		</div>
+	</div>
+	<div class="TitreOeuvre">
+		<a id="TitleOeuvre">
+			Léonard de Vinci,<br>
+		</a>
+		<a id="SubTitleOeuvre">
+			Homme de Vitruve,<br>
+			vers 1492<br>
+		</a>
+		<a id="TextOeuvre">
+			Plume, encre<br>
+			et lavis sur papier<br>
+		</a>
+	</div>
+</div>
+
+<div class="popin" id="popin3">
+    <div class="imgFullPage">
+        <img src="./Assets/Oeuvre_1/DeVinci-Homme-de-Vitruve-Full.png" alt="Description de l'image">
+    </div>
+    <div class="backArrow">
+        <a href="#popin2">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="nextArrow">
+        <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
+    </div>
+    <div class="close">
+        <a href="#popin0">
+            <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin4">
+    <div class="pince">
+        <img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
+        </div>
+        <div class="imgOeuvre2">
+        <img src="./Assets/Oeuvre_2/Rembrandt-Lecon-anatomie-docteur-tulp.png" alt="Description de l'image">
+        </div>
+        <div class="scotch">
+            <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+        </div>
+        <div class="boutonOeuvre2">
+            <a href="#popin5">
+                <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
+            </a>
+        </div>
+        <div class="backArrow">
+            <img src="./Assets/Elements/retourNoir.svg" alt="Description de l'image">
+        </div>
+        <div class="nextArrow">
+            <a href="#popin5">
+                <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+            </a>
+        </div>
+        <div class="close">
+            <a href="#popin0">
+                <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+            </a>
+        </div>
+        <div class="blocNoteImage2">
+            <img src="./Assets/Elements/blocNotes.svg" alt="Description de l'image">
+        </div>
+        <div class="blocNoteImageLine2">
+            <img src="./Assets/Elements/cadrillageBleu.svg" alt="Description de l'image">
+        </div>
+		<div class="enSavoirPlus3">
+			<a href="#popin2">
+				<img src="./Assets/Elements/enSavoir+.png" alt="Description de l'image">
+			</a>
+		</div>
+        <div class="Titre">
+            <a id="Title">
+                REMBRANDT (1606 - 1669)<br>
+            </a>
+            <a id="SubTitle">
+                Quand l’anatomie fascine<br><br>
+            </a>
+            
+            <a id="Text">
+                <br>Dès la Renaissance, les sciences, la médecine…<br>
+                basées sur l’expérimentation s’intéressent à <span id="changeColor">l’anatomie</span><br>
+                et au <span id="changeColor">fonctionnement du corps humain</span> qui se voit<br>
+                découvert, ouvert, écorché, disséqué.<br>
+                On s’interesse à l’intérieur.<br>
+                Les musculatures sont davantage proches de la réalité.<br>
+            </a>
+            <div class="blocNote2">
+                <a id="blocNoteText">
+                    Peinte en 1632 par Rembrandt, La Leçon d’anantomie du<br>
+                    Docteur Tulp, scène de dissection d’un corps, appartient au<br>
+                    mouvement Baroque.<br><br>
+                    <span id="underlineColor">À la Renaissance, les peintres sont désormais en qûete de<br>
+                    ressemblance avec la réalité du corps humain.</span><br><br>
+                    Rembrandt utilise la technique du clair-obscur, un jeu<br>
+                    d’ombre et de lumière emprunté au Caravage qui montre<br>
+                    que pas un souffle de vie ne circule sous la peau du défunt<br>
+                    blafard.<br>
+                    En créant un contraste avec le noir des habits, le cadavre<br>
+                    peint au blanc de plomb met en valeur les visages et donne<br>
+                    une dimension mystique à l’ensemble.<br>
+                </a>
+            </div>
+        </div>
+        <div class="TitreOeuvre">
+            <a id="TitleOeuvre">
+                Rembrandt,<br>
+            </a>
+            <a id="SubTitleOeuvre">
+                La leçon d’anantomie<br>
+                du Docteur Tulp,<br>
+                1632<br>
+            </a>
+            <a id="TextOeuvre">
+                Huile sur toile<br>
+            </a>
+        </div>
+</div>
+
+<div class="popin" id="popin5">
+    <div class="imgFullPage2">
+        <img src="./Assets/Oeuvre_2/Rembrandt-Lecon-anatomie-docteur-tulp-Full.png" alt="Description de l'image">
+    </div>
+    <div class="backArrow">
+        <a href="#popin4">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="nextArrow">
+        <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
+    </div>
+    <div class="close">
+        <a href="#popin0">
+            <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin6">
+        <div class="imgOeuvre3">
+        <img src="./Assets/Oeuvre_3/One-Minute-Art-History.png" alt="Description de l'image">
+        </div>
+        <div class="scotch">
+            <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+        </div>
+        <div class="backArrow">
+            <img src="./Assets/Elements/retourNoir.svg" alt="Description de l'image">
+        </div>
+        <div class="nextArrow">
+            <a href="#popin7">
+                <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+            </a>
+        </div>
+        <div class="close">
+            <a href="#popin0">
+                <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+            </a>
+        </div>
+        <div class="blocNoteImage3">
+            <img src="./Assets/Elements/blocNotes.svg" alt="Description de l'image">
+        </div>
+        <div class="blocNoteImageLine3">
+            <img src="./Assets/Elements/cadrillageBleu.svg" alt="Description de l'image">
+        </div>
+		<div class="blocNote3">
+			<a id="blocNoteText">
+				<span id="changeColor">L’artiste-réalisateur chinois Cao Shu crée en 2018<br>
+					un stop-motion retraçant l’histoire de l’art de l’Égypte<br>
+					antique à nos jours </span>en seulement une minute :<br>
+					la vidéo se termine sur des styles artistiques plus<br>
+					contemporains inspirés d’artistes comme Modigliani,<br>
+					Basquiat ou encore Picasso.<br><br>
+					Le vidéaste rend hommage à l’Art qui traverse les époques<br>
+					mettant en scène un personnage qui évolue et qui est<br>
+					revisité par les différents mouvements qui ont façonné<br>
+					l’histoire de l’art.<br>
+			</a>
+		</div>
+        <div class="TitreOeuvre2">
+            <a id="TitleOeuvre">
+                One minute art history, 2018<br>
+            </a>
+            <a id="TextOeuvre">
+                © Cao Shu - 2018<br>
+            </a>
+        </div>
+</div>
+
+<div class="popin" id="popin7">
+    <div class="imgOeuvre2Full">
+        <img src="./Assets/Oeuvre_2/Rembrandt-Lecon-anatomie-docteur-tulp-Full.png" alt="Description de l'image">
+    </div>
+    <div class="backArrow">
+        <a href="#popin6">
+            <img src="./Assets/Elements/returnWhite.png" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="nextArrow">
+        <img src="./Assets/Elements/nextBlack.png" alt="Description de l'image">
+    </div>
+    <div class="close">
+        <a href="#popin0">
+            <img src="./Assets/Elements/croix.png" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin8">
+    <div class="venusInspiration">
+        <img src="./Assets/Oeuvre_4/Venus_de_Willendorf-Small.png" alt="Description de l'image">
+    </div>
+    <div class="tromboneVenus">
+        <img src="./Assets/Elements/trombone.svg" alt="Description de l'image">
+    </div>
+    <div class="inspiration">
+        <a href="#popin9">
+            <img src="./Assets/Elements/INSPIRATION.png" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="pince">
+        <img src="./Assets/Elements/PINCE_DESSIN.png" alt="Description de l'image">
+        </div>
+        <div class="imgOeuvre">
+        <img src="./Assets/Oeuvre_4/Niki-de-st-Phalle-Nana-noire-Upside-down.png" alt="Description de l'image">
+        </div>
+        <div class="scotch">
+            <img src="./Assets/Elements/scotch.png" alt="Description de l'image">
+        </div>
+        <div class="buttonImage">
+            <a href="#popin11">
+                <img src="./Assets/Elements/ROND.png" alt="Description de l'image">
+            </a>
+        </div>
+        <div class="backArrow">
+            <img src="./Assets/Elements/returnBlack.png" alt="Description de l'image">
+        </div>
+        <div class="nextArrow">
+            <a href="#popin9">
+                <img src="./Assets/Elements/nextWhite.png" alt="Description de l'image">
+            </a>
+        </div>
+        <div class="close">
+            <a href="#popin0">
+                <img src="./Assets/Elements/croix.png" alt="Description de l'image">
+            </a>
+        </div>
+        <div class="citation">
+            <a href="#popin10">
+                <img src="./Assets/Elements/CITATION_ECRITE.png" alt="Description de l'image">
+            </a>
+        </div>
+        <div class="Titre">
+            <a id="Title">
+                NIKI DE SAINT PHALLE (1930-2002)<br>
+            </a>
+            <a id="SubTitle">
+                l’hommage au corps rond et libéré<br><br>
+            </a>
+            <a id="Text">
+                C’est avec les Nanas que Niki de Saint Phalle connaît sa<br>
+                plus grande popularité. Grande voyageuse et de nature<br>
+                curieuse, l’artiste passe la plupart de son temps à lire et<br>
+                à visiter des musées, cela lui permet de rassembler un<br>
+                vocabulaire de formes et d’images puisé dans une nature<br>
+                imaginée.Inspirées des figurines féminines<br>
+                paléolithiques, les Nanas représentent des femmes aux<br>
+                formes généreuses, <span id="changeColor">loin des canons de l’époque et<br>
+                d’aujourd’hui.</span><br>
+                Elles adoptent des postures festives, dynamiques, elles sont<br>
+                des images éternelles de la maternité triomphante<br>
+                et la féminité. En envahissant l’espace public ces Nanas<br>
+                posent la question de <span id="changeColor">la place de la femme dans la<br>
+                société du XXème et dans l’histoire de l’art.</span><br>
+            </a>
+        </div>
+        <div class="TitreOeuvre">
+            <a id="TitleOeuvre">
+                Niki de Saint Phalle<br>
+            </a>
+            <a id="SubTitleOeuvre">
+                Nana noire, upside down<br>
+                1965-66<br>
+            </a>
+            <a id="TextOeuvre">
+                Peinture, laine,<br>
+                tissu sur grillage<br>
+            </a>
+        </div>
+</div>
+
+<div class="popin" id="popin9">
+    <div class="pince">
+        <div class="inspirationTitle">
+            <img src="./Assets/Elements/INSPIRATION.png" alt="Description de l'image">
+        </div>
+        <img src="./Assets/Elements/PINCE_DESSIN.png" alt="Description de l'image">
+        </div>
+        <div class="imgOeuvre">
+        <img src="./Assets/Oeuvre_4/Venus_de_Willendorf.png" alt="Description de l'image">
+        </div>
+        <div class="scotch">
+            <img src="./Assets/Elements/scotch.png" alt="Description de l'image">
+        </div>
+        <div class="buttonImage">
+            <a href="#popin12">
+                <img src="./Assets/Elements/ROND.png" alt="Description de l'image">
+            </a>
+        </div>
+        <div class="backArrow">
+            <a href="#popin8">
+                <img src="./Assets/Elements/returnWhite.png" alt="Description de l'image">
+            </a>
+        </div>
+        <div class="nextArrow">
+            <a href="#popin10">
+                <img src="./Assets/Elements/nextWhite.png" alt="Description de l'image">
+            </a>
+        </div>
+        <div class="close">
+            <a href="#popin0">
+                <img src="./Assets/Elements/croix.png" alt="Description de l'image">
+            </a>
+        </div>
+        <div class="citation">
+            <a href="#popin10">
+                <img src="./Assets/Elements/CITATION_ECRITE.png" alt="Description de l'image">
+            </a>
+        </div>
+        <div class="TitreInspiration">
+            <a id="TitleInspiration">
+                Niki de Saint Phalle inspirée !<br><br>
+            </a>
+            <a id="TextInspiration">
+                La Vénus paléolithiques représente un corps féminin<br>
+                idéalisé apte à procréer.<br>
+                Ces « Vénus du Paléolithique », sont pour certaines<br>
+                datées de plus de 30.000 ans, époque de la dernière <br>
+                période glacière.<br>
+                Ces figurines étaient sensées représenter la déesse<br>
+                mère, symbole de la fertilité: des statuettes d’une taille<br>
+                allant de 6 à 16 centimètres, représentant des femmes<br>
+                en surpoids. Les représentations du corps pendant la<br>
+                préhistoire montrent des femmes potelées aux formes<br>
+                adipeuses : <span id="changeColor">ces qualités étaient exagérées pour montrer<br>
+                le désir de fécondité et le besoin de perpétuer l’espèce.</span><br>
+                
+            </a>
+        </div>
+        <div class="TitreOeuvre">
+            <a id="TitleOeuvre">
+                Vénus de Willendorf<br>
+            </a>
+            <a id="TextOeuvre">
+                (Paléolithique)<br>
+            </a>
+        </div>
+</div>
+
+<div class="popin" id="popin10">
+    <div class="placementCarton">
+        <img src="./Assets/Elements/carton2.png" alt="Description de l'image">
+    </div>
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.png" alt="Description de l'image">
+    </div>
+    <div class="venusInspiration">
+        <img src="./Assets/Oeuvre_4/Venus_de_Willendorf-Small.png" alt="Description de l'image">
+    </div>
+    <div class="tromboneVenus">
+        <img src="./Assets/Elements/trombone.svg" alt="Description de l'image">
+    </div>
+    <div class="inspiration">
+        <a href="#popin9">
+            <img src="./Assets/Elements/INSPIRATION.png" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="scotchB">
+        <img src="./Assets/Elements/scotchB.png" alt="Description de l'image">
+    </div>
+    <div class="backArrow">
+        <a href="#popin9">
+            <img src="./Assets/Elements/returnWhite.png" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="nextArrow">
+        <img src="./Assets/Elements/nextBlack.png" alt="Description de l'image">
+    </div>
+    <div class="close">
+        <a href="#popin0">
+            <img src="./Assets/Elements/croix.png" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="citation">
+        <img src="./Assets/Elements/CITATION_ECRITE.png" alt="Description de l'image">
+    </div>
+    <div class="textCarton">
+        <a id="textC">
+            Pour moi, mes sculptures représentent le monde<br>
+            de la femme amplifiée, la folie des grandeurs des femmes,<br>
+            la femme dans le monde d’aujourd’hui,<br>
+            la femme au pouvoir.<br>
+        </a>
+        <a id="sousTextC">
+            <br>Niki de Saint Phalle (1965)<br>
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin11">
+    <div class="imgOeuvreFull">
+        <img src="./Assets/Oeuvre_4/Niki-de-st-Phalle-Nana-noire-Upside-down-Full.png" alt="Description de l'image">
+    </div>
+    <div class="backArrow">
+        <a href="#popin8">
+            <img src="./Assets/Elements/returnWhite.png" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="nextArrow">
+        <img src="./Assets/Elements/nextBlack.png" alt="Description de l'image">
+    </div>
+    <div class="close">
+        <a href="#popin0">
+            <img src="./Assets/Elements/croix.png" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin12">
+    <div class="imgOeuvreFull4">
+        <img src="./Assets/Oeuvre_4/Venus_de_Willendorf-Full.png" alt="Description de l'image">
+    </div>
+    <div class="backArrow">
+        <a href="#popin9">
+            <img src="./Assets/Elements/returnWhite.png" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="nextArrow">
+        <img src="./Assets/Elements/nextBlack.png" alt="Description de l'image">
+    </div>
+    <div class="close">
+        <a href="#popin0">
+            <img src="./Assets/Elements/croix.png" alt="Description de l'image">
+        </a>
+    </div>
 </div>
 
 </body>

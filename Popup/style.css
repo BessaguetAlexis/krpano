@@ -1,0 +1,387 @@
+.popin {
+	display: none;
+    background-image: url("./Assets/Elements/background.png");
+	background-size: cover;
+    position: absolute;
+    width: 50vw;
+    height: 60vh;
+    left: 25%;
+    top: 20%;
+}
+
+.popin:target {
+	display: block;
+}
+
+a[href="#"] {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 10;
+}
+
+
+#popin3 {
+	background-image: url("");
+	position: absolute;
+    top: 20;
+    left: 25%;
+}
+
+#popin5 {
+	background-image: url("");
+	position: absolute;
+    top: 20;
+    left: 25%;
+}
+
+#popin11 {
+	background-image: url("");
+	position: absolute;
+    top: 50;
+    left: 30%;
+}
+
+#popin12 {
+	background-image: url("");
+}
+
+/* Zone font */
+
+@font-face {
+    font-family: "PatrickHand";
+    src: url("./Assets/Police/Patrick_Hand/PatrickHand-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "PatrickHandSC";
+    src: url("./Assets/Police/Patrick_Hand_SC/PatrickHandSC-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Overpass";
+    src: url("./Assets/Police/Overpass/Overpass-VariableFont_wght.ttf") format("truetype");
+}
+
+
+/* Elements generaux */
+
+.pince {
+	position: absolute;
+    top: -11.5%;
+    left: 8%;
+    transform: scale(1.3);
+    z-index: 1;
+}
+
+.scotch {
+	position: absolute;
+    bottom: -3%;
+    left: -2%;
+    transform: scale(1.3);
+    z-index: 0;
+}
+
+.backArrow {
+	position: absolute;
+    top: -6%;
+    right: 6%;
+    z-index: 0;
+}
+
+.nextArrow {
+	position: absolute;
+    top: -6%;
+    right: 3%;
+    z-index: 0;
+}
+
+.close {
+	position: absolute;
+    top: -6.5%;
+    right: 0%;
+    z-index: 0;
+}
+
+.citation {
+	position: absolute;
+    top: 55%;
+    left: 70%;
+    transform: scale(0.3);
+    z-index: 0;
+}
+
+
+
+
+
+#blocNoteText {
+	font-weight:500;
+	font-size: 18px;
+	font-family: "PatrickHand";
+}
+
+
+
+
+
+/* Zone texte */
+
+.Titre{
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    color: black;
+    z-index: 1;
+}
+
+.TitreOeuvre {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+#Title {
+	font-weight:800;
+	font-size: 30px;
+	font-family: "Overpass";
+    letter-spacing: 0.01px;
+}
+
+#SubTitle {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "Overpass";
+    line-height: 0.6;
+    letter-spacing: 0.01px;
+}
+
+#Text {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    line-height: 1.2;
+}
+
+#changeColor {
+	color: #EB3C2B;
+}
+
+#underlineColor {
+	background-color: #FEF3A5;
+}
+
+#TitleOeuvre {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SubTitleOeuvre {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#TextOeuvre {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+#blocNoteText {
+	font-weight:500;
+	font-size: 18px;
+	font-family: "PatrickHand";
+}
+
+
+
+
+
+
+
+/* Leonard de vinci */
+
+.boutonOeuvre {
+	position: absolute;
+    top: 2%;
+    left: -5.5%;
+    transform: scale(0.3);
+    z-index: 1;
+}
+
+.imgOeuvre {
+	position: absolute;
+    top: 1%;
+    left: 1%;
+    transform: scale(1.3);
+    z-index: 0;
+}
+
+.imgFullPage {
+    position: absolute;
+	top: 0%;
+	left: 25%;
+    transform: scale(1.3);
+	z-index: 0;
+}
+
+.blocNoteImage {
+	position: absolute;
+	top: 28%;
+	left: 45%;
+	z-index: 1;
+	transform: scale(1.3);
+}
+
+.blocNoteImageLine {
+	position: absolute;
+	top: 38%;
+	left: 48%;
+	z-index: 2;
+	transform: scale(1.3);
+}
+
+.blocNote {
+	position: absolute;
+	top: 231%;
+	left: 5%;
+	line-height: 1.27;
+	z-index: 3;
+	transform: rotate(-6.5deg);
+}
+
+.enSavoirPlus {
+	position: absolute;
+    top: 65%;
+    left: 70%;
+    transform: scale(0.3);
+    z-index: 3;
+}
+
+.enSavoirPlus1-2 {
+	position: absolute;
+    top: 10%;
+    left: 11.5%;
+    transform: scale(0.3);
+    z-index: 3;
+}
+
+
+
+
+/* Rembrandt */
+
+.boutonOeuvre2 {
+	position: absolute;
+    top: 4%;
+    left: -12%;
+    transform: scale(0.3);
+    z-index: 1;
+}
+
+.imgOeuvre2 {
+    position: absolute;
+	top: -4%;
+	left: -4%;
+    transform: scale(1.3);
+	z-index: 0;
+}
+
+.imgFullPage2 {
+    position: absolute;
+	top: 10%;
+	left: 7%;
+    transform: scale(1.3);
+	z-index: 0;
+}
+
+.blocNoteImage2 {
+	position: absolute;
+	bottom: -20%;
+	left: 45%;
+	z-index: 1;
+	transform: scale(1.3);
+}
+
+.blocNoteImageLine2 {
+	position: absolute;
+    bottom: -15%;
+    left: 48%;
+	z-index: 2;
+	transform: scale(1.3);
+}
+
+.blocNote2 {
+	position: absolute;
+    top: 150%;
+    left: 0%;
+	line-height: 1.27;
+	z-index: 3;
+	transform: rotate(-6.6deg);
+}
+
+.enSavoirPlus2 {
+	position: absolute;
+    top: 43%;
+    left: 10%;
+    transform: scale(0.3);
+    z-index: 3;
+}
+
+
+
+/* One minute art history */
+
+.blocNoteImage3 {
+	position: absolute;
+	top: 12%;
+	left: 2%;
+	z-index: 1;
+	transform: scale(1.4);
+}
+
+.blocNoteImageLine3 {
+	position: absolute;
+    top: 20%;
+    left: 5%;
+	z-index: 2;
+	transform: scale(1.4);
+}
+
+.blocNote3 {
+	position: absolute;
+    color: black;
+    top: 16.5%;
+    left: 1%;
+	z-index: 3;
+    line-height: 1.35;
+    letter-spacing: 1px;
+	transform: rotate(-6.5deg);
+}
+
+.imgOeuvre3 {
+    position: absolute;
+	bottom: 12%;
+	right: 8%;
+    transform: scale(1.2);
+	z-index: 3;
+}
+
+.TitreOeuvre2 {
+	position: absolute;
+    top: 35%;
+    right: 20%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+
+/* Niki de saint phalle */
