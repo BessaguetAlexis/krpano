@@ -1,0 +1,100 @@
+<svg id="Groupe_387" data-name="Groupe 387" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="230.294" height="58.856" viewBox="0 0 230.294 58.856">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_183" data-name="Rectangle 183" width="230.294" height="58.856" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_182" data-name="Rectangle 182" width="230.294" height="58.856" transform="translate(0 0)" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-5">
+      <path id="Tracé_131" data-name="Tracé 131" d="M227.786,0l.023.41-4.573,4.065,5,3.535c0,.075-4.6,4.142-4.6,4.142l5.023,3.59c0,.037-4.6,4.122-4.6,4.122l5.022,3.571-4.621,4.125,5.023,3.589-4.621,4.106,5.024,3.608-4.62,4.124,5.023,3.59L2.438,58.856,7.059,54.75,2.011,51.162l4.647-4.107L1.609,43.467,6.256,39.36,1.208,35.772l4.62-4.125L.806,28.076l4.621-4.124L.4,20.344l4.621-4.106L0,12.63Z" fill="none"/>
+    </clipPath>
+    <radialGradient id="radial-gradient" cx="0.027" cy="0.259" r="2.285" gradientTransform="matrix(0.307, 0, 0, -0.392, 0.004, 1.269)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#443f38"/>
+      <stop offset="0.15" stop-color="#38332e"/>
+      <stop offset="0.71" stop-color="#0f0e0c"/>
+      <stop offset="1"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="0.754" cy="0.663" r="2.206" gradientTransform="matrix(0.356, -0.054, -0.001, -0.029, 0.009, 0.874)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#dcdcdc"/>
+      <stop offset="1" stop-color="#fff"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-3" cx="0.595" cy="0.552" r="1.306" gradientTransform="matrix(0.355, -0.056, -0.001, -0.033, 0.01, 0.878)" xlink:href="#radial-gradient-2"/>
+    <radialGradient id="radial-gradient-4" cx="0.752" cy="0.428" r="1.54" gradientTransform="matrix(0.307, 0, 0, -0.055, 0.004, 0.962)" xlink:href="#radial-gradient-2"/>
+    <clipPath id="clip-path-12">
+      <rect id="Rectangle_181" data-name="Rectangle 181" width="230.294" height="58.502" transform="translate(0 0.354)" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-13">
+      <path id="Tracé_137" data-name="Tracé 137" d="M228.235,8.085l-4.6,4.067,5.023,3.59c0,.037-4.6,4.122-4.6,4.122l5.022,3.571-4.621,4.125,5.023,3.589-4.621,4.106,5.024,3.608-4.62,4.124,5.023,3.59L2.438,58.856,7.059,54.75,2.011,51.162l4.647-4.107L1.609,43.467,6.256,39.36,1.208,35.772l4.62-4.125L.806,28.076l4.621-4.124L.4,20.344l4.621-4.106L0,12.63,227.806.354c.075,0,0,.056,0,.056l-4.573,4.065,5,3.535a.044.044,0,0,1,0,.075" fill="none"/>
+    </clipPath>
+    <radialGradient id="radial-gradient-5" cx="0.358" cy="0.718" r="3.02" gradientTransform="matrix(0.305, 0, 0, -2.186, 0.004, 2.903)" xlink:href="#radial-gradient"/>
+  </defs>
+  <g id="Groupe_386" data-name="Groupe 386" clip-path="url(#clip-path)">
+    <g id="Groupe_385" data-name="Groupe 385">
+      <g id="Groupe_384" data-name="Groupe 384" clip-path="url(#clip-path-2)">
+        <g id="Groupe_358" data-name="Groupe 358" opacity="0.75">
+          <g id="Groupe_357" data-name="Groupe 357">
+            <g id="Groupe_356" data-name="Groupe 356" clip-path="url(#clip-path-2)">
+              <path id="Tracé_130" data-name="Tracé 130" d="M227.786,0l.023.41-4.573,4.066,4.994,3.535c0,.074-4.594,4.141-4.594,4.141l5.023,3.59c0,.037-4.6,4.123-4.6,4.123l5.022,3.571-4.621,4.124,5.023,3.59-4.621,4.105,5.024,3.609-4.621,4.124,5.023,3.589L2.437,58.856,7.059,54.75,2.011,51.162l4.646-4.107L1.609,43.467,6.256,39.36,1.208,35.772l4.62-4.124L.806,28.077l4.62-4.125L.4,20.344l4.622-4.106L0,12.63Z" fill="#e5d8c7"/>
+            </g>
+          </g>
+        </g>
+        <g id="Groupe_363" data-name="Groupe 363" opacity="0.37" style="mix-blend-mode: color-dodge;isolation: isolate">
+          <g id="Groupe_362" data-name="Groupe 362">
+            <g id="Groupe_361" data-name="Groupe 361" clip-path="url(#clip-path-2)">
+              <g id="Groupe_360" data-name="Groupe 360">
+                <g id="Groupe_359" data-name="Groupe 359" clip-path="url(#clip-path-5)">
+                  <rect id="Rectangle_174" data-name="Rectangle 174" width="233.203" height="71.521" transform="translate(-3.256 0.181) rotate(-3.175)" fill="url(#radial-gradient)"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="Groupe_368" data-name="Groupe 368" style="mix-blend-mode: multiply;isolation: isolate">
+          <g id="Groupe_367" data-name="Groupe 367">
+            <g id="Groupe_366" data-name="Groupe 366" clip-path="url(#clip-path-2)">
+              <g id="Groupe_365" data-name="Groupe 365">
+                <g id="Groupe_364" data-name="Groupe 364" clip-path="url(#clip-path-5)">
+                  <path id="Tracé_132" data-name="Tracé 132" d="M-3.188.177,229.6-12.736l3.88,71.416L.692,71.593Z" fill="url(#radial-gradient-2)"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="Groupe_373" data-name="Groupe 373" opacity="0.75" style="mix-blend-mode: multiply;isolation: isolate">
+          <g id="Groupe_372" data-name="Groupe 372">
+            <g id="Groupe_371" data-name="Groupe 371" clip-path="url(#clip-path-2)">
+              <g id="Groupe_370" data-name="Groupe 370">
+                <g id="Groupe_369" data-name="Groupe 369" clip-path="url(#clip-path-5)">
+                  <path id="Tracé_134" data-name="Tracé 134" d="M-3.318.184,229.574-12.735l4.038,71.407L.72,71.592Z" fill="url(#radial-gradient-3)"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="Groupe_378" data-name="Groupe 378" opacity="0.75" style="mix-blend-mode: multiply;isolation: isolate">
+          <g id="Groupe_377" data-name="Groupe 377">
+            <g id="Groupe_376" data-name="Groupe 376" clip-path="url(#clip-path-2)">
+              <g id="Groupe_375" data-name="Groupe 375">
+                <g id="Groupe_374" data-name="Groupe 374" clip-path="url(#clip-path-5)">
+                  <rect id="Rectangle_178" data-name="Rectangle 178" width="233.217" height="71.521" transform="matrix(0.998, -0.055, 0.055, 0.998, -3.263, 0.181)" fill="url(#radial-gradient-4)"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="Groupe_383" data-name="Groupe 383" opacity="0.37" style="mix-blend-mode: color-dodge;isolation: isolate">
+          <g id="Groupe_382" data-name="Groupe 382">
+            <g id="Groupe_381" data-name="Groupe 381" clip-path="url(#clip-path-12)">
+              <g id="Groupe_380" data-name="Groupe 380">
+                <g id="Groupe_379" data-name="Groupe 379" clip-path="url(#clip-path-13)">
+                  <rect id="Rectangle_180" data-name="Rectangle 180" width="233.18" height="71.172" transform="translate(-3.235 0.53) rotate(-3.175)" fill="url(#radial-gradient-5)"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

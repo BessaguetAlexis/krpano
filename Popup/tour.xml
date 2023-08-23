@@ -1,30 +1,692 @@
 <krpano>
-    <!-- Configuration de la vue du panorama -->
-    <view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2" />
 
-    <!-- Chargement de l'image du panorama -->
-    <image>
-        <cube url="./pano.jpg" />
-    </image>
+	<style name="hotspotBlanc"
+	       url="hotspotBlanc.png"
+	       crop="0|0|64|64"
+	       frames="40" framewidth="64" frameheight="64" frame="0"
+	       onloaded="hotspot_animate();"
+	       />
 
-    <!-- Hotspot cliquable -->
-    <hotspot name="spot1" url="./cam.png" ath="-50" atv="-10" onclick="showImage()" />
-    <hotspot name="spot2" url="./cam.png" ath="-50" atv="0" onclick="showImage2()" />
-    <hotspot name="spot3" url="./cam.png" ath="-50" atv="10" onclick="showImage3()" />
-    <hotspot name="spot4" url="./cam.png" ath="-50" atv="20" onclick="showImage4()" />
 
-    <action name="showImage">
+	
+    <action name="hotspot_animate">
+		if(loaded,
+			inc(frame,1,get(frames),0);
+			mul(ypos,frame,frameheight);
+			txtadd(crop,'0|',get(ypos),'|',get(framewidth),'|',get(frameheight));
+			delayedcall(0.03, hotspot_animate() );
+		  );
+	</action>
+
+    <action name="scene3dtransition" scope="local" args="scenename, hlookatoffset">
+		motionblur = 0.5;
+		transitiondelay = 0.0;
+		transitiontime = 0.5;
+		transitiontweentype = "easeoutquad";
+		
+		if(caller AND caller.ishotspot,
+			<!-- called from a hotspot, move toward the hotspot -->
+			if(caller.depth == 0,
+				<!-- 3d placed hotspot -->
+				set3dtransition("image", caller.tx,caller.ty,caller.tz, motionblur, hlookatoffset, transitiondelay, transitiontime, transitiontweentype);
+			  ,
+				<!-- a hotspot with a spherical position -->
+				caller.getcenter(h,v);
+				if(v GT -50 AND v LT +50 AND caller.depth GT 120, set(v,0));
+				set3dtransition("sphere", h,v,(min(caller.depth,1000)), motionblur, hlookatoffset, transitiondelay, transitiontime, transitiontweentype);
+			);
+		  ,
+			<!-- called from a layer or a script, recenter at the new pano center (3d-model/depthmap panos only) -->
+			if(image.depthmap.url,
+				set3dtransition("image", 0,0,0, motionblur, hlookatoffset, transitiondelay, transitiontime, transitiontweentype);
+			);
+		);
+		
+		loadscene(get(scenename), null, MERGE|PRELOAD, BLEND(get(transitiontime),get(transitiontweentype)));
+	</action>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<action name="loadScene0-1" >
+		loadscene(salle_0-1, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene0-2" >
+		loadscene(salle_0-2, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene0-3" >
+		loadscene(salle_0-3, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene0-4" >
+		loadscene(salle_0-4, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene0-5" >
+		loadscene(salle_0-5, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+
+
+
+
+	<action name="loadScene1-1">
+		loadscene(salle_1-1, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene1-2" >
+		loadscene(salle_1-2, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene1-3" >
+		loadscene(salle_1-3, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene1-4" >
+		loadscene(salle_1-4, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene1-5" >
+		loadscene(salle_1-5, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene1-6" >
+		loadscene(salle_1-6, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene1-7">
+		loadscene(salle_1-7, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene1-8" >
+		loadscene(salle_1-8, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+
+
+
+
+
+
+
+	<action name="loadScene2-1" >
+		loadscene(salle_2-1, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene2-2">
+		loadscene(salle_2-2, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene2-3">
+		loadscene(salle_2-3, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene2-4">
+		loadscene(salle_2-4, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene2-5">
+		loadscene(salle_2-5, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene2-6">
+		loadscene(salle_2-6, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene2-7">
+		loadscene(salle_2-7, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene2-8">
+		loadscene(salle_2-8, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene2-9">
+		loadscene(salle_2-9, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene2-10">
+		loadscene(salle_2-10, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+
+
+
+
+
+
+
+
+
+    <action name="loadScene3-1" >
+		loadscene(salle_3-1, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene3-2" >
+		loadscene(salle_3-2, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene3-3" >
+		loadscene(salle_3-3, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene3-4" autorun="onstart">
+		loadscene(salle_3-4, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene3-5">
+		loadscene(salle_3-5, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene3-6">
+		loadscene(salle_3-6, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+    <action name="loadScene3-7">
+		loadscene(salle_3-7, null, MERGE);
+        openurl("#popin0", "_self");
+	</action>
+
+
+
+
+
+
+
+
+
+    <action name="closeImage">
+        openurl("#popin0", "_self");
+    </action>
+
+    <action name="showImage1">
         openurl("#popin1", "_self");
     </action>
+
     <action name="showImage2">
         openurl("#popin4", "_self");
     </action>
+
         <action name="showImage3">
         openurl("#popin6", "_self");
     </action>
-        <action name="showImage4">
+
+    <action name="showImage4">
         openurl("#popin8", "_self");
     </action>
 
-    
+
+
+
+
+    <scene name="salle_0-1">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="90" fovmax="110" />
+        <image>
+            <cube url="Salle/Landing/W1/w1_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-23" atv="1.5" onclick="loadScene0-2()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="-1" atv="1.5" onclick="loadScene0-3()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="20" atv="1.5" onclick="loadScene0-4()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="-44" atv="-5" onclick="loadScene0-5()" />
+    </scene>
+
+    <scene name="salle_0-2">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="90" fovmax="110" />
+        <image>
+            <cube url="Salle/Landing/W2/w2_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-71" atv="2" onclick="loadScene0-4()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="-8" atv="6" onclick="loadScene3-1()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="-57" atv="4" onclick="loadScene0-3()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="-91" atv="-4" onclick="loadScene0-5()" />
+    </scene>
+
+    <scene name="salle_0-3">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="90" fovmax="110" />
+        <image>
+            <cube url="Salle/Landing/W3/w3_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-57" atv="2" onclick="loadScene0-4()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="-7" atv="2" onclick="loadScene2-1()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="54" atv="2" onclick="loadScene0-2()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="-92" atv="-7" onclick="loadScene0-5()" />
+    </scene>
+
+    <scene name="salle_0-4">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="90" fovmax="110" />
+        <image>
+            <cube url="Salle/Landing/W4/w4_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-90" atv="-8" onclick="loadScene0-5()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="48" atv="6" onclick="loadScene0-3()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="68" atv="4" onclick="loadScene0-2()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="-10" atv="8" onclick="loadScene1-1()" />
+    </scene>
+
+    <scene name="salle_0-5">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="90" fovmax="110" />
+        <image>
+            <cube url="Salle/Landing/W5/w5_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="80" atv="8" onclick="loadScene0-4()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="138" atv="6" onclick="loadScene0-3()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="158" atv="4" onclick="loadScene0-2()" />
+
+    </scene>
+
+
+
+
+
+
+
+
+
+
+
+	<scene name="salle_1-1">
+		<view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="60" fovmax="120" />
+		<image>
+            <cube url="Salle/S1/W1/w1_%s.png" />
+		</image>
+		<hotspot name="spot1" style="hotspotBlanc" ath="53" atv="-3" onclick="loadScene1-7()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="67" atv="-3" onclick="loadScene1-8()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="0" atv="3" onclick="loadScene1-2()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="32" atv="-1" onclick="loadScene1-6()" />
+        <hotspot name="spot5" style="hotspotBlanc" ath="-32" atv="-1" onclick="loadScene1-4()" />
+        <hotspot name="spot6" style="hotspotBlanc" ath="20" atv="-1" onclick="loadScene1-5()" />
+        <hotspot name="spot7" style="hotspotBlanc" ath="178" atv="-1" onclick="loadScene1-5()" />
+	</scene>
+
+    <scene name="salle_1-2">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="60" fovmax="120" />
+        <image>
+            <cube url="Salle/S1/W2/w2_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-180" atv="-1" onclick="loadScene1-1()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="136" atv="-3" onclick="loadScene1-8()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="125" atv="-3" onclick="loadScene1-7()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="-77" atv="-2" onclick="loadScene1-4()" />
+        <hotspot name="spot5" style="hotspotBlanc" ath="75" atv="-1" onclick="loadScene1-6()" />
+        <hotspot name="spot6" style="hotspotBlanc" ath="32" atv="-1" onclick="loadScene1-5()" />
+        <hotspot name="spot7" style="hotspotBlanc" ath="0" atv="0" onclick="showImage3()" />
+
+	</scene>
+
+    <scene name="salle_1-3">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="60" fovmax="120" />
+        <image>
+            <cube url="Salle/S1/W3/w3_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="110" atv="0" onclick="loadScene1-5()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="-180" atv="4" onclick="loadScene1-2()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="148" atv="-1" onclick="loadScene1-6()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="157" atv="-1" onclick="loadScene1-7()" />
+        <hotspot name="spot5" style="hotspotBlanc" ath="162" atv="-1" onclick="loadScene1-8()" />
+        <hotspot name="spot6" style="hotspotBlanc" ath="-147" atv="-2" onclick="loadScene1-4()" />
+        <hotspot name="spot7" style="hotspotBlanc" ath="0" atv="0" onclick="loadScene2-1()" />
+	</scene>
+
+    <scene name="salle_1-4">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="60" fovmax="120" />
+        <image>
+            <cube url="Salle/S1/W4/w4_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-104" atv="-1" onclick="loadScene1-1()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="104" atv="0" onclick="loadScene1-3()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="-181" atv="15" onclick="loadScene1-2()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="-181" atv="-5" onclick="loadScene1-6()" />
+        <hotspot name="spot5" style="hotspotBlanc" ath="-138" atv="-1" onclick="loadScene1-8()" />
+        <hotspot name="spot6" style="hotspotBlanc" ath="-222" atv="-1" onclick="loadScene1-5()" />
+        <hotspot name="spot7" style="hotspotBlanc" ath="-147" atv="-2" onclick="loadScene1-7()" />
+        <hotspot name="spot7" style="hotspotBlanc" ath="0" atv="0" onclick="showImage5()" />
+	</scene>
+
+    <scene name="salle_1-5">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="60" fovmax="120" />
+        <image>
+            <cube url="Salle/S1/W5/w5_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-115" atv="0" onclick="loadScene1-3()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="96" atv="0" onclick="loadScene1-1()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="70" atv="-1" onclick="loadScene1-7()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="74" atv="-1" onclick="loadScene1-8()" />
+        <hotspot name="spot5" style="hotspotBlanc" ath="138" atv="-1" onclick="loadScene1-4()" />
+        <hotspot name="spot6" style="hotspotBlanc" ath="104" atv="4" onclick="loadScene1-2()" />
+        <hotspot name="spot7" style="hotspotBlanc" ath="60" atv="-3" onclick="loadScene1-6()" />
+        <hotspot name="spot8" style="hotspotBlanc" ath="0" atv="0" onclick="showImage4()" />
+	</scene>
+
+    <scene name="salle_1-6">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="60" fovmax="120" />uk
+        <image>
+            <cube url="Salle/S1/W6/w6_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-60" atv="0" onclick="loadScene1-5()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="-180" atv="0" onclick="loadScene1-4()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="-185" atv="15" onclick="loadScene1-2()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="103" atv="0" onclick="loadScene1-1()" />
+        <hotspot name="spot5" style="hotspotBlanc" ath="59" atv="-4" onclick="loadScene1-7()" />
+        <hotspot name="spot6" style="hotspotBlanc" ath="68" atv="-2" onclick="loadScene1-8()" />
+        <hotspot name="spot7" style="hotspotBlanc" ath="-103" atv="0" onclick="loadScene1-3()" />
+        <hotspot name="spot8" style="hotspotBlanc" ath="0" atv="0" onclick="showImage6()" />
+	</scene>
+
+    <scene name="salle_1-7">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="60" fovmax="120" />
+        <image>
+            <cube url="Salle/S1/W7/w7_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="30" atv="-6" onclick="loadScene1-8()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="-75" atv="-1" onclick="loadScene1-5()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="-60" atv="-2" onclick="loadScene1-6()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="-99" atv="0" onclick="loadScene1-3()" />
+        <hotspot name="spot5" style="hotspotBlanc" ath="-114" atv="5" onclick="loadScene1-2()" />
+        <hotspot name="spot6" style="hotspotBlanc" ath="-148" atv="-1" onclick="loadScene1-4()" />
+        <hotspot name="spot7" style="hotspotBlanc" ath="118" atv="1" onclick="loadScene1-1()" />
+        <hotspot name="spot8" style="hotspotBlanc" ath="1" atv="-7" onclick="showImage2()" />
+
+	</scene>
+
+    <scene name="salle_1-8">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="60" fovmax="120" />
+        <image>
+            <cube url="Salle/S1/W8/w8_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-27" atv="-6" onclick="loadScene1-7()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="-77" atv="-1" onclick="loadScene1-5()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="-66" atv="-2" onclick="loadScene1-6()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="-98" atv="0" onclick="loadScene1-3()" />
+        <hotspot name="spot5" style="hotspotBlanc" ath="-109" atv="1" onclick="loadScene1-2()" />
+        <hotspot name="spot6" style="hotspotBlanc" ath="-140" atv="-1" onclick="loadScene1-4()" />
+        <hotspot name="spot7" style="hotspotBlanc" ath="130" atv="1" onclick="loadScene1-1()" />
+        <hotspot name="spot8" style="hotspotBlanc" ath="2" atv="-5" onclick="showImage1()" />
+
+	</scene>
+
+
+
+
+
+
+
+
+
+
+
+    <scene name="salle_2-1">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="90" fovmax="110" />
+        <image>
+            <cube url="Salle/S2/W1/w1_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-73" atv="-2" onclick="loadScene2-2()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="-5" atv="-3" onclick="loadScene2-4()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="18" atv="-2" onclick="loadScene2-8()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="180" atv="-2" onclick="loadScene1-3()" />
+
+    </scene>
+
+    <scene name="salle_2-2">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="90" fovmax="110" />
+        <image>
+            <cube url="Salle/S2/W2/w2_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-100" atv="0" onclick="loadScene2-1()" />
+        <hotspot name="spot1" style="hotspotBlanc" ath="-100" atv="0" onclick="loadScene2-1()" />
+        <!-- <hotspot name="spot2" style="hotspotBlanc" ath="-50" atv="0" onclick="showImage2()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="-50" atv="10" onclick="showImage3()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="-50" atv="20" onclick="showImage4()" />
+        <hotspot name="spot5" style="hotspotBlanc" ath="20" atv="0" onclick="loadScene3()" />
+        <hotspot name="spot6" style="hotspotBlanc" ath="-20" atv="0" onclick="loadScene1()" /> -->
+    </scene>
+
+    <scene name="salle_2-3">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="90" fovmax="110" />
+        <image>
+            <cube url="Salle/S2/W3/w3_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-50" atv="-10" onclick="showImage()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="-50" atv="0" onclick="showImage2()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="-50" atv="10" onclick="showImage3()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="-50" atv="20" onclick="showImage4()" />
+        <hotspot name="spot5" style="hotspotBlanc" ath="20" atv="0" onclick="loadScene3()" />
+        <hotspot name="spot6" style="hotspotBlanc" ath="-20" atv="0" onclick="loadScene1()" />
+    </scene>
+
+    <scene name="salle_2-4">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="90" fovmax="110" />
+        <image>
+            <preview url="Salle2.png" />
+            <cube url="Salle/S2/W4/w4_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-50" atv="-10" onclick="showImage()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="-50" atv="0" onclick="showImage2()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="-50" atv="10" onclick="showImage3()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="-50" atv="20" onclick="showImage4()" />
+        <hotspot name="spot5" style="hotspotBlanc" ath="20" atv="0" onclick="loadScene3()" />
+        <hotspot name="spot6" style="hotspotBlanc" ath="-20" atv="0" onclick="loadScene1()" />
+    </scene>
+
+    <scene name="salle_2-5">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="90" fovmax="110" />
+        <image>
+            <cube url="Salle/S2/W5/w5_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-50" atv="-10" onclick="showImage()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="-50" atv="0" onclick="showImage2()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="-50" atv="10" onclick="showImage3()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="-50" atv="20" onclick="showImage4()" />
+        <hotspot name="spot5" style="hotspotBlanc" ath="20" atv="0" onclick="loadScene3()" />
+        <hotspot name="spot6" style="hotspotBlanc" ath="-20" atv="0" onclick="loadScene1()" />
+    </scene>
+
+    <scene name="salle_2-6">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="90" fovmax="110" />
+        <image>
+            <cube url="Salle/S2/W6/w6_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-50" atv="-10" onclick="showImage()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="-50" atv="0" onclick="showImage2()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="-50" atv="10" onclick="showImage3()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="-50" atv="20" onclick="showImage4()" />
+        <hotspot name="spot5" style="hotspotBlanc" ath="20" atv="0" onclick="loadScene3()" />
+        <hotspot name="spot6" style="hotspotBlanc" ath="-20" atv="0" onclick="loadScene1()" />
+    </scene>
+
+    <scene name="salle_2-7">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="90" fovmax="110" />
+        <image>
+            <cube url="Salle/S2/W7/w7_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-50" atv="-10" onclick="showImage()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="-50" atv="0" onclick="showImage2()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="-50" atv="10" onclick="showImage3()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="-50" atv="20" onclick="showImage4()" />
+        <hotspot name="spot5" style="hotspotBlanc" ath="20" atv="0" onclick="loadScene3()" />
+        <hotspot name="spot6" style="hotspotBlanc" ath="-20" atv="0" onclick="loadScene1()" />
+    </scene>
+
+    <scene name="salle_2-8">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="90" fovmax="110" />
+        <image>
+            <cube url="Salle/S2/W8/w8_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-50" atv="-10" onclick="showImage()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="-50" atv="0" onclick="showImage2()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="-50" atv="10" onclick="showImage3()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="-50" atv="20" onclick="showImage4()" />
+        <hotspot name="spot5" style="hotspotBlanc" ath="20" atv="0" onclick="loadScene3()" />
+        <hotspot name="spot6" style="hotspotBlanc" ath="-20" atv="0" onclick="loadScene1()" />
+    </scene>
+
+    <scene name="salle_2-9">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="90" fovmax="110" />
+        <image>
+            <cube url="Salle/S2/W9/w9_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-50" atv="-10" onclick="showImage()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="-50" atv="0" onclick="showImage2()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="-50" atv="10" onclick="showImage3()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="-50" atv="20" onclick="showImage4()" />
+        <hotspot name="spot5" style="hotspotBlanc" ath="20" atv="0" onclick="loadScene3()" />
+        <hotspot name="spot6" style="hotspotBlanc" ath="-20" atv="0" onclick="loadScene1()" />
+    </scene>
+
+    <scene name="salle_2-10">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="90" fovmax="110" />
+        <image>
+            <cube url="Salle/S2/W10/w10_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-50" atv="-10" onclick="showImage()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="-50" atv="0" onclick="showImage2()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="-50" atv="10" onclick="showImage3()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="-50" atv="20" onclick="showImage4()" />
+        <hotspot name="spot5" style="hotspotBlanc" ath="20" atv="0" onclick="loadScene3()" />
+        <hotspot name="spot6" style="hotspotBlanc" ath="-20" atv="0" onclick="loadScene1()" />
+    </scene>
+
+
+
+
+    <scene name="salle_3-1">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="90" fovmax="110" />
+        <image>
+            <cube url="Salle/S3/W1/w1_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-18" atv="-7" onclick="loadScene3-2()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="-21" atv="7" onclick="loadScene3-3()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="-46" atv="-6" onclick="loadScene3-4()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="0" atv="0" onclick="loadScene3-5()" />
+        <hotspot name="spot5" style="hotspotBlanc" ath="16" atv="-2" onclick="loadScene3-6()" />
+        <hotspot name="spot6" style="hotspotBlanc" ath="31" atv="-5" onclick="loadScene3-7()" />
+    </scene>
+
+        <scene name="salle_3-2">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="90" fovmax="110" />
+        <image>
+            <cube url="Salle/S3/W2/w2_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-104" atv="7" onclick="loadScene3-1()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="65" atv="15" onclick="loadScene3-3()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="70" atv="-8" onclick="loadScene3-4()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="95" atv="2" onclick="loadScene3-5()" />
+        <hotspot name="spot5" style="hotspotBlanc" ath="118" atv="-2" onclick="loadScene3-6()" />
+        <hotspot name="spot6" style="hotspotBlanc" ath="154" atv="-5" onclick="loadScene3-7()" />
+    </scene>
+
+        <scene name="salle_3-3">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="90" fovmax="110" />
+        <image>
+            <cube url="Salle/S3/W3/w3_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-51" atv="-7" onclick="loadScene3-2()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="-93" atv="4" onclick="loadScene3-1()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="46" atv="-5" onclick="loadScene3-4()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="93" atv="4" onclick="loadScene3-5()" />
+        <hotspot name="spot5" style="hotspotBlanc" ath="131" atv="-2" onclick="loadScene3-6()" />
+        <hotspot name="spot6" style="hotspotBlanc" ath="-157" atv="-5" onclick="loadScene3-7()" />
+    </scene>
+
+        <scene name="salle_3-4">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="90" fovmax="110" />
+        <image>
+            <cube url="Salle/S3/W4/w4_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-18" atv="-7" onclick="loadScene3-2()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="-21" atv="7" onclick="loadScene3-3()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="-46" atv="-6" onclick="loadScene3-1()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="0" atv="0" onclick="loadScene3-5()" />
+        <hotspot name="spot5" style="hotspotBlanc" ath="16" atv="-2" onclick="loadScene3-6()" />
+        <hotspot name="spot6" style="hotspotBlanc" ath="31" atv="-5" onclick="loadScene3-7()" />
+    </scene>
+
+        <scene name="salle_3-5">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="90" fovmax="110" />
+        <image>
+            <cube url="Salle/S3/W5/w5_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-18" atv="-7" onclick="loadScene3-2()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="-21" atv="7" onclick="loadScene3-3()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="-46" atv="-6" onclick="loadScene3-4()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="0" atv="0" onclick="loadScene3-1()" />
+        <hotspot name="spot5" style="hotspotBlanc" ath="16" atv="-2" onclick="loadScene3-6()" />
+        <hotspot name="spot6" style="hotspotBlanc" ath="31" atv="-5" onclick="loadScene3-7()" />
+    </scene>
+
+        <scene name="salle_3-6">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="90" fovmax="110" />
+        <image>
+            <cube url="Salle/S3/W6/w6_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-18" atv="-7" onclick="loadScene3-2()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="-21" atv="7" onclick="loadScene3-3()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="-46" atv="-6" onclick="loadScene3-4()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="0" atv="0" onclick="loadScene3-5()" />
+        <hotspot name="spot5" style="hotspotBlanc" ath="16" atv="-2" onclick="loadScene3-1()" />
+        <hotspot name="spot6" style="hotspotBlanc" ath="31" atv="-5" onclick="loadScene3-7()" />
+    </scene>
+
+        <scene name="salle_3-7">
+        <view hlookat="0" vlookat="0" fov="100" maxpixelzoom="2.0" fovmin="90" fovmax="110" />
+        <image>
+            <cube url="Salle/S3/W7/w7_%s.png" />
+        </image>
+        <hotspot name="spot1" style="hotspotBlanc" ath="-18" atv="-7" onclick="loadScene3-2()" />
+        <hotspot name="spot2" style="hotspotBlanc" ath="-21" atv="7" onclick="loadScene3-3()" />
+        <hotspot name="spot3" style="hotspotBlanc" ath="-46" atv="-6" onclick="loadScene3-4()" />
+        <hotspot name="spot4" style="hotspotBlanc" ath="0" atv="0" onclick="loadScene3-5()" />
+        <hotspot name="spot5" style="hotspotBlanc" ath="16" atv="-2" onclick="loadScene3-6()" />
+        <hotspot name="spot6" style="hotspotBlanc" ath="31" atv="-5" onclick="loadScene3-1()" />
+    </scene>
+
+
+
+
+
+
+
+
+
+
 </krpano>
