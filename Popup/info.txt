@@ -1,0 +1,72 @@
+Landing
+
+W1 = spawn
+W2 = porte 1
+W3 = porte 2
+W4 = porte 3
+W5 = text gauche
+
+----------------------------------------------------------------
+
+Salle 1
+
+W1 = porte entrée
+W2 = Angelica Dass
+W3 = Odalisque 
+W4 = porte sortie
+W5 = Niki Venus
+W6 = Leonard de vinci Rembrandt 
+W7 = OMAH 
+W8 = porte sortie 2
+
+Oeuvre numérotée
+
+1 = Leonard de vinci Rembrandt
+2 = Niki Venus
+3 = Angelica Dass
+
+----------------------------------------------------------------
+
+Salle 2
+
+W1 = porte entrée
+W2 = Becca Saladin
+W3 = Alper Yesiltas
+W4 = Van Gogh
+W5 = Ron Mueck
+W6 = Meitner
+W7 = Roman Opalka Visage
+W8 = Roman Opalka Chiffre
+W9 = Vogue
+W10 = porte sortie
+
+Oeuvre numérotée
+
+1 = Becca Saladin
+2 = Alper Yesiltas
+3 = Vogue
+
+----------------------------------------------------------------
+
+Salle 3
+
+W1 = porte entrée
+W2 = Marco Melgrati Reflet
+W3 = Video Basquiat
+W4 = Paula Modersohn Becker
+W5 = porte sortie
+W6 = Jean Michel Basquiat 
+W7 = Marco Melgrati Blonde
+
+Oeuvre numérotée
+
+1 = Marco Melgrati Reflet
+2 = Jean Michel Basquiat
+3 = Paula Modersohn Becker
+
+----------------------------------------------------------------
+----------------------------------------------------------------
+
+
+<span id="changeColor">
+<span id="underlineColor">

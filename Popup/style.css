@@ -3,10 +3,14 @@
     background-image: url("./Assets/Elements/background.png");
 	background-size: cover;
     position: absolute;
-    width: 50vw;
-    height: 60vh;
+    width: 960px;
+    height: 600px;
     left: 25%;
     top: 20%;
+}
+
+.salle {
+    display: none;
 }
 
 .popin:target {
@@ -24,31 +28,31 @@ a[href="#"] {
 #popin3 {
 	background-image: url("");
 	position: absolute;
-    top: 20;
     left: 25%;
 }
 
 #popin5 {
 	background-image: url("");
 	position: absolute;
-    top: 20;
     left: 25%;
 }
 
 #popin7 {
 	background-image: url("");
 	position: absolute;
-    top: 20;
     left: 25%;
 }
 
-#popin11 {
+#popin11,#popin12,#popin14,#popin16,#popin18,#popin19,#popin20,#popin21,#popin22,#popin23,#popin26,#popin28,#popin31,#popin33,#popin35,#popin38,#popin39,#popin40,#popin41,#popin42,#popin44,#popin47,#popin50,#popin53,#popin54,#popin56,#popin58,#popin61,#popin64 {
 	background-image: url("");
-
 }
 
-#popin12 {
-	background-image: url("");
+#changeColor {
+	color: #EB3C2B;
+}
+
+#underlineColor {
+	background-color: #FEF3A5;
 }
 
 /* Zone font */
@@ -68,8 +72,13 @@ a[href="#"] {
     src: url("./Assets/Police/Overpass/Overpass-VariableFont_wght.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "Hurricane";
+    src: url("./Assets/Police/Hurricane/Hurricane-Regular.ttf") format("truetype");
+}
 
 /* Elements generaux */
+
 
 .pince {
 	position: absolute;
@@ -116,158 +125,6 @@ a[href="#"] {
     z-index: 0;
 }
 
-.citation {
-	position: absolute;
-    top: 55%;
-    left: 70%;
-    transform: scale(0.3);
-    z-index: 0;
-}
-
-
-#blocNoteText {
-	font-weight:500;
-	font-size: 18px;
-	font-family: "PatrickHand";
-}
-
-
-
-
-
-/* Zone texte */
-
-.Titre{
-	position: absolute;
-    top: 10%;
-    left: 45%;
-    color: black;
-    z-index: 1;
-}
-
-.TitreOeuvre {
-	position: absolute;
-    top: 77%;
-    left: 7%;
-    color: black;
-    z-index: 1;
-    line-height: 0.7;
-}
-
-#Title {
-	font-weight:800;
-	font-size: 25px;
-	font-family: "Overpass";
-    letter-spacing: 0.01px;
-}
-
-#SubTitle {
-	font-weight:200;
-	font-size: 20px;
-	font-family: "Overpass";
-    line-height: 0.6;
-    letter-spacing: 0.01px;
-}
-
-#Text {
-	font-weight:200;
-	font-size: 20px;
-	font-family: "PatrickHand";
-    color: black;
-    line-height: 1.1;
-}
-
-#changeColor {
-	color: #EB3C2B;
-}
-
-#underlineColor {
-	background-color: #FEF3A5;
-}
-
-#TitleOeuvre {
-	font-weight:bold;
-	font-size: 14px;
-	font-family: "Overpass";
-}
-
-#SubTitleOeuvre {
-	font-weight:600;
-	font-style: italic;
-	font-size: 12px;
-	font-family: "Overpass";
-}
-
-#TextOeuvre {
-	font-weight:600;
-	font-size: 10px;
-	font-style: italic;
-	font-family: "Overpass";
-}
-
-#blocNoteText {
-	font-weight:500;
-	font-size: 18px;
-	font-family: "PatrickHand";
-}
-
-
-
-
-
-
-
-/* Leonard de vinci */
-
-.boutonOeuvre {
-	position: absolute;
-    top: 0%;
-    left: -5.5%;
-    transform: scale(0.3);
-    z-index: 1;
-}
-
-.imgOeuvre {
-	position: absolute;
-    top: -4%;
-    left: -2%;
-    transform: scale(1.1);
-    z-index: 0;
-}
-
-.imgFullPage {
-    position: absolute;
-	top: -10%;
-	left: 25%;
-    transform: scale(1.3);
-	z-index: 0;
-}
-
-.blocNoteImage {
-	position: absolute;
-	top: 28%;
-	left: 45%;
-	z-index: 1;
-	transform: scale(1.3);
-}
-
-.blocNoteImageLine {
-	position: absolute;
-	top: 38%;
-	left: 48%;
-	z-index: 2;
-	transform: scale(1.3);
-}
-
-.blocNote {
-	position: absolute;
-	top: 215%;
-	left: 5%;
-	line-height: 1.27;
-	z-index: 3;
-	transform: rotate(-6.5deg);
-}
-
 .enSavoirPlus {
 	position: absolute;
     top: 65%;
@@ -276,207 +133,12 @@ a[href="#"] {
     z-index: 3;
 }
 
-.enSavoirPlus1-2 {
+.citationEcrite {
 	position: absolute;
-    top: 10%;
-    left: 11.5%;
+    top: 53%;
+    left: 70%;
     transform: scale(0.3);
-    z-index: 3;
-}
-
-
-
-
-/* Rembrandt */
-
-.boutonOeuvre2 {
-	position: absolute;
-    top: 2%;
-    left: -9%;
-    transform: scale(0.3);
-    z-index: 1;
-}
-
-.imgOeuvre2 {
-    position: absolute;
-	top: -9%;
-	left: -4%;
-    transform: scale(1.1);
-	z-index: 0;
-}
-
-.imgFullPage2 {
-    position: absolute;
-	top: 10%;
-	left: 7%;
-    transform: scale(1.3);
-	z-index: 0;
-}
-
-.blocNoteImage2 {
-	position: absolute;
-	bottom: -25%;
-	left: 45%;
-	z-index: 1;
-	transform: scale(1.27);
-}
-
-.blocNoteImageLine2 {
-	position: absolute;
-    bottom: -18%;
-    left: 48%;
-	z-index: 2;
-	transform: scale(1.30);
-}
-
-.blocNote2 {
-	position: absolute;
-    top: 139%;
-    left: 0%;
-	line-height: 1.27;
-	z-index: 3;
-	transform: rotate(-6.6deg);
-}
-
-.enSavoirPlus2 {
-	position: absolute;
-    top: 41%;
-    left: 10%;
-    transform: scale(0.3);
-    z-index: 3;
-}
-
-
-
-/* One minute art history */
-
-.blocNoteImage3 {
-	position: absolute;
-	top: 12%;
-	left: -1%;
-	z-index: 1;
-	transform: scale(1.2);
-}
-
-.blocNoteImageLine3 {
-	position: absolute;
-    top: 22%;
-    left: 3%;
-	z-index: 2;
-    line-height: 1.1;
-	transform: scale(1.15);
-}
-
-.blocNote3 {
-	position: absolute;
-    color: black;
-    top: 22.5%;
-    left: 2%;
-	z-index: 3;
-    line-height: 1.2;
-	transform: rotate(-6.4deg) scale(0.95);
-}
-
-.blocNote3-2 {
-	position: absolute;
-    color: black;
-    top: 45.5%;
-    left: 3%;
-	z-index: 3;
-    line-height: 1.2;
-	transform: rotate(-6.4deg) scale(0.95);
-}
-
-.imgOeuvre3 {
-    position: absolute;
-	bottom: 12%;
-	right: 8%;
-    transform: scale(1.2);
-	z-index: 3;
-}
-
-.TitreOeuvre2 {
-	position: absolute;
-    top: 33%;
-    right: 20%;
-    color: black;
-    z-index: 1;
-    line-height: 0.7;
-}
-
-.trombone {
-	position: absolute;
-	top: -4%;
-	left: -6.5%;
-	z-index: 4;
-	transform: scale(1.1);
-}
-
-.scotchBlanc {
-	position: absolute;
-	top: 38%;
-	left: 58%;
-	z-index: 4;
-	transform: scale(1.2);
-}
-
-
-
-/* Niki de saint phalle */
-
-.boutonOeuvre4 {
-	position: absolute;
-    top: 3%;
-    left: -10.5%;
-    transform: scale(0.3);
-    z-index: 1;
-}
-
-.imgOeuvre4 {
-    position: absolute;
-	top: -7%;
-	left: -4%;
-    transform: scale(1.2);
-	z-index: 0;
-}
-
-.tromboneVenus {
-	position: absolute;
-	top: 40%;
-	right: -6.9%;
-	z-index: 2;
-	transform: scale(0.9) rotate(180deg);
-}
-
-.venusInspiration {
-    position: absolute;
-	top: 20.5%;
-	right: -9%;
-    transform: scale(1.2);
-	z-index: 0;
-}
-
-.inspiration {
-	position: absolute;
-    top: 11%;
-    left: 41%;
-    transform: scale(0.1) rotate(-10deg);
-    z-index: 1;
-}
-
-.TextCentral {
-	position: absolute;
-    bottom: 5%;
-    left: 35%;
-    z-index: 1;
-}
-
-#TextC {
-	font-weight:200;
-	font-size: 24px;
-	font-family: "PatrickHand";
-    color: black;
-    line-height: 1.4;
+    z-index: 0;
 }
 
 .placementCarton {
@@ -487,65 +149,96 @@ a[href="#"] {
     z-index: 4;
 }
 
-.scotchB {
+.scotchCarton {
 	position: absolute;
-    top: 18%;
-    left: 40%;
+    top: 15%;
+    left: 35%;
     transform: scale(1.6);
     z-index: 5;
 }
 
-.textCarton {
-	position: absolute;
-    top: 35%;
-    left: 27.5%;
-    color: black;
-    text-align: center;
-    transform: scale(1.2) rotate(-5deg);
-    z-index: 5;
+.fondCubeHD {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    z-index: 0;
 }
 
-#textCa {
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Module 1 Salle 1 */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Leonard de vinci */
+
+
+.TextLeonard{
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreLeonard {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreLeonard {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuLeaonard {
 	font-weight:200;
-	font-size: 24px;
+	font-size: 20px;
 	font-family: "PatrickHand";
     color: black;
-    line-height: 1.4;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
 }
 
-#sousTextCa {
-	font-weight:bold;
-	font-size: 16px;
-	font-family: "PatrickHandSD";
+
+
+.TextOeuvreLeonard {
+	position: absolute;
+    top: 77%;
+    left: 7%;
     color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreLeonard {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreLeonard {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreLeonard {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
 }
 
 
-.imgOeuvreFull4 {
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    transform: scale(1.2);
-    z-index: 0;
-}
 
-.imgOeuvreFull4-2 {
-    position: absolute;
-    top: -10%;
-    left: 25%;
-    transform: scale(1.2);
-    z-index: 0;
-}
-
-.inspirationTitle {
-    position: absolute;
-    top: -90%;
-    left: -200%;
-    transform: scale(0.2);
-    z-index: 0;
-}
-
-.boutonOeuvre4-2 {
+.boutonOeuvreLeonard {
 	position: absolute;
     top: 0%;
     left: -6%;
@@ -553,7 +246,446 @@ a[href="#"] {
     z-index: 2;
 }
 
-.imgOeuvre4-2 {
+.imgOeuvreLeonard {
+	position: absolute;
+    top: -4%;
+    left: -2%;
+    transform: scale(1.1);
+    z-index: 0;
+}
+
+.enSavoirPlusLeonard {
+	position: absolute;
+    top: 8%;
+    left: 12%;
+    transform: scale(0.3);
+    z-index: 3;
+}
+
+
+
+.blocNoteLeonard {
+	position: absolute;
+	top: 28%;
+	left: 45%;
+	z-index: 1;
+	transform: scale(1.3);
+}
+
+.blocNoteLigneLeonard {
+	position: absolute;
+	top: 38%;
+	left: 48%;
+	z-index: 2;
+	transform: scale(1.3);
+}
+
+.blocNoteContenuLeonard {
+	position: absolute;
+	top: 32%;
+	left: 47%;
+    right: 12%;
+	line-height: 1.1;
+	z-index: 3;
+	transform: rotate(-6.5deg);
+    text-align: justify;
+}
+
+#ContenuBlocLeaonard {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 800px;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+.imgFullLeonard {
+    position: absolute;
+    top: -10%;
+    left: 20%;
+    transform: scale(1.2);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Rembrandt */
+
+
+.boutonOeuvreRembrandt {
+	position: absolute;
+    top: 2%;
+    left: -9%;
+    transform: scale(0.3);
+    z-index: 1;
+}
+
+.imgOeuvreRembrandt {
+    position: absolute;
+	top: -9%;
+	left: -4%;
+    transform: scale(1.08);
+	z-index: 0;
+}
+
+.enSavoirPlusRembrandt {
+	position: absolute;
+    top: 35%;
+    left: 10%;
+    transform: scale(0.3);
+    z-index: 3;
+}
+
+
+
+.TextRembrandt{
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreRembrandt {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+    letter-spacing: 0.01px;
+}
+
+#SousTitreRembrandt {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+    letter-spacing: 0.01px;
+}
+
+#ContenuRembrandt{
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.blocNoteRembrandt {
+	position: absolute;
+	bottom: -19%;
+	left: 45%;
+	z-index: 1;
+	transform: scale(1.27);
+}
+
+.blocNoteLigneRembrandt {
+	position: absolute;
+    bottom: -12%;
+    left: 48%;
+	z-index: 2;
+	transform: scale(1.30);
+}
+
+.blocNoteContenuRembrandt {
+	position: absolute;
+    top: 128%;
+    left:3%;
+	line-height: 1.1;
+	z-index: 5;
+	transform: rotate(-6.6deg);
+}
+
+#ContenuBlocRembrandt {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    letter-spacing: 1.1px;
+}
+
+
+
+.TextOeuvreRembrandt {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreRembrandt {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreRembrandt {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreRembrandt {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+.imgFullRembrandt {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    transform: scale(1.2);
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* One minute art history / OMAH */
+
+
+.blocNoteOMAH {
+	position: absolute;
+	top: 12%;
+	left: -1%;
+	z-index: 1;
+	transform: scale(1.2);
+}
+
+.blocNoteLigneOMAH {
+	position: absolute;
+    top: 22%;
+    left: 3%;
+	z-index: 2;
+    line-height: 1.1;
+	transform: scale(1.15);
+}
+
+.blocNoteContenuOMAH {
+	position: absolute;
+    color: black;
+    top: 19%;
+    left: 2%;
+    right: 60%;
+	z-index: 3;
+    text-align: justify;
+    line-height: 1.02;
+	transform: rotate(-6.7deg) scale(0.95);
+}
+
+.blocNoteContenuOMAH2 {
+	position: absolute;
+    color: black;
+    top: 45%;
+    left: 3.7%;
+    right: 58%;
+	z-index: 3;
+    text-align: justify;
+    line-height: 1.02;
+	transform: rotate(-6.7deg) scale(0.95);
+}
+
+#ContenuBlocOMAH {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    letter-spacing: 1.1px;
+}
+
+
+
+.imgOeuvreOMAH {
+    position: absolute;
+	bottom: 12%;
+	right: 8%;
+    transform: scale(1.2);
+	z-index: 3;
+}
+
+.TextOeuvreOMAH {
+	position: absolute;
+    top: 32%;
+    right: 20%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+#TitreOeuvreOMAH {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreOMAH {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+
+.trombone {
+	position: absolute;
+	top: -4%;
+	left: -6.5%;
+	z-index: 4;
+	transform: scale(1.1);
+}
+
+.scotchBlancOMAH {
+	position: absolute;
+	top: 38%;
+	right: 18%;
+	z-index: 4;
+	transform: scale(1.2);
+}
+
+.goToPlayOMAH {
+	position: absolute;
+	top: 65%;
+	right: 28%;
+	z-index: 4;
+	transform: scale(1.2);
+}
+
+.playerVideoOMAH {
+    position: absolute;
+    top: 5%;
+    left: 0%;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Niki Venus */
+
+
+.boutonOeuvreNiki {
+	position: absolute;
+    top: 3%;
+    left: -10.5%;
+    transform: scale(0.3);
+    z-index: 1;
+}
+
+.imgOeuvreNiki {
+    position: absolute;
+	top: -7%;
+	left: -4%;
+    transform: scale(1.2);
+	z-index: 0;
+}
+
+
+
+.TextNiki {
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreNiki {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreNiki {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuNiki {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 300px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.TextOeuvreNiki {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreNiki {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreNiki {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreNiki {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+
+.TextNiki2 {
+	position: absolute;
+    bottom: 10%;
+    left: 35%;
+    z-index: 1;
+}
+
+#ContenuNiki2 {
+	font-weight:200;
+	font-size: 24px;
+	font-family: "PatrickHand";
+    color: black;
+    line-height: 1.4;
+}
+
+
+.boutonOeuvreVenus {
+	position: absolute;
+    top: 0%;
+    left: -6%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.imgOeuvreVenus {
     position: absolute;
 	top: -3%;
 	left: 0%;
@@ -561,30 +693,2240 @@ a[href="#"] {
 	z-index: 0;
 }
 
-.TitreInspiration {
+.TextVenus {
+	position: absolute;
+    top: 30%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreVenus {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreVenus {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuVenus {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 300px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.TextOeuvreVenus {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreVenus {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreVenus {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreVenus {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+.inspirationTitreVenus {
     position: absolute;
-	top: 25%;
-	left: 45%;
+    top: -25%;
+    left: -10%;
+    transform: scale(0.2);
+    z-index: 0;
+}
+
+
+
+.tromboneCarton {
+	position: absolute;
+	top: 40%;
+	right: -6.9%;
+	z-index: 2;
+	transform: scale(0.9) rotate(180deg);
+}
+
+.venusCarton {
+    position: absolute;
+	top: 20.5%;
+	right: -9%;
+    transform: scale(1.2);
 	z-index: 0;
 }
 
-#TitleInspiration {
-	font-weight: bold;
+.inspirationCarton {
+	position: absolute;
+    top: 11%;
+    left: 41%;
+    transform: scale(0.1) rotate(-10deg);
+    z-index: 1;
+}
+
+
+
+
+.TextCarton {
+	position: absolute;
+    top: 35%;
+    left: 20%;
+    color: black;
+    text-align: center;
+    transform: scale(1.2) rotate(-5deg);
+    z-index: 5;
+}
+
+#ContenuCarton {
+	font-weight:200;
+	font-size: 40px;
+	font-family: "Hurricane";
+    color: black;
+    line-height: 1.1;
+}
+
+#SousTextCarton {
+	font-weight:bold;
 	font-size: 22px;
 	font-family: "PatrickHandSD";
     color: black;
-
 }
 
-#TextInspiration {
+
+.imgFullNiki {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    transform: scale(1.2);
+}
+
+
+.imgFullVenus {
+    position: absolute;
+    top: -10%;
+    left: 20%;
+    transform: scale(1.2);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Odalisque */
+
+.imgOeuvreOdalisque {
+    position: absolute;
+    top: -69%;
+    left: -73%;
+    transform: scale(0.18) rotate(-20deg);
+}
+
+.boutonOeuvreOdalisque {
+	position: absolute;
+    top: 0%;
+    left: -8%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+
+
+.TextOeuvreOdalisque {
+	position: absolute;
+    top: 50%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreOdalisque {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreOdalisque {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+
+.TextOdalisque {
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+.TextOdalisque2 {
+	position: absolute;
+    top: 40%;
+    left: 25%;
+    right: 10%;
+    color: black;
+    overflow: hidden;
+    z-index: 1;
+    overflow-y: auto;
+    display: block;
+    text-align: justify;
+    max-height: 350px;
+}
+
+#TitreOdalisque {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreOdalisque {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuOdalisque {
 	font-weight:200;
-	font-size: 18px;
-    letter-spacing: 1.5px;
-    line-height: 1.2;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+.imgFullOdalisque {
+    position: absolute;
+    top: -30%;
+    left: -41%;
+    transform: scale(0.65);
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Angelica Dass */
+
+.imgOeuvreDass {
+    position: absolute;
+    bottom: -11%;
+    right: 10%;
+    transform: scale(0.25) rotate(-20deg);
+}
+
+.boutonOeuvreDass {
+    position: absolute;
+    top: 2%;
+    left: -9%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+
+
+.TextOeuvreDass {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreDass {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreDass {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+
+.TextDass {
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreDass {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreDass {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuDass {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.imgFullDass {
+    position: absolute;
+    top: -35%;
+    left: -24%;
+    transform: scale(0.65);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Module 1 Salle 2 */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Becca Saladin */
+
+
+.boutonOeuvreBecca {
+	position: absolute;
+    top: 4%;
+    left: -14%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.imgOeuvreBecca {
+    position: absolute;
+    top: -12%;
+    left: -10%;
+}
+
+
+
+.TextBecca{
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreBecca {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreBecca {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuBecca {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.TextOeuvreBecca {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreBecca {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreBecca {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreBecca {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+.imgFullBecca {
+    position: absolute;
+    top: -6%;
+    left: -14%;
+    transform: scale(0.9);
+}
+
+.imgFullBecca2 {
+    position: absolute;
+    top: -6%;
+    left: -14%;
+    transform: scale(0.9);
+}
+
+.imgFullBecca3 {
+    position: absolute;
+    top: -6%;
+    left: -14%;
+    transform: scale(0.9);
+}
+
+.imgFullBecca4 {
+    position: absolute;
+    top: -6%;
+    left: -14%;
+    transform: scale(0.9);
+}
+
+.imgFullBecca5 {
+    position: absolute;
+    top: -6%;
+    left: -14%;
+    transform: scale(0.9);
+}
+
+.imgFullBecca6 {
+    position: absolute;
+    top: -6%;
+    left: -14%;
+    transform: scale(0.9);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Meitner */
+
+.boutonOeuvreMeitner {
+	position: absolute;
+    top: 0%;
+    left: -8%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.imgOeuvreMeitner {
+    position: absolute;
+    top: -2%;
+    left: 0%;
+    transform: scale(1.2);
+    z-index: 0;
+}
+
+
+.TextMeitner{
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreMeitner {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreMeitner {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuMeitner {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.TextOeuvreMeitner {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreMeitner {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreMeitner {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreMeitner {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+.TextCarton2 {
+	position: absolute;
+    top: 35%;
+    left: 16%;
+    color: black;
+    text-align: center;
+    transform: scale(1.2) rotate(-6deg);
+    z-index: 5;
+}
+
+#ContenuCarton {
+	font-weight:200;
+	font-size: 40px;
+	font-family: "Hurricane";
+    color: black;
+    line-height: 1;
+}
+
+#SousTextCarton {
+	font-weight:bold;
+	font-size: 22px;
+	font-family: "PatrickHandSD";
+    color: black;
+}
+
+.imgFullMeitner {
+    position: absolute;
+    top: 0%;
+    left: 25%;
+    transform: scale(1.3);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Francisco Goya */
+
+
+
+
+.boutonOeuvreGoya {
+	position: absolute;
+    top: 0%;
+    left: -8%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.imgOeuvreGoya {
+    position: absolute;
+    top: -2%;
+    left: 0%;
+    transform: scale(1.2);
+    z-index: 0;
+}
+
+
+.TextGoya{
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+}
+
+#TitreGoya {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreGoya {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuGoya {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    text-align: justify;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.TextOeuvreGoya {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreGoya {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreGoya {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreGoya {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+.imgFullGoya {
+    position: absolute;
+    top: 0%;
+    left: 25%;
+    transform: scale(1.3);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Apo Whang-Od */
+
+
+.boutonOeuvreApo {
+	position: absolute;
+    top: 0%;
+    left: -8%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.imgOeuvreApo {
+    position: absolute;
+    top: -2%;
+    left: 0%;
+    transform: scale(1.2);
+    z-index: 0;
+}
+
+
+.TextApo{
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+}
+
+#TitreApo {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreApo {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuApo {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    text-align: justify;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.TextOeuvreApo {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreApo {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreApo {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreApo {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+
+.TextCarton3 {
+	position: absolute;
+    top: 35%;
+    left: 16%;
+    color: black;
+    text-align: center;
+    transform: scale(1.2) rotate(-6deg);
+    z-index: 5;
+}
+
+#ContenuCarton {
+	font-weight:200;
+	font-size: 40px;
+	font-family: "Hurricane";
+    color: black;
+    line-height: 1;
+}
+
+#SousTextCarton {
+	font-weight:bold;
+	font-size: 22px;
+	font-family: "PatrickHandSD";
+    color: black;
+}
+
+.imgFullApo {
+    position: absolute;
+    top: 0%;
+    left: 25%;
+    transform: scale(1.3);
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Alper Yesiltas */
+
+.imgOeuvreAlper {
+    position: absolute;
+    top: -12%;
+    left: -3%;
+    transform: scale(0.9);
+    z-index: 0;
+}
+
+.boutonOeuvreAlper {
+	position: absolute;
+    top: -2%;
+    left: -4%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+
+
+.TextAlper{
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+}
+
+#TitreAlper {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreAlper {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuAlper {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    text-align: justify;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.TextOeuvreAlper {
+    position: absolute;
+    top: 65%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+.TextOeuvreAlper2 {
+    position: absolute;
+    top: 65%;
+    left: 25.5%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+.TextOeuvreAlper3 {
+    position: absolute;
+    top: 77%;
+    left: 25.5%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+.TextOeuvreAlper4 {
+    position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+#TitreOeuvreAlper {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreAlper {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreAlper {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+.enSavoirPlusAlper {
+    position: absolute;
+    top: 7%;
+    left: 15%;
+    transform: scale(0.4);
+    z-index: 2;
+}
+
+
+
+
+.blocNoteAlper {
+	position: absolute;
+	top: 28%;
+	left: 50%;
+	z-index: 1;
+	transform: scale(1.3);
+}
+
+.blocNoteLigneAlper {
+	position: absolute;
+	top: 38%;
+	left: 53%;
+	z-index: 2;
+	transform: scale(1.3);
+}
+
+.blocNoteContenuAlper {
+	position: absolute;
+    top: 30.5%;
+    left: 50%;
+    right: 5%;
+	z-index: 3;
+    line-height: 1.15;
+	transform: rotate(-6.7deg) scale(0.95);
+    text-align: justify;
+}
+
+#ContenuBlocAlper {
+	font-weight:200;
+	font-size: 20px;
+    letter-spacing: 1.1px;
 	font-family: "PatrickHand";
     color: black;
 }
 
+.imgFullAlper {
+    position: absolute;
+    top: 5%;
+    left: 25%;
+    transform: scale(1.3);
+}
+
+.imgFullAlper2 {
+    position: absolute;
+    top: 5%;
+    left: 25%;
+    transform: scale(1.3);
+}
+
+.imgFullAlper3 {
+    position: absolute;
+    top: 5%;
+    left: 18%;
+    transform: scale(1.3);
+}
+
+.imgFullAlper4 {
+    position: absolute;
+    top: 5%;
+    left: 25%;
+    transform: scale(1.3);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Roman Opalka Chiffre */
+
+.imgOeuvreRomanChiffre {
+    position: absolute;
+    top: -9%;
+    left: -10%;
+    transform: scale(0.7) rotate(-10deg);
+    z-index: 0;
+}
+
+.boutonOeuvreRomanChiffre {
+	position: absolute;
+    top: 2%;
+    left: -2%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.pinceRomanChiffre {
+	position: absolute;
+    top: -11.5%;
+    left: 35%;
+    transform: scale(1.1);
+    z-index: 1;
+}
 
 
+
+.TextRomanChiffre{
+	position: absolute;
+    top: 50%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreRomanChiffre {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreRomanChiffre {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuRomanChiffre {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.TextOeuvreRomanChiffre {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreRomanChiffre {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreRomanChiffre {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreRomanChiffre {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+.imgFullRomanChiffre {
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    transform: scale(1.3);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Roman Opalka Visage */
+
+
+.imgOeuvreRomanVisage {
+    position: absolute;
+    top: -17%;
+    left: -25%;
+    transform: scale(0.6) rotate(-15deg);
+    z-index: 0;
+}
+
+.boutonOeuvreRomanVisage {
+	position: absolute;
+    top: 2%;
+    left: -17%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+
+
+.TextRomanVisage{
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreRomanVisage {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreRomanVisage {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuRomanVisage {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.TextOeuvreRomanVisage {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreRomanVisage {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreRomanVisage {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreRomanVisage {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+
+.imgFullRomanVisage {
+    position: absolute;
+    top: 10%;
+    left: 8%;
+    transform: scale(1.2);
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Van Gogh */
+
+.imgOeuvreVanGogh {
+    position: absolute;
+    top: -14%;
+    left: 25%;
+    transform: scale(0.8) rotate(-20deg);
+    z-index: 0;
+}
+
+.boutonOeuvreVanGogh {
+	position: absolute;
+    top: 3%;
+    left: 20%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.pinceVanGogh {
+	position: absolute;
+    top: -11.5%;
+    left: 42%;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+
+
+.TextOeuvreVanGogh {
+    position: absolute;
+    top: 77%;
+    right: 5%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+#TitreOeuvreVanGogh {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreVanGogh {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreVanGogh {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+.imgFullVanGogh{
+    position: absolute;
+    top: -5%;
+    left: 21%;
+    transform: scale(1.3);
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Ron Mueck */
+
+
+.imgOeuvreMueck {
+    position: absolute;
+    top: -10%;
+    left: 13%;
+    transform: scale(0.8) rotate(-20deg);
+    z-index: 0;
+}
+
+.boutonOeuvreMueck {
+	position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.pinceMueck {
+	position: absolute;
+    top: -11.5%;
+    left: 42%;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+
+
+.TextOeuvreMueck {
+    position: absolute;
+    top: 77%;
+    right: 5%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+#TitreOeuvreMueck {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreMueck {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreMueck {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+.imgFullMueck{
+    position: absolute;
+    top: 11%;
+    left: 9%;
+    transform: scale(1.3);
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Module 1 Salle 3 */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Video Basquiat */
+
+.videoBasquiat {
+    position: absolute;
+    top: -5%;
+    left: 11%;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Marco Melgrati Blonde */
+
+
+
+.imgOeuvreMelgratiBlonde {
+    position: absolute;
+    top: -18%;
+    left: 23%;
+    transform: scale(0.7) rotate(-20deg);
+    z-index: 0;
+}
+
+.boutonOeuvreMelgratiBlonde {
+	position: absolute;
+    top: 3%;
+    left: 22%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.pinceMelgratiBlonde {
+	position: absolute;
+    top: -11.5%;
+    left: 42%;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+
+
+.TextOeuvreMelgratiBlonde {
+    position: absolute;
+    top: 77%;
+    right: 20%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+#TitreOeuvreMelgratiBlonde {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreMelgratiBlonde {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreMelgratiBlonde {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+.imgFullMelgratiBlonde{
+    position: absolute;
+    top: 0%;
+    left: 20%;
+    transform: scale(1.2);
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Paula Modersohn Becker */
+
+.imgOeuvrePMB {
+    position: absolute;
+    top: -30%;
+    left: -5%;
+    transform: scale(0.45) rotate(-15deg);
+    z-index: 0;
+}
+
+.boutonOeuvrePMB {
+	position: absolute;
+    top: -5%;
+    left: -1%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+
+
+.TextPMB{
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+}
+
+#TitrePMB {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitrePMB {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuPMB {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    text-align: justify;
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.TextOeuvrePMB {
+	position: absolute;
+    top: 53%;
+    left: 7%;
+    right: 60%;
+    color: black;
+    text-align: justify;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+#TitreOeuvrePMB {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvrePMB {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvrePMB {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+.TextCarton4 {
+	position: absolute;
+    top: 40%;
+    left: 20%;
+    color: black;
+    text-align: center;
+    transform: scale(1.2) rotate(-6deg);
+    z-index: 5;
+}
+
+#ContenuCarton {
+	font-weight:200;
+	font-size: 40px;
+	font-family: "Hurricane";
+    color: black;
+    line-height: 1;
+}
+
+#SousTextCarton {
+	font-weight:bold;
+	font-size: 22px;
+	font-family: "PatrickHandSD";
+    color: black;
+}
+
+.imgFullPMB {
+    position: absolute;
+    top: 0%;
+    left: 25%;
+    transform: scale(1.2);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Jean Michel Basquiat */
+
+
+.imgOeuvreJMB {
+    position: absolute;
+    top: -22%;
+    left: -8%;
+    transform: scale(0.6) rotate(-15deg);
+    z-index: 0;
+}
+
+.boutonOeuvreJMB {
+	position: absolute;
+    top: -3%;
+    left: -7%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+
+.TextJMB{
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+}
+
+#TitreJMB {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreJMB {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuJMB {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    text-align: justify;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.TextOeuvreJMB {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreJMB {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreJMB {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreJMB {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+.TextCarton5 {
+	position: absolute;
+    top: 35%;
+    left: 25%;
+    color: black;
+    text-align: center;
+    transform: scale(1.2) rotate(-6deg);
+    z-index: 5;
+}
+
+#ContenuCarton {
+	font-weight:200;
+	font-size: 40px;
+	font-family: "Hurricane";
+    color: black;
+    line-height: 1;
+}
+
+#SousTextCarton {
+	font-weight:bold;
+	font-size: 22px;
+	font-family: "PatrickHandSD";
+    color: black;
+}
+
+.imgFullJMB {
+    position: absolute;
+    top: 0%;
+    left: 25%;
+    transform: scale(1.2);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Marco Melgrati Reflet */
+
+.imgOeuvreMMR {
+    position: absolute;
+    top: -5%;
+    left: 0%;
+    transform: scale(0.35) rotate(-30deg);
+    z-index: 0;
+}
+
+.imgOeuvreMMR2 {
+    position: absolute;
+    top: -25%;
+    left: -20%;
+    transform: scale(0.4) rotate(-15deg);
+    z-index: 0;
+}
+
+.tromboneMMR {
+    position: absolute;
+    top: 29%;
+    left: 8%;
+    transform: scale(1.2) rotate(-2deg);
+    z-index: 3;
+}
+
+
+
+.boutonOeuvreMMR {
+	position: absolute;
+    top: -2%;
+    left: -6%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+
+
+.TextMMR{
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+}
+
+#TitreMMR {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreMMR {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuMMR {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    text-align: justify;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+.TextOeuvreMMR {
+    position: absolute;
+    bottom: 8%;
+    left: 5%;
+    right: 40%;
+    color: black;
+    line-height: 0.7;
+}
+
+.TextOeuvreMMR2 {
+    position: absolute;
+    bottom: 32%;
+    left: 5%;
+    line-height: 0.7;
+    color: black;
+}
+
+
+#TitreOeuvreMMR {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreMMR {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreMMR {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+.TextCarton6 {
+	position: absolute;
+    top: 40%;
+    left: 15%;
+    color: black;
+    text-align: center;
+    transform: scale(1.2) rotate(-6deg);
+    z-index: 5;
+}
+
+#ContenuCarton {
+	font-weight:200;
+	font-size: 40px;
+	font-family: "Hurricane";
+    color: black;
+    line-height: 1;
+}
+
+#SousTextCarton {
+	font-weight:bold;
+	font-size: 22px;
+	font-family: "PatrickHandSD";
+    color: black;
+}
+
+.imgFullMMR {
+    position: absolute;
+    top: 0%;
+    left: 25%;
+    transform: scale(1.2);
+}
+
+.imgFullMMR2 {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    transform: scale(1.2);
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Module 2 Salle 1 */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Frida Kahlo La colonne brisée */
+
+.imgOeuvreFrida {
+    position: absolute;
+    top: -8%;
+    left: 0%;
+}
+
+.boutonOeuvreFrida {
+    position: absolute;
+    top: -2%;
+    left: -3%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+
+
+.TextOeuvreFrida {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreFrida {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreFrida {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+
+.TextFrida {
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreFrida {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreFrida {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuFrida {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.imgFullFrida {
+    position: absolute;
+    top: -10%;
+    left: 20%;
+    transform: scale(1.2);
+}
+
+#underlineColorFrida {
+	background-color: #FEF3A5;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Frida Kahlo Autoportrait au collier */
+
+.TextFridaAuto{
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreFridaAuto {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreFridaAuto {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuFridaAuto {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.TextOeuvreFridaAuto {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreFridaAuto {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreFridaAuto {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreFridaAuto {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+
+.boutonOeuvreFridaAuto {
+	position: absolute;
+    top: 0%;
+    left: -6%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.imgOeuvreFridaAuto {
+	position: absolute;
+    top: -4%;
+    left: -2%;
+    transform: scale(1.1);
+    z-index: 0;
+}
+
+.enSavoirPlusFridaAuto {
+	position: absolute;
+    top: 8%;
+    left: 12%;
+    transform: scale(0.3);
+    z-index: 3;
+}
+
+
+
+.blocNoteFridaAuto {
+	position: absolute;
+	top: 28%;
+	left: 45%;
+	z-index: 1;
+	transform: scale(1.3);
+}
+
+.blocNoteLigneFridaAuto {
+	position: absolute;
+	top: 38%;
+	left: 48%;
+	z-index: 2;
+	transform: scale(1.3);
+}
+
+.blocNoteContenuFridaAuto {
+	position: absolute;
+	top: 32%;
+	left: 47%;
+    right: 12%;
+	line-height: 1.1;
+	z-index: 3;
+	transform: rotate(-6.5deg);
+    text-align: justify;
+}
+
+#ContenuBlocFridaAuto {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 800px;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+.imgFullFridaAuto {
+    position: absolute;
+    top: -10%;
+    left: 20%;
+    transform: scale(1.2);
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Gustave Courbet Le Désespéré */
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Vincent van Gogh Autoportrait à l'oreille bandée */
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Rembrandt van Rijn Rembrandt aux yeux hagards */
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Module 2 Salle 2 */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Nicolas Amiard */
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Valie export BODY SIGN ACTION B */
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Shannon Holt Hérons */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Wim Delvoye Tim, Tatooed skin */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Shelley Jackson Captures du projet Skin */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Shannon Holt Crocodiles */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Shannon Holt Renard */
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Module 2 Salle 3 */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Orlan Self-hybridations précolombiennes */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Orlan Self-hybridations précolombiennes n°2 */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Cindy Sherman Untitled #141 */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Man Ray Portrait de Rrose Sélavy */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Portrait d’un souverain Maya, Bonampak */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Buste d’un haut dignitaire maya */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Cindy Sherman Untitled #584 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Module 3 Salle 1 */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Rineke Dijkstra Série Beach portrait */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Sandro Botticelli La Naissance de Vénus */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Rankin Shereen & Mahalia */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* John Yuyi */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Johanna Jaskowska Cyborg#6 */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Jonh Yuyi Twitter */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Johanna Jaskowska Cyborg#4 */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Johanna Jaskowska Cyborg#7 */
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Module 3 Salle 2 */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Nicolas Amiard La Grande Odalisque d’Ingres */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Nicolas Amiard Hercule au repos */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Ilya Volykhine Toute son attention */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Jamie Lee Fabuleux cheveux chérie */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Francesca Woodman Autoportrait à 13 ans */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Robert Cornelius Autoportrait */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Andy Warhol Self-Portrait */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Kevin Lau Réseaux */
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Module 3 Salle 3 */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Christian Boltanski Vitrine de réféence */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Banksy La Fille au ballon / L’Amour est dans la poubelle */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Jonathan Harris We Feel Fine */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Yves Klein, performance */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Yves Klein Anthropométrie de l’époque bleue */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Banksy Les Glaneuses */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Jean-François Millet Les Glaneuses */
 

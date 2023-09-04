@@ -3,18 +3,96 @@
 <head>
 	<title>krpano</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="no" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<meta http-equiv="x-ua-compatible" content="IE=edge" />
+    
 	<style>
-		html { height:100%; }
-		body { height:100%; overflow:hidden; margin:0; padding:0; font-family:Arial,Helvetica,sans-serif; font-size:16px; color:#FFFFFF; background-color:rgba(0, 0, 0, 1); }
+		html { height: 100%; }
+		body { height:100%; width: 100%; overflow:hidden; margin:0; padding:0; font-family:Arial,Helvetica,sans-serif; font-size:16px; color:#FFFFFF; background-color:rgba(0, 0, 0, 1); }
 	</style>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 <script src="viewer.js"></script>
+<script>
+    function pauseVideo1() 
+    {    
+        var video = document.getElementById("Video1");
+        video.pause();
+        video.currentTime = 0;
+    }
+
+    function pauseVideo2() 
+    {    
+        var video = document.getElementById("Video2");
+        video.pause();
+        video.currentTime = 0;
+    }
+
+    function playAudio1() {
+        var audio = document.getElementById("S1");
+        audio.play();
+        audio.volume = 0.1;
+    }
+
+    function playAudio1() {
+        var audio = document.getElementById("S1");
+        audio.play();
+        audio.volume = 0.1;
+    }
+
+    function playAudio2() {
+        var audio = document.getElementById("S2");
+        audio.play();
+        audio.volume = 0.1;
+    }
+
+    function playAudio3() {
+        var audio = document.getElementById("S3");
+        audio.play();
+        audio.volume = 0.1;
+    }
+
+    function reduceAudio1() {
+        var audio = document.getElementById("S1");
+        audio.volume = 0.001;
+    }
+
+    function reduceAudio2() {
+        var audio = document.getElementById("S2");
+        audio.volume = 0.001;
+    }
+
+    function reduceAudio3() {
+        var audio = document.getElementById("S3");
+        audio.volume = 0.001;
+    }
+
+    function stopAudio1() {
+        var audio = document.getElementById("S1");
+        audio.pause();
+        audio.currentTime = 0;
+    }
+
+    function stopAudio2() {
+        var audio = document.getElementById("S2");
+        audio.pause();
+        audio.currentTime = 0;
+    }
+
+    function stopAudio3() {
+        var audio = document.getElementById("S3");
+        audio.pause();
+        audio.currentTime = 0;
+    }
+
+
+
+
+    
+</script>
 
 <div id="pano" style="width:100%;height:100%;">
 	<noscript><table style="width:100%;height:100%;"><tr style="vertical-align:middle;text-align:center;"><td>ERROR:<br><br>Javascript not activated<br><br></td></tr></table></noscript>
@@ -23,10 +101,18 @@
 	</script>
 </div>
 
+<audio id="S1" src="./Audio/audioS1.mp3"></audio>
+<audio id="S2" src="./Audio/audioS2.mp3"></audio>
+<audio id="S3" src="./Audio/audioS3.mp3"></audio>
 
 
 
+<!-- Module 1 - Salle 1 -->
+
+<!-- Leonard de vinci -->
 <div class="popin" id="popin1">
+    
+
     <div class="pince">
     	<img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
     </div>
@@ -35,22 +121,14 @@
         <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
     </div>
 
-    <div class="imgOeuvre">
-    	<img src="./Assets/Oeuvre_1/DeVinci-Homme-de-Vitruve.png" alt="Description de l'image">
-    </div>
-
     <div class="scotch">
         <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
     </div>
 
-    <div class="boutonOeuvre">
-        <a href="#popin3">
-            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
-        </a>
-    </div>
-
     <div class="backArrow">
-        <img src="./Assets/Elements/retourNoir.svg" alt="Description de l'image">
+        <a href="#popin5">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>    
     </div>
 
     <div class="nextArrow">
@@ -61,14 +139,22 @@
 
     <div class="close">
         <a href="#popin0">
-            <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+            <img onclick="playAudio1()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
         </a>
     </div>
 
-    <div class="citation">
-        <a href="#popin1">
-            <img src="./Assets/Elements/citationOrale.png" alt="Description de l'image">
+    <div class="imgOeuvreLeonard">
+    	<img src="./Assets/Oeuvre_1/DeVinci-Homme-de-Vitruve.png" alt="Description de l'image">
+    </div>
+
+    <div class="boutonOeuvreLeonard">
+        <a href="#popin3">
+            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
         </a>
+    </div>
+
+    <div class="citationEcrite">
+            <img src="./Assets/Elements/citationEcrite.png" alt="Description de l'image">
     </div>
 
     <div class="enSavoirPlus">
@@ -77,40 +163,34 @@
         </a>
     </div>
 
-    <div class="Titre">
-        <a id="Title">
+    <div class="TextLeonard">
+        <a id="TitreLeonard">
             LÉONARD DE VINCI (1452-1519)<br>
         </a>
-        <a id="SubTitle">
+        <a id="SousTitreLeonard">
             et ses mesures « parfaites »<br><br>
         </a>
-        <a id="Text">
-            <br>Vers 1490, Léonard De Vinci décide de dessiner l’homme<br>
-            « de Vitruve », autrement dit : <span id="changeColor">« l’homme parfait »</span><br>
-            Tout en reprennant les idées de la statuaire de<br>
-            l’Antiquité gréco-romaine, il le dessine dans deux<br>
-            positions, jambes jointes et jambes écartées,<br>
-            bras tendus et bras levés.<br><br>
-            Il le représente avec des proportions calculées<br>
-            <span id="underlineColor">(de manière mathématique)</span> pour que son corps<br>
-            puisse s’inscrire dans les deux formes géométrique<br>
-            « parfaites » que sont le carré et le cercle.<br>
-            Même son nombril est au centre du cercle (d’ailleurs,<br>
-            au pied de l’homme se trouve une échelle de calcul.)<br>
+        <a id="ContenuLeaonard">
+            Vers 1490, Léonard De Vinci décide de dessiner l’homme « de Vitruve », autrement dit : <span id="changeColor">« l’homme parfait ».</span><br>
+            Tout en reprennant les idées de la statuaire de l’Antiquité gréco-romaine, il le dessine dans deux
+            positions, jambes jointes et jambes écartées, bras tendus et bras levés.
+            Il le représente avec des proportions calculées<span id="underlineColor">(de manière mathématique)</span> pour que son corps
+            puisse s’inscrire dans les deux formes géométrique « parfaites » que sont le carré et le cercle.
+            Même son nombril est au centre du cercle (d’ailleurs, au pied de l’homme se trouve une échelle de calcul).
         </a>
     </div>
 
-    <div class="TitreOeuvre">
-        <a id="TitleOeuvre">
+    <div class="TextOeuvreLeonard">
+        <a id="TitreOeuvreLeonard">
             Léonard de Vinci,<br>
         </a>
 
-        <a id="SubTitleOeuvre">
+        <a id="SousTitreOeuvreLeonard">
             Homme de Vitruve,<br>
             vers 1492<br>
         </a>
 
-        <a id="TextOeuvre">
+        <a id="SousTexteOeuvreLeonard">
             Plume, encre<br>
             et lavis sur papier<br>
         </a>
@@ -118,107 +198,109 @@
 </div>
 
 <div class="popin" id="popin2">
-
     <div class="pince">
-        <img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
+    	<img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
     </div>
 
 	<div class="logoVal">
         <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
     </div>
 
-    <div class="imgOeuvre">
-        <img src="./Assets/Oeuvre_1/DeVinci-Homme-de-Vitruve.png" alt="Description de l'image">
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
     </div>
-	
-	<div class="scotch">
-		<img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
-	</div>
 
-	<div class="boutonOeuvre">
-		<a href="#popin3">
-			<img src="./Assets/Elements/rond+.png" alt="Description de l'image">
-		</a>
-	</div>
-
-	<div class="backArrow">
-		<a href="#popin1">
-			<img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
-		</a>
-	</div>
-
-	<div class="nextArrow">
-		<a href="#popin3">
-			<img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
-		</a>
-	</div>
-
-	<div class="close">
-		<a href="#popin0">
-			<img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
-		</a>
-	</div>
-
-	<div class="citation">
-		<a href="#popin1">
-			<img src="./Assets/Elements/citationOrale.png" alt="Description de l'image">
-		</a>
-	</div>
-
-	<div class="enSavoirPlus1-2">
+    <div class="backArrow">
         <a href="#popin1">
-            <img src="./Assets/Elements/enSavoir+.png" alt="Description de l'image">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>    
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin3">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
         </a>
     </div>
 
-	<div class="blocNoteImage">
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio1()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+
+
+    <div class="imgOeuvreLeonard">
+    	<img src="./Assets/Oeuvre_1/DeVinci-Homme-de-Vitruve.png" alt="Description de l'image">
+    </div>
+
+    <div class="boutonOeuvreLeonard">
+        <a href="#popin3">
+            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="citationEcrite">
+        <a href="#popin1">
+            <img src="./Assets/Elements/citationEcrite.png" alt="Description de l'image">
+        </a>
+    </div>
+
+	<div class="enSavoirPlusLeonard">
+        <img src="./Assets/Elements/enSavoir+.png" alt="Description de l'image">
+    </div>
+
+	<div class="blocNoteLeonard">
 		<img src="./Assets/Elements/blocNotes.svg" alt="Description de l'image">
 	</div>
 
-	<div class="blocNoteImageLine">
+	<div class="blocNoteLigneLeonard">
 		<img src="./Assets/Elements/cadrillageBleu.svg" alt="Description de l'image">
 	</div>
 
-	<div class="Titre">
-		<a id="Title">
-			LÉONARD DE VINCI (1452-1519)<br>
-		</a>
-		<a id="SubTitle">
-			et ses mesures « parfaites »<br><br>
-		</a>
-		<div class="blocNote">
-			<a id="blocNoteText">
-				Cette oeuvre s’inspire d’un traité d’architecture<br>
-				antique rédigé par l’architecte et ingénieur militaire<br>
-				Vitruve ( c. 90 - c. 20 avant J.-C.), où ce dernier décrit<br>
-				justement, comment un corps humain idéal, présente des<br>
-				proportions idéales pour le corps humain, mais irréalistes<br>
-				peut servir d’unité de mesure, pour construire des édifices.<br>
-				Pourtant, ce système de mesure est difficile à appliquer.<br><br>
-				<span id="underlineColor">Car en réalité, chaque être humain a une taille et une<br>
-				morphologie différentes.</span><br><br>
-				Impossible de se baser sur un corps « normal » pour<br>
-				concevoir des édifices !<br>
-			</a>
-		</div>
-	</div>
-	<div class="TitreOeuvre">
-		<a id="TitleOeuvre">
-			Léonard de Vinci,<br>
-		</a>
-		<a id="SubTitleOeuvre">
-			Homme de Vitruve,<br>
-			vers 1492<br>
-		</a>
-		<a id="TextOeuvre">
-			Plume, encre<br>
-			et lavis sur papier<br>
-		</a>
-	</div>
+    <div class="TextLeonard">
+        <a id="TitreLeonard">
+            LÉONARD DE VINCI (1452-1519)<br>
+        </a>
+        <a id="SousTitreLeonard">
+            et ses mesures « parfaites »<br><br>
+        </a>
+    </div>
+    <div class="blocNoteContenuLeonard">
+        <a id="ContenuBlocLeaonard">
+            Cette oeuvre s’inspire d’un traité d’architecture
+            antique rédigé par l’architecte et ingénieur militaire
+            Vitruve ( c. 90 - c. 20 avant J.-C.),<br>
+            où ce dernier décrit justement, comment un corps humain idéal,
+            présente des proportions idéales pour le corps humain,
+            mais irréalistes peut servir d’unité de mesure, pour
+            construire des édifices.<br>
+            Pourtant, ce système de mesure est difficile à appliquer.
+            <span id="underlineColor">Car en réalité, chaque être humain a une taille et une morphologie différentes.</span>
+            Impossible de se baser sur un corps « normal » pour concevoir des édifices !
+        </a>
+    </div>
+
+
+    <div class="TextOeuvreLeonard">
+        <a id="TitreOeuvreLeonard">
+            Léonard de Vinci,<br>
+        </a>
+
+        <a id="SousTitreOeuvreLeonard">
+            Homme de Vitruve,<br>
+            vers 1492<br>
+        </a>
+
+        <a id="SousTexteOeuvreLeonard">
+            Plume, encre<br>
+            et lavis sur papier<br>
+        </a>
+    </div>
 </div>
 
 <div class="popin" id="popin3">
-    <div class="imgFullPage">
+    <div class="imgFullLeonard">
         <img src="./Assets/Oeuvre_1/DeVinci-Homme-de-Vitruve-Full.png" alt="Description de l'image">
     </div>
 
@@ -238,114 +320,103 @@
 
     <div class="close">
         <a href="#popin0">
-            <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+            <img onclick="playAudio1()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
         </a>
     </div>
 </div>
 
+<!-- Rembrandt -->
+
 <div class="popin" id="popin4">
     <div class="pince">
-        <img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
+    	<img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
     </div>
 
 	<div class="logoVal">
         <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
     </div>
 
-    <div class="imgOeuvre2">
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <img src="./Assets/Elements/retourNoir.svg" alt="Description de l'image">
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin5">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio1()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="imgOeuvreRembrandt">
         <img src="./Assets/Oeuvre_2/Rembrandt-Lecon-anatomie-docteur-tulp.png" alt="Description de l'image">
     </div>
 
-	<div class="scotch">
-		<img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
-	</div>
-
-	<div class="boutonOeuvre2">
+	<div class="boutonOeuvreRembrandt">
 		<a href="#popin5">
 			<img src="./Assets/Elements/rond+.png" alt="Description de l'image">
 		</a>
 	</div>
 
-	<div class="backArrow">
-		<img src="./Assets/Elements/retourNoir.svg" alt="Description de l'image">
-	</div>
-
-	<div class="nextArrow">
-		<a href="#popin5">
-			<img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
-		</a>
-	</div>
-
-	<div class="close">
-		<a href="#popin0">
-			<img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
-		</a>
-	</div>
-
-	<div class="blocNoteImage2">
+	<div class="blocNoteRembrandt">
 		<img src="./Assets/Elements/blocNotes.svg" alt="Description de l'image">
 	</div>
 
-	<div class="blocNoteImageLine2">
+	<div class="blocNoteLigneRembrandt">
 		<img src="./Assets/Elements/cadrillageBleu.svg" alt="Description de l'image">
 	</div>
 
-	<div class="enSavoirPlus2">
+	<div class="enSavoirPlusRembrandt">
 		<a href="#popin2">
 			<img src="./Assets/Elements/enSavoir+.png" alt="Description de l'image">
 		</a>
 	</div>
 
-	<div class="Titre">
-		<a id="Title">
+	<div class="TextRembrandt">
+		<a id="TitreRembrandt">
 			REMBRANDT (1606 - 1669)<br>
 		</a>
-		<a id="SubTitle">
+		<a id="SousTitreRembrandt">
 			Quand l’anatomie fascine<br><br>
 		</a>
-		<a id="Text">
-			<br>Dès la Renaissance, les sciences, la médecine…<br>
-			basées sur l’expérimentation s’intéressent à <span id="changeColor">l’anatomie</span><br>
-			et au <span id="changeColor">fonctionnement du corps humain</span> qui se voit<br>
-			découvert, ouvert, écorché, disséqué.<br>
-			On s’interesse à l’intérieur.<br>
-			Les musculatures sont davantage proches de la réalité.<br>
+		<a id="ContenuRembrandt">
+			Dès la Renaissance, les sciences, la médecine… basées sur l’expérimentation s’intéressent à <span id="changeColor">l’anatomie</span> et au <span id="changeColor">fonctionnement du corps humain</span> qui se voit découvert, ouvert, écorché, disséqué. On s’interesse à l’intérieur. Les musculatures sont davantage proches de la réalité.<br>
 		</a>
-		<div class="blocNote2">
-			<a id="blocNoteText">
-				Peinte en 1632 par Rembrandt, La Leçon d’anantomie du<br>
-				Docteur Tulp, scène de dissection d’un corps, appartient au<br>
-				mouvement Baroque.<br><br>
-				<span id="underlineColor">À la Renaissance, les peintres sont désormais en qûete de<br>
-				ressemblance avec la réalité du corps humain.</span><br><br>
-				Rembrandt utilise la technique du clair-obscur, un jeu<br>
-				d’ombre et de lumière emprunté au Caravage qui montre<br>
-				que pas un souffle de vie ne circule sous la peau du défunt<br>
-				blafard.<br>
-				En créant un contraste avec le noir des habits, le cadavre<br>
-				peint au blanc de plomb met en valeur les visages et donne<br>
-				une dimension mystique à l’ensemble.<br>
+		<div class="blocNoteContenuRembrandt">
+			<a id="ContenuBlocRembrandt">
+				Peintre en 1632 par Rembrandt, La Leçon d’anantomie du Docteur Tulp, scène de dissection d’un corps, appartient au mouvement Baroque.<br>
+                <span id="underlineColor">À la Renaissance, les peintres sont désormais en qûete de ressemblance avec la réalité du corps humain.</span><br>
+                Rembrandt utilise la technique du clair-obscur, un jeu d’ombre et de lumière emprunté au Caravage qui montre que pas un souffle de vie ne circule sous la peau du défunt blafard.<br>
+                En créant un contraste avec le noir des habits, le cadavre peint au blanc de plomb met en valeur les visages et donne une dimension mystique à l’ensemble.
 			</a>
 		</div>
 	</div>
 
-	<div class="TitreOeuvre">
-		<a id="TitleOeuvre">
+	<div class="TextOeuvreRembrandt">
+		<a id="TitreOeuvreRembrandt">
 			Rembrandt,<br>
 		</a>
-		<a id="SubTitleOeuvre">
+		<a id="SousTitreOeuvreRembrandt">
 			La leçon d’anantomie<br>
 			du Docteur Tulp,<br>
 			1632<br>
 		</a>
-		<a id="TextOeuvre">
+		<a id="SousTexteOeuvreRembrandt">
 			Huile sur toile<br>
 		</a>
 	</div>
 </div>
 
 <div class="popin" id="popin5">
-    <div class="imgFullPage2">
+    <div class="imgFullRembrandt">
         <img src="./Assets/Oeuvre_2/Rembrandt-Lecon-anatomie-docteur-tulp-Full.png" alt="Description de l'image">
     </div>
 
@@ -360,18 +431,22 @@
     </div>
 
     <div class="nextArrow">
-        <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
-    </div>
+        <a href="#popin1">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>    </div>
 
     <div class="close">
         <a href="#popin0">
-            <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+            <img onclick="playAudio1()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
         </a>
     </div>
 </div>
 
+
+<!-- OMAH -->
+
 <div class="popin" id="popin6">
-	<div class="imgOeuvre3">
+	<div class="imgOeuvreOMAH">
 		<img src="./Assets/Oeuvre_3/One-Minute-Art-History.png" alt="Description de l'image">
 	</div>
 
@@ -399,107 +474,97 @@
 
 	<div class="close">
 		<a href="#popin0">
-			<img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+			<img onclick="stopAudio1()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
 		</a>
 	</div>
 
-	<div class="blocNoteImage3">
+	<div class="blocNoteOMAH">
 		<img src="./Assets/Elements/blocNotes.svg" alt="Description de l'image">
 	</div>
 
-	<div class="blocNoteImageLine3">
+	<div class="blocNoteLigneOMAH">
 		<img src="./Assets/Elements/cadrillageBleu.svg" alt="Description de l'image">
 	</div>
 
-	<div class="scotchBlanc">
-		<img src="./Assets/Elements/scotchBlanc.svg" alt="Description de l'image">
+	<div class="scotchBlancOMAH">
+		<img src="./Assets/Elements/scotchBlanc.png" alt="Description de l'image">
 	</div>
 
-	<div class="blocNote3">
-		<a id="blocNoteText">
-			<span id="changeColor">L’artiste-réalisateur chinois Cao Shu crée en 2018<br>
-				un stop-motion retraçant l’histoire de l’art de l’Égypte<br>
-				antique à nos jours </span>en seulement une minute :<br>
-				la vidéo se termine sur des styles artistiques plus<br>
-				contemporains inspirés d’artistes comme Modigliani,<br>
-				Basquiat ou encore Picasso.<br><br>
+    <div class="goToPlayOMAH">
+		<a href="#popin7">
+			<img src="./Assets/Elements/buttonPlay.png" alt="Description de l'image">
 		</a>
 	</div>
 
-	<div class="blocNote3-2">
-		<a id="blocNoteText">
-				Le vidéaste rend hommage à l’Art qui traverse les époques<br>
-				mettant en scène un personnage qui évolue et qui est<br>
-				revisité par les différents mouvements qui ont façonné<br>
-				l’histoire de l’art.<br>
+	<div class="blocNoteContenuOMAH">
+		<a id="ContenuBlocOMAH">
+			<span id="changeColor">L’artiste-réalisateur chinois Cao Shu</span> crée en 2018
+				un <span id="changeColor">stop-motion retraçant l’histoire de l’art de l’Égypte
+				antique à nos jours </span>en seulement une minute :
+				la vidéo se termine sur des styles artistiques plus
+				contemporains inspirés d’artistes comme Modigliani,
+				Basquiat ou encore Picasso.
 		</a>
 	</div>
-
-	
-
-	<div class="TitreOeuvre2">
-		<a id="TitleOeuvre">
+    <div class="blocNoteContenuOMAH2">
+		<a id="ContenuBlocOMAH">
+                Le vidéaste rend hommage à l’Art qui traverse les époques
+				mettant en scène un personnage qui évolue et qui est
+				revisité par les différents mouvements qui ont façonné
+				l’histoire de l’art.
+		</a>
+	</div>
+	<div class="TextOeuvreOMAH">
+		<a id="TitreOeuvreOMAH">
 			One minute art history, 2018<br>
 		</a>
-		<a id="TextOeuvre">
+		<a id="SousTexteOeuvreOMAH">
 			© Cao Shu - 2018<br>
 		</a>
 	</div>
 </div>
 
 <div class="popin" id="popin7">
-    <div class="imgOeuvre2Full">
-        <img src="./Assets/Oeuvre_3/One-Minute-Art-History.png" alt="Description de l'image">
-    </div>
+
+    <video controls class="playerVideoOMAH" id="Video1">
+        <source src="./Assets/Oeuvre_3/omah.mp4" type="video/mp4">
+    </video>
+    
     <div class="backArrow">
         <a href="#popin6">
             <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
         </a>
     </div>
+
+    <div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
     <div class="nextArrow">
         <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
     </div>
-    <div class="close">
+    <div class="close" >
         <a href="#popin0">
-            <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+            <img onclick="playAudio1()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
         </a>
     </div>
 </div>
 
+
+
+<!-- Niki Venus -->
+
 <div class="popin" id="popin8">
-    <div class="venusInspiration">
-        <img src="./Assets/Oeuvre_4/Venus_de_Willendorf-Small.png" alt="Description de l'image">
-    </div>
 
-    <div class="tromboneVenus">
-        <img src="./Assets/Elements/trombone.svg" alt="Description de l'image">
-    </div>
-
-    <div class="inspiration">
-        <a href="#popin9">
-            <img src="./Assets/Elements/INSPIRATION.png" alt="Description de l'image">
-        </a>
+    <div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
     </div>
 
     <div class="pince">
         <img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
     </div>
 
-	<div class="imgOeuvre4">
-		<img src="./Assets/Oeuvre_4/Niki-de-st-Phalle-Nana-noire-Upside-down.png" alt="Description de l'image">
-	</div>
-
-	<div class="scotch">
-		<img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
-	</div>
-
-	<div class="boutonOeuvre4">
-		<a href="#popin11">
-			<img src="./Assets/Elements/rond+.png" alt="Description de l'image">
-		</a>
-	</div>
-
-	<div class="backArrow">
+    <div class="backArrow">
 		<img src="./Assets/Elements/retourNoir.svg" alt="Description de l'image">
 	</div>
 
@@ -511,57 +576,74 @@
 
 	<div class="close">
 		<a href="#popin0">
-			<img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+			<img onclick="playAudio1()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
 		</a>
 	</div>
 
-	<div class="citation">
+	<div class="scotch">
+		<img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+	</div>
+
+    <div class="tromboneCarton">
+        <img src="./Assets/Elements/trombone.svg" alt="Description de l'image">
+    </div>
+
+    <div class="inspirationCarton">
+        <a href="#popin9">
+            <img src="./Assets/Elements/INSPIRATION.png" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="venusCarton">
+        <img src="./Assets/Oeuvre_4/Venus_de_Willendorf-Small.png" alt="Description de l'image">
+    </div>
+
+	<div class="boutonOeuvreNiki">
+		<a href="#popin11">
+			<img src="./Assets/Elements/rond+.png" alt="Description de l'image">
+		</a>
+	</div>
+
+    <div class="imgOeuvreNiki">
+		<img src="./Assets/Oeuvre_4/Niki-de-st-Phalle-Nana-noire-Upside-down.png" alt="Description de l'image">
+	</div>
+
+	<div class="citationEcrite">
 		<a href="#popin10">
 			<img src="./Assets/Elements/citationEcrite.png" alt="Description de l'image">
 		</a>
 	</div>
 
-	<div class="Titre">
-		<a id="Title">
+	<div class="TextNiki">
+		<a id="TitreNiki">
 			NIKI DE SAINT PHALLE (1930-2002)<br>
 		</a>
-		<a id="SubTitle">
+		<a id="SousTitreNiki">
 			l’hommage au corps rond et libéré<br><br>
 		</a>
-		<a id="Text">
-			C’est avec les Nanas que Niki de Saint Phalle connaît sa<br>
-			plus grande popularité. Grande voyageuse et de nature<br>
-			curieuse, l’artiste passe la plupart de son temps à lire et<br>
-			à visiter des musées, cela lui permet de rassembler un<br>
-			vocabulaire de formes et d’images puisé dans une nature<br>
-			imaginée.Inspirées des figurines féminines<br>
-			paléolithiques, les Nanas représentent des femmes aux<br>
-			formes généreuses, <span id="changeColor">loin des canons de l’époque et<br>
-			d’aujourd’hui.</span><br>
-			Elles adoptent des postures festives, dynamiques, elles<br>
-			sont des images éternelles de la maternité triomphante<br>
-			et la féminité. En envahissant l’espace public ces Nanas<br>
-			posent la question de <span id="changeColor">la place de la femme dans la<br>
-			société du XXème et dans l’histoire de l’art.</span><br>
+		<a id="ContenuNiki">
+			C’est avec les Nanas que Niki de Saint Phalle connaît sa plus grande popularité. Grande voyageuse et de nature curieuse, l’artiste passe la plupart de son temps à lire et à visiter des musées, cela lui permet de rassembler un vocabulaire de formes et d’images puisé dans une nature imaginée.<br>
+            Inspirées des figurines féminines paléolithiques, les Nanas représentent des femmes aux formes généreuses, <span id="changeColor">loin des canons de l’époque et d’aujourd’hui.</span><br>
+			Elles adoptent des postures festives, dynamiques, elles sont des images éternelles de la maternité triomphante et <span id="changeColor">la féminité</span>. En envahissant l’espace public <span id="changeColor">ces Nanas posent la question de la place de la femme dans la société du XXème et dans l’histoire de l’art.</span>
 		</a>
 	</div>
 	
-	<div class="TextCentral">
-		<a id="TextC">
+	<div class="TextNiki2">
+		<a id="ContenuNiki2">
 			<span id="underlineColor">C'est l'example parlant de la libération du corps<br>
 			de la femme et de l'acceptation de soi.<br></span>
 		</a>
 	</div>
 
-	<div class="TitreOeuvre">
-		<a id="TitleOeuvre">
+	<div class="TextOeuvreNiki">
+		<a id="TitreOeuvreNiki">
 			Niki de Saint Phalle<br>
 		</a>
-		<a id="SubTitleOeuvre">
+		<a id="SousTitreOeuvreNiki">
 			Nana noire, upside down<br>
 			1965-66<br>
 		</a>
-		<a id="TextOeuvre">
+		<a id="SousTexteOeuvreNiki">
 			Peinture, laine,<br>
 			tissu sur grillage<br>
 		</a>
@@ -569,126 +651,21 @@
 </div>
 
 <div class="popin" id="popin9">
-    <div class="pince">
-        <div class="inspirationTitle">
-            <img src="./Assets/Elements/INSPIRATION.png" alt="Description de l'image">
-        </div>
-        <img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
-        </div>
-        <div class="imgOeuvre4-2">
-        <img src="./Assets/Oeuvre_4/Venus_de_Willendorf.png" alt="Description de l'image">
-        </div>
-        <div class="scotch">
-            <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
-        </div>
-        <div class="boutonOeuvre4-2">
-            <a href="#popin12">
-                <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
-            </a>
-        </div>
-        <div class="backArrow">
-            <a href="#popin8">
-                <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
-            </a>
-        </div>
-        <div class="nextArrow">
-            <a href="#popin10">
-                <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
-            </a>
-        </div>
-        <div class="close">
-            <a href="#popin0">
-                <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
-            </a>
-        </div>
-        <div class="citation">
-            <a href="#popin10">
-                <img src="./Assets/Elements/citationEcrite.png" alt="Description de l'image">
-            </a>
-        </div>
-        <div class="TitreInspiration">
-            <a id="TitleInspiration">
-                Niki de Saint Phalle inspirée !<br><br>
-            </a>
-            <a id="TextInspiration">
-                La Vénus paléolithiques représente un corps féminin<br>
-                idéalisé apte à procréer.<br>
-                Ces « Vénus du Paléolithique », sont pour certaines<br>
-                datées de plus de 30.000 ans, époque de la dernière <br>
-                période glacière.<br>
-                Ces figurines étaient sensées représenter la déesse<br>
-                mère, symbole de la fertilité: des statuettes d’une taille<br>
-                allant de 6 à 16 centimètres, représentant des femmes<br>
-                en surpoids. Les représentations du corps pendant la<br>
-                préhistoire montrent des femmes potelées aux formes<br>
-                adipeuses : <span id="changeColor">ces qualités étaient exagérées pour montrer<br>
-                le désir de fécondité et le besoin de perpétuer l’espèce.</span><br>
-                
-            </a>
-        </div>
-        <div class="TitreOeuvre">
-            <a id="TitleOeuvre">
-                Vénus de Willendorf<br>
-            </a>
-            <a id="TextOeuvre">
-                (Paléolithique)<br>
-            </a>
-        </div>
-</div>
 
-<div class="popin" id="popin10">
-    <div class="placementCarton">
-        <img src="./Assets/Elements/carton.png" alt="Description de l'image">
+    <div class="pince">
+        <img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
     </div>
+    
+    <div class="inspirationTitreVenus">
+        <img src="./Assets/Elements/INSPIRATION.png" alt="Description de l'image">
+    </div>
+
     <div class="scotch">
         <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
     </div>
-    <div class="venusInspiration">
-        <img src="./Assets/Oeuvre_4/Venus_de_Willendorf-Small.png" alt="Description de l'image">
-    </div>
-    <div class="tromboneVenus">
-        <img src="./Assets/Elements/trombone.svg" alt="Description de l'image">
-    </div>
-    <div class="inspiration">
-        <a href="#popin9">
-            <img src="./Assets/Elements/INSPIRATION.png" alt="Description de l'image">
-        </a>
-    </div>
-    <div class="scotchB">
-        <img src="./Assets/Elements/scotchBlanc.svg" alt="Description de l'image">
-    </div>
-    <div class="backArrow">
-        <a href="#popin9">
-            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
-        </a>
-    </div>
-    <div class="nextArrow">
-        <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
-    </div>
-    <div class="close">
-        <a href="#popin0">
-            <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
-        </a>
-    </div>
-    <div class="citation">
-        <img src="./Assets/Elements/citationEcrite.png" alt="Description de l'image">
-    </div>
-    <div class="textCarton">
-        <a id="textCa">
-            Pour moi, mes sculptures représentent le monde<br>
-            de la femme amplifiée, la folie des grandeurs des femmes,<br>
-            la femme dans le monde d’aujourd’hui,<br>
-            la femme au pouvoir.<br>
-        </a>
-        <a id="sousTextCa">
-            <br>Niki de Saint Phalle (1965)<br>
-        </a>
-    </div>
-</div>
 
-<div class="popin" id="popin11">
-    <div class="imgOeuvreFull4">
-        <img src="./Assets/Oeuvre_4/Niki-de-st-Phalle-Nana-noire-Upside-down-Full.png" alt="Description de l'image">
+    <div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
     </div>
     <div class="backArrow">
         <a href="#popin8">
@@ -696,21 +673,150 @@
         </a>
     </div>
     <div class="nextArrow">
-        <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
+        <a href="#popin10">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
     </div>
     <div class="close">
         <a href="#popin0">
-            <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+            <img onclick="playAudio1()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="citationEcrite">
+        <a href="#popin10">
+            <img src="./Assets/Elements/citationEcrite.png" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="boutonOeuvreVenus">
+        <a href="#popin12">
+            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
+        </a>
+    </div>
+    
+    <div class="imgOeuvreVenus">
+        <img src="./Assets/Oeuvre_4/Venus_de_Willendorf.png" alt="Description de l'image">
+    </div>
+
+        <div class="TextVenus">
+            <a id="TitreVenus">
+                Niki de Saint Phalle inspirée !<br><br>
+            </a>
+            <a id="ContenuVenus">
+                La Vénus paléolithiques représente un corps féminin idéalisé apte à procréer. Ces « Vénus du Paléolithique », sont pour certaines datées de plus de 30.000 ans, époque de la dernière  période glacière.<br>
+                Ces figurines étaient sensées représenter la déesse mère, symbole de la fertilité: des statuettes d’une taille allant de 6 à 16 centimètres, représentant des femmes en surpoids.<br>
+                Les représentations du corps pendant la préhistoire montrent des femmes potelées aux formes adipeuses : <span id="changeColor">ces qualités</span> étaient exagérées pour montrer le désir de fécondité et le besoin de perpétuer l’espèce.
+                
+            </a>
+        </div>
+        <div class="TextOeuvreVenus">
+            <a id="TitreOeuvreVenus">
+                Vénus de Willendorf<br>
+            </a>
+            <a id="SousTexteOeuvreVenus">
+                (Paléolithique)<br>
+            </a>
+        </div>
+</div>
+
+<div class="popin" id="popin10">
+
+    <div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin9">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="nextArrow">
+        <a href="#popin11">
+        <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio1()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+
+    <div class="venusCarton">
+        <img src="./Assets/Oeuvre_4/Venus_de_Willendorf-Small.png" alt="Description de l'image">
+    </div>
+
+    <div class="tromboneCarton">
+        <img src="./Assets/Elements/trombone.svg" alt="Description de l'image">
+    </div>
+
+    <div class="inspirationCarton">
+        <a href="#popin9">
+            <img src="./Assets/Elements/INSPIRATION.png" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="placementCarton">
+        <img src="./Assets/Elements/carton.png" alt="Description de l'image">
+    </div>
+
+    <div class="scotchCarton">
+        <img src="./Assets/Elements/scotchBlanc.png" alt="Description de l'image">
+    </div>
+
+    <div class="citationEcrite">
+        <img src="./Assets/Elements/citationEcrite.png" alt="Description de l'image">
+    </div>
+    <div class="TextCarton">
+        <a id="ContenuCarton">
+            Pour moi, mes sculptures représentent le monde<br>
+            de la femme amplifiée, la folie des grandeurs des femmes,<br>
+            la femme dans le monde d’aujourd’hui,<br>
+            la femme au pouvoir.<br>
+        </a>
+        <a id="SousTextCarton">
+            Niki de Saint Phalle (1965)<br>
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin11">
+    <div class="imgFullNiki">
+        <img src="./Assets/Oeuvre_4/Niki-de-st-Phalle-Nana-noire-Upside-down-Full.png" alt="Description de l'image">
+    </div>
+    <div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+    <div class="backArrow">
+        <a href="#popin10">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="nextArrow">
+        <a href="#popin12">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio1()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
         </a>
     </div>
 </div>
 
 <div class="popin" id="popin12">
-    <div class="imgOeuvreFull4-2">
+    <div class="imgFullVenus">
         <img src="./Assets/Oeuvre_4/Venus_de_Willendorf-Full.png" alt="Description de l'image">
     </div>
+    <div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
     <div class="backArrow">
-        <a href="#popin9">
+        <a href="#popin11">
             <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
         </a>
     </div>
@@ -719,10 +825,14 @@
     </div>
     <div class="close">
         <a href="#popin0">
-            <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+            <img onclick="playAudio1()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
         </a>
     </div>
 </div>
+
+
+
+<!-- Odalisque -->
 
 <div class="popin" id="popin13">
     <div class="pince">
@@ -733,18 +843,8 @@
         <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
     </div>
 
-    <div class="imgOeuvre">
-    	<img src="./Assets/Oeuvre_1/DeVinci-Homme-de-Vitruve.png" alt="Description de l'image">
-    </div>
-
     <div class="scotch">
         <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
-    </div>
-
-    <div class="boutonOeuvre">
-        <a href="#popin3">
-            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
-        </a>
     </div>
 
     <div class="backArrow">
@@ -759,55 +859,1316 @@
 
     <div class="close">
         <a href="#popin0">
-            <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+            <img onclick="playAudio1()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
         </a>
     </div>
 
-    <div class="citation">
-        <img src="./Assets/Elements/citationOrale.png" alt="Description de l'image">
-    </div>
 
-    <div class="enSavoirPlus">
+
+    <div class="boutonOeuvreOdalisque">
         <a href="#popin14">
-            <img src="./Assets/Elements/enSavoir+.png" alt="Description de l'image">
+            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
         </a>
     </div>
 
-    <div class="Titre">
-        <a id="Title">
-            ANGELICA DASS<br>
+    <div class="imgOeuvreOdalisque">
+    	<img src="./Assets/Oeuvre_6/Jean_Auguste_Dominique_Ingres,_La_Grande_Odalisque.png" alt="Description de l'image">
+    </div>
+
+    <div class="TextOdalisque">
+        <a id="TitreOdalisque">
+            ET DÉJÀ EN 1814 ...<br>
         </a>
-        <a id="SubTitle">
-            l’immense mosaïque humaine<br><br>
+        <a id="SousTitreOdalisque">
+            Les vertèbres supplémentaires<br>
+            de La Grande Odalisque…<br><br>
         </a>
-        <a id="Text">
-            Pour son projet intitulé Humanae, la photographe brésilienne a<br>
-			tenu à mettre en valeur toutes les couleurs de peau.<br>
-			Elle parcourt le monde pour immortaliser des volontaires de<br>
-			toutes origines et de tous âges, donnant lieu à un nuancier<br>
-			de couleurs inspiré de ceux créés par l’entreprise américaine Pantone.<br>
-			Une fois la photo prise, l’artiste fait correspondre le teint du<br>
-			modèle à une teinte Pantone, en prenant un pixel de 11 x 11<br>
-			de son visage. Le portrait est ensuite placé sur un fond de cette<br>
-			couleur, et le numéro de nuance Pantone est ensuite ajouté au bas.<br>
+        <a id="ContenuOdalisque">
+            Ingres, peintre néo-classique, réalise La Grande
+			Odalisque en 1814. Il avait l’art <span id="changeColor">de se jouer de la
+			réalité</span> pour créer <span id="changeColor">d’improbables canons de beauté.</span>
         </a>
     </div>
 
-    <div class="TitreOeuvre">
-		<a id="TitleOeuvre">
-			Angélica Dass,<br>
+    <div class="TextOdalisque2">
+        <a id="ContenuOdalisque">
+            Si le corps de cette femme de harem nous fascine, c’est qu’il est beaucoup trop long : <span id="changeColor">la jeune femme a trois lombaires et deux vertèbres de trop</span>. Les proportions du modèle font jaser depuis fort longtemps. L’hypothèse de trois vertèbres de trop avait déjà été émise. Ce qui donne un angle peu naturel formé par la jambe gauche. Ingres préfère ainsi volontairement sacrifier la vraisemblance à la beauté. Le rendu de la peau, l’incarnation, est accentué par le rendu des tissus.<br><br>
+            Pour en avoir le coeur net, le médecin Jean-Yves Maigne, de l’Hôtel-Dieu, aidé de Gilles Chatelier de l’hôpital Georges Pompidou, et l’historienne de l’art Hélène Norlöff, ont pris des mesures sur neuf modèles vivants. La taille de leur tête et la longueur de leur dos ont été mesurées dans la même position que celle de l’Odalisque d’Ingres, en tenant compte de la perspective adoptée par le peintre.<br>
+            <span id="changeColor">Résultat</span> : la Grande Odalisque a subi une élongation du dos de plus de 8 cm et du bassin de presque 7 cm. Ces 15 cm correspondent à trois lombaires et deux vertèbres sacrées (constituant le sacrum).<br>
+            La position de la Grande Odalisque, son inclinaison, la rotation de son bassin, ne serait pas possible sans ces centimètres supplémentaires, notent Maigne et ses collègues. L’un de ses bras a lui aussi été allongé. La volupté du corps contraste ainsi encore plus fortement <span id="changeColor">avec la tristesse du visage</span>.<br>
+        </a>
+    </div>
+    <div class="TextOeuvreOdalisque">
+		<a id="TitreOeuvreOdalisque">
+			Jean Auguste<br>
+            Dominique Ingres<br>
+            (1780-1867)<br>
 		</a>
-		<a id="SubTitleOeuvre">
-			Humanae,<br>
-		</a>
-		<a id="TextOeuvre">
-			Projet évolutif<br>
-			depuis 2012<br>
+		<a id="SousTexteOeuvreOdalisque">
+			La Grande Odalisque,<br>
+            1814<br>
 		</a>
 	</div>
 </div>
 
 <div class="popin" id="popin14">
+    <div class="imgFullOdalisque">
+        <img src="./Assets/Oeuvre_6/Jean_Auguste_Dominique_Ingres,_La_Grande_Odalisque.png" alt="Description de l'image">
+    </div>
+    <div class="backArrow">
+        <a href="#popin13">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+    <div class="nextArrow">
+        <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
+    </div>
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio1()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+
+<!-- Angelica Dass -->
+
+<div class="popin" id="popin15">
+    <div class="pince">
+    	<img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <img src="./Assets/Elements/retourNoir.svg" alt="Description de l'image">
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin16">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio1()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+
+    <div class="boutonOeuvreDass">
+        <a href="#popin16">
+            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="imgOeuvreDass">
+    	<img src="./Assets/Oeuvre_5/ANGELICA-DASSHumanae.png" alt="Description de l'image">
+    </div>
+
+
+    <div class="TextDass">
+        <a id="TitreDass">
+            ANGELICA DASS<br>
+        </a>
+        <a id="SousTitreDass">
+            l'immense mosaïque humaine<br>
+        </a>
+        <a id="ContenuDass">
+            <br>Pour son projet intitulé Humanae, la photographe brésilienne a tenu à mettre en valeur <span id="changeColor">toutes les couleurs de peau.</span><br>
+            Elle parcourt le monde pour immortaliser des volontaires de toutes origines et de tous âges, donnant lieu à <span id="changeColor">un nuancier de couleurs</span> inspiré de ceux créés par l’entreprise américaine Pantone.<br>
+            Une fois la photo prise, l’artiste fait correspondre le teint du modèle à une teinte Pantone, en prenant un pixel de 11 x 11 de son visage. Le portrait est ensuite placé sur un fond de cette couleur, et le numéro de nuance Pantone est ensuite ajouté au bas.<br>
+            Angélica Dass a expliqué que son but ultime est que Humanae agisse comme une plate-forme de discussion sur <span id="changeColor">l’identité « indépendante de facteurs tels que la nationalité, l’origine, le statut économique, l’âge ou les normes esthétiques »</span>.<br><br>
+            Un ambitieux projet de la part de l’artiste, débuté en 2012 et qui évolue quotidiennement, qui milite contre les discriminations et les stéréotypes liés à la couleur de peau, en ayant à coeur de faire évoluer les mentalités.<br><br>
+            À ce jour, Angélica Dass a réunit dans son oeuvre plus de 2 500 carnations de peau.
+        </a>
+    </div>
+    <div class="TextOeuvreDass">
+		<a id="TitreOeuvreDass">
+			Angélica Dass<br>
+            Humanae<br>
+		</a>
+		<a id="SousTexteOeuvreDass">
+			Projet évolutif depuis 2012<br>
+		</a>
+	</div>
+</div>
+
+<div class="popin" id="popin16">
+    <div class="imgFullDass">
+        <img src="./Assets/Oeuvre_5/ANGELICA-DASSHumanae.png" alt="Description de l'image">
+    </div>
+    <div class="backArrow">
+        <a href="#popin15">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+    <div class="nextArrow">
+        <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
+    </div>
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio1()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+
+<!-- Module 1 - Salle 2 -->
+
+<!-- Becca Saladin -->
+
+<div class="popin" id="popin17">
+    <div class="pince">
+    	<img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <img src="./Assets/Elements/retourNoir.svg" alt="Description de l'image">  
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin18">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+
+    <div class="imgOeuvreBecca">
+    	<img src="./Assets/Salle2/6portrait.png" alt="Description de l'image">
+    </div>
+
+    <div class="boutonOeuvreBecca">
+        <a href="#popin18">
+            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
+        </a>
+    </div>
+
+
+
+
+    <div class="TextBecca">
+        <a id="TitreBecca">
+            BECCA SALADIN<br>
+        </a>
+        <a id="SousTitreBecca">
+            du portrait historique au visage actuel<br><br>
+        </a>
+    
+        <a id="ContenuBecca">
+            <br>Becca Saladin est une graphiste américaine.<br>
+            Depuis 2020, elle travaille sur une série photographique intitulée Royalty Now – un projet
+            où elle tente de recréer des personnages historiques célèbres en les rendant actuels. Sur Instagram, elle imagine à quoi ressembleraient les personnalités historiques aujourd’hui, grâce à des artifi ces numériques.<br>
+            Le but ? Se rendre compte à quoi ressemblaient vraiment les personnalités de l’époque, si elles vivaient de nos jours, et surtout <span id="changeColor">avec les standards de beauté du XXIème siècle à l’ère des réseaux sociaux</span> : la carnation de la peau est plus claire, le visage est rajeuni, fi ltré, les défauts sont gommés et les coiffures tendances. L’artiste joue également sur les codes vestimentaires de notre époque, et les postures du, corps des réseaux sociaux : des poses plus langoureuses.
+        </a>
+    </div>
+        
+    <div class="TextOeuvreBecca">
+        <a id="TitreOeuvreBecca">
+            Becca Saladin,<br>
+        </a>
+
+        <a id="SousTitreOeuvreBecca">
+            Royalty Now, 2020<br>
+        </a>
+
+        <a id="SousTexteOeuvreBecca">
+            De haut en bas, et de gauche à droite :<br>
+            William Shakespeare, La Joconde, Marie-Antoinette,<br>
+            Anne Boleyn, Henri VIII et Catherine d’Aragon<br>
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin18">
+    <div class="imgFullBecca">
+        <img src="./Assets/Salle2/DIAPORAMA BECCA SALADIN/1-SHAKESPEARE-Becca-saladin.jpg" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin17">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin19">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>    
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin19">
+    <div class="imgFullBecca2">
+        <img src="./Assets/Salle2/DIAPORAMA BECCA SALADIN/2-JOCONDE-Becca-saladin.jpg" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin18">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin20">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>    
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin20">
+    <div class="imgFullBecca3">
+        <img src="./Assets/Salle2/DIAPORAMA BECCA SALADIN/3-MARIE-ANTOINETTE-Becca-saladin.jpg" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin19">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin21">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>    
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin21">
+    <div class="imgFullBecca4">
+        <img src="./Assets/Salle2/DIAPORAMA BECCA SALADIN/4-ANNE-BOLEYN-Becca-saladin.jpg" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin20">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin22">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>    
+    </div>
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin22">
+    <div class="imgFullBecca5">
+        <img src="./Assets/Salle2/DIAPORAMA BECCA SALADIN/5-HENRI-VIII-Becca-saladin.jpg" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin21">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin23">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>    
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin23">
+    <div class="imgFullBecca6">
+        <img src="./Assets/Salle2/DIAPORAMA BECCA SALADIN/6-CATHERINE-D'ARAGON-Becca-saladin.jpg" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin22">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+
+<!-- Meitner -->
+
+<div class="popin" id="popin24">
+    <div class="pince">
+    	<img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <img src="./Assets/Elements/retourNoir.svg" alt="Description de l'image">  
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin25">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="citationEcrite">
+        <a href="#popin25">
+            <img src="./Assets/Elements/citationEcrite.png" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="boutonOeuvreMeitner">
+        <a href="#popin26">
+            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="imgOeuvreMeitner">
+    	<img src="./Assets/Salle2/vielle.png" alt="Description de l'image">
+    </div>
+    
+    <div class="TextMeitner">
+        <a id="TitreMeitner">
+            MissMe (exposition NobELLES)<br>
+        </a>
+        <a id="SousTitreMeitner">
+            l’intelligence du regard, la sagesse des rides<br><br>
+        </a>
+    
+        <a id="ContenuMeitner">
+            <br>MissMe s’est fait connaître comme artiste de rue avec des oeuvres éphémères sur les murs de la ville de Montréal, des autoportraits nus et masqués. Elle ne révèle pas son identité, ni dans ses oeuvres, ni en public.<br>
+            Le Planétarium de Montréal lui a commandé en 2023 une série d’oeuvres pour bâtir une exposition dont le but est de mettre en valeur des femmes de science importantes, mais que l’histoire a oubliées.<br>
+            Parceque passées sous le radar en raison de leur genre, de leur statut ou de leur appartenance raciale, <span id="changeColor">NobELLES</span> cherche à mettre en lumière ces femmes, à notre époque où les hommes dominent encore cette sphère. Cette obsession de notre société pour la perfection du corps vient également avec celle de la jeunesse éternelle, et la plupart des mannequins que l’on voit défilerdoivent s’effacer de la lumière après quelques années de carrière.
+        </a>
+    </div>
+        
+    <div class="TextOeuvreMeitner">
+        <a id="TitreOeuvreMeitner">
+            MissMe, NobELLES, Lise Meitner, 2023<br>
+        </a>
+
+        <a id="SousTitreOeuvreMeitner">
+            Lise Meitner (1878-1968),<br>
+        </a>
+              
+        <a id="SousTexteOeuvreMeitner">
+            physicienne austro-suédoise fut nommée 49 fois au prix Nobel, sans<br>
+            jamais le remporter. Ses travaux sont de ceux qui conduiront à la fission<br>
+            nucléaire. Lors d’une visite aux États-Unis en 1946, elle a été traitée<br>
+            comme une célébrité de la presse américaine, comme quelqu’un qui<br>
+            avait « quitté l’Allemagne avec la bombe dans mon sac à main ».<br>
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin25">
+
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin24">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin26">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+
+    <div class="placementCarton">
+        <img src="./Assets/Elements/carton.png" alt="Description de l'image">
+    </div>
+
+    <div class="scotchCarton">
+        <img src="./Assets/Elements/scotchBlanc.png" alt="Description de l'image">
+    </div>
+
+    <div class="TextCarton2">
+        <a id="ContenuCarton">
+            J’étais vraiment contente de faire le dessin d’une femme plus<br>
+            âgée. L’effacement des femmes après un certain âge, ça me<br>
+            révolte personnellement; et j’ai eu un vrai plaisir à dessiner <br>
+            la beauté de cette femme avec ses rides et l’intelligence<br>
+            dans son regard.
+        </a>
+        <a id="SousTextCarton">
+            <br>MissMe (2023)<br>
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin26">
+    <div class="imgFullMeitner">
+        <img src="./Assets/Salle2/vielle2.png" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin25">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+
+<!-- vogue -->
+
+<div class="popin" id="popin27">
+    <div class="pince">
+    	<img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <img src="./Assets/Elements/retourNoir.svg" alt="Description de l'image">
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin28">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>  
+    
+    <div class="imgOeuvreGoya">
+    	<img src="./Assets/Salle2/laideur1.png" alt="Description de l'image">
+    </div>
+
+    <div class="boutonOeuvreGoya">
+        <a href="#popin28">
+            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
+        </a>
+    </div>
+
+
+    <div class="TextGoya">
+        <a id="TitreGoya">
+            XIXE SIÈCLE : la vielliesse, synonyme de laideur<br>
+        </a>
+        <a id="SousTitreGoya">
+            L’exemple parlant de GOYA (1746-1828)…<br><br>
+        </a>
+        <a id="ContenuGoya">
+            Au premier plan, deux vieilles femmes regardant dans un miroir. L’une, à droite, est habillée avec une robe blanche à fleurs dorées et aux noeuds bleus, parée de bijoux perlés. Son apparence vestimentaire est lumineuse et ses cheveux blonds bien coiffés ne possèdent aucun indice de vieillesse. Pourtant, son visage creusé, son nez crochu, son thorax squelettique, et ses mains veineuses nous montrent le contraire. Son corps possède tous les indices nécessaires pour comprendre son âge avancé.<br>
+            Son regard reste figé sur le miroir que tend une deuxième femme. Celle-ci est habillé en noir et porte une guimpe (voile de deuil). Ce dernier élément explicite la perte d’un proche, sûrement le mari. Les mèches de cheveux qui se distinguent par contraste montrent la négligence de soi-même. Pourtant,elle porte à sa main droite des bijoux, signe d’un passé riche. Son visage est métamorphosé en une espèce de morte-vivante.Elle montre ce miroir sur lequel est écrit « Que tal »,« Comment ça va ? » en espagnol.<br>
+            Enfin, en arrière-plan, nous voyons un vieil homme ailé, aux yeux obscurs avec un balais. Il s’agit de Chronos, dieu du Temps dans la mythologie grecque., typiquement représenté comme un vieil homme sage dans la peinture contemporaine. Son rôle au sein de la peinture n’est pas anodin. Dieu capable de voir dans l’avenir, nous pouvons interpréter ce tableau comme une vision pour ces deux jeunes femmes. <span id="changeColor">Dieu leur permet de voir, dans une caricature d’elles-mêmes, la médiocrité de leur comportement.</span>
+        </a>
+    </div>
+
+    <div class="TextOeuvreGoya">
+        <a id="TitreOeuvreGoya">
+            Francisco Goya,<br>
+        </a>
+
+        <a id="SousTitreOeuvreGoya">
+            Les Vieilles ou Le Temps,<br>
+            Huile sur toile,<br>
+        </a>
+
+        <a id="SousTexteOeuvreGoya">
+            Palais des Beaux-Arts de Lille<br>
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin28">
+    <div class="imgFullGoya">
+        <img src="./Assets/Salle2/laideur2.png" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin27">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin29">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin29">
+
+    <div class="pince">
+    	<img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin28">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>    
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin30">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="citationEcrite">
+        <a href="#popin30">
+            <img src="./Assets/Elements/citationEcrite.png" alt="Description de l'image">
+        </a>
+    </div>
+             
+    <div class="boutonOeuvreApo">
+        <a href="#popin30">
+            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="imgOeuvreApo">
+    	<img src="./Assets/Salle2/vogue1.png" alt="Description de l'image">
+    </div>
+
+    <div class="TextApo">
+        <a id="TitreApo">
+            ET EN 2023 : Éloge du « bel âge »<br>
+        </a>
+        <a id="SousTitreApo">
+            Apo Whang-Od, 106 ans<br><br>
+        </a>
+        <a id="ContenuApo">
+            <br>En plus de figurer en couverture du Vogue Philippines, le portrait d’Apo Maria Whang-Od Oggay fait le tour des médias internationaux depuis sa sortie en avril 2023.<br>
+            Et pour cause, <span id="changeColor">le monde occidental n’est pas habitué à voir représentées des personnes âgées</span> (de plus de 25 ans !) en une de magazines.<br>
+            <span id="changeColor">Cette femme, tatoueuse et tatouée, est la
+            plus vieille personne à apparaître en couverture de Vogue</span> qui,
+            élément à souligner, ne l’a pas choisie pour un numéro spécial seniors mais <span id="changeColor">pour leur “numéro Spécial Beauté”</span>.
+        </a>
+    </div>
+
+    <div class="TextOeuvreApo">
+        <a id="TitreOeuvreApo">
+            Apo Whang-Od,<br>
+        </a>
+
+        <a id="SousTitreOeuvreApo">
+            la tatoueuse de 106 ans<br>
+        </a>
+
+        <a id="SousTexteOeuvreApo">
+            Couverture de Vogue<br>
+            Philippines, avril 2023<br>
+        </a>
+    </div>
+</div>
+   
+<div class="popin" id="popin30">
+
+    <div class="placementCarton">
+        <img src="./Assets/Elements/carton.png" alt="Description de l'image">
+    </div>
+
+    <div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+
+    <div class="scotchCarton">
+        <img src="./Assets/Elements/scotchBlanc.png" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin29">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin31">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>  
+
+    <div class="TextCarton3">
+        <a id="ContenuCarton">
+            Chacun perd en avançant dans l’âge, et les femmes plus que<br>
+            les hommes. Comme tout leur mérite consiste en agréments<br>
+            extérieurs, et que le temps les détruit, elles se trouvent<br>
+            absolument dénuées : car il y a peu de femmes dont le mérite<br>
+            dure plus que la beauté.
+        </a>
+        <a id="SousTextCarton">
+            <br>Madame de Lambert extrait du Traité de la vieillesse (1727)<br>
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin31">
+    <div class="imgFullApo">
+        <img src="./Assets/Salle2/Vogue2.png" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin30">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+
+<!-- Van Gogh -->
+
+<div class="popin" id="popin55">
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <img src="./Assets/Elements/retourNoir.svg" alt="Description de l'image">
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin56">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+
+    <div class="boutonOeuvreVanGogh">
+        <a href="#popin56">
+            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="imgOeuvreVanGogh">
+    	<img src="./Assets/Salle2/VanGogh.png" alt="Description de l'image">
+    </div>
+
+    <div class="pinceVanGogh">
+    	<img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
+    </div>
+      
+    
+    <div class="TextOeuvreVanGogh">
+        <a id="TitreOeuvreVanGogh">
+            Vincent van Gogh (1853-1890)<br>
+        </a>
+        <a id="SousTitreOeuvreVanGogh">
+            À la porte de l’éternité ou Vieil<br>
+            homme pleurant, 1890<br>
+        </a>
+
+        <a id="SousTexteOeuvreVanGogh">
+            Huile sur toile, 80 x 64 cm<br>
+            © Musée Kröller-Müller, Otterlo (Pays-Bas)<br>
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin56">
+    <div class="imgFullVanGogh">
+        <img src="./Assets/Salle2/VanGogh.png" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin55">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+
+<!-- Ron Mueck -->
+
+<div class="popin" id="popin57">
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <img src="./Assets/Elements/retourNoir.svg" alt="Description de l'image">
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin58">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+
+    <div class="boutonOeuvreMueck">
+        <a href="#popin58">
+            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="imgOeuvreMueck">
+    	<img src="./Assets/Salle2/RonMueck.png" alt="Description de l'image">
+    </div>
+
+    <div class="pinceMueck">
+    	<img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
+    </div>
+    
+    <div class="TextOeuvreMueck">
+        <a id="TitreOeuvreMueck">
+            Ron Mueck,<br>
+        </a>
+        <a id="SousTitreOeuvreMueck">
+            Mass, 2017<br>
+        </a>
+
+        <a id="SousTexteOeuvreMueck">
+            Fibre de verre et résine, dimensions variables<br>
+            Vue d’exposition / National Gallery of Victoria, Melbourne<br>
+            © Photo Marc Domage<br>
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin58">
+    <div class="imgFullMueck">
+        <img src="./Assets/Salle2/RonMueck.png" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin57">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+<!-- Roman Opalka Visage -->
+
+<div class="popin" id="popin32">
+    <div class="pince">
+    	<img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <img src="./Assets/Elements/retourNoir.svg" alt="Description de l'image">
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin33">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>    
+    
+    <div class="boutonOeuvreRomanVisage">
+        <a href="#popin33">
+            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="imgOeuvreRomanVisage">
+    	<img src="./Assets/Salle2/visage.png" alt="Description de l'image">
+    </div>
+                
+    <div class="TextRomanVisage">
+        <a id="TitreRomanVisage">
+            ROMAN OPALKA (1931 - 2011)<br>
+        </a>
+        <a id="SousTitreRomanVisage">
+            ou « le chiffrage d’une vie » <br><br>
+        </a>
+        <a id="ContenuRomanVisage">
+            La fin de chaque journée est ponctuée par la capture d’un autoportrait photographique : même format (24x30,50 cm), en noir et blanc, selon la même pose. La juxtaposition des portraits successifs et des toiles en contrepoint sont, depuis cette date, la seule expression de son travail, <span id="changeColor">un processus, universel de notre existence : on voit le visage d’Opalka, pâle, vieillir peu à peu en se rapprochant de la mort. Son but ?</span> Inscrire dans son travail, la fuite du temps et l’avancée vers le néant blanc.
+        </a>
+    </div>
+
+    <div class="TextOeuvreRomanVisage">
+        <a id="TitreOeuvreRomanVisage">
+            Roman Opalka<br>
+        </a>
+        <a id="SousTitreOeuvreRomanVisage">
+            « Détail » 1965 / 1 – ∞<br>
+        </a>
+        <a id="SousTexteOeuvreRomanVisage">
+            Palais des Beaux-Arts de Lille<br>
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin33">
+    <div class="imgFullRomanVisage">
+        <img src="./Assets/Salle2/visage.png" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin32">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+<!-- Roman Opalka Chiffre -->
+
+<div class="popin" id="popin34">
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <img src="./Assets/Elements/retourNoir.svg" alt="Description de l'image">
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin35">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>   
+    
+
+    <div class="pinceRomanChiffre">
+    	<img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
+    </div>
+
+    <div class="imgOeuvreRomanChiffre">
+    	<img src="./Assets/Salle2/ecriture.png" alt="Description de l'image">
+    </div>
+
+    <div class="boutonOeuvreRomanChiffre">
+        <a href="#popin35">
+            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
+        </a>
+    </div>
+
+
+    <div class="TextRomanChiffre"> 
+        <a id="TitreRomanChiffre">
+            ROMAN OPALKA (1931 - 2011)<br>
+        </a>
+        <a id="SousTitreRomanChiffre">
+            ou « le chiffrage d’une vie »<br><br>
+        </a>  
+        <a id="ContenuRomanChiffre">
+            Roman Opalka, artiste franco-polonais attendit toute sa vie ce moment inéluctable qui viendrait conclure sa grande oeuvre : À partir de 1965, il entame la série <span id="changeColor">Détail sous titrée 1965 / 1 – ∞.</span>
+        </a>
+    </div>
+
+    <div class="TextOeuvreRomanChiffre">
+        <a id="TitreOeuvreRomanChiffre">
+            Roman Opalka<br>
+        </a>
+            
+        <a id="SousTitreOeuvreRomanChiffre">
+            (1931-2011)<br>
+        </a>
+
+        <a id="SousTexteOeuvreRomanChiffre">
+            OPALKA, 1965, série / 1-<br>
+            ∞ Détail 993460 - 10178751<br>
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin35">
+    <div class="imgFullRomanChiffre">
+        <img src="./Assets/Salle2/ecriture.png" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin34">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+
+<!-- Alper Yesiltas -->
+
+<div class="popin" id="popin36">
+    <div class="pince">
+    	<img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <img src="./Assets/Elements/retourNoir.svg" alt="Description de l'image">
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin37">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="enSavoirPlus">
+        <a href="#popin37">
+            <img src="./Assets/Elements/enSavoir+.png" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="imgOeuvreAlper">
+    	<img src="./Assets/Salle2/4oeuvre.png" alt="Description de l'image">
+    </div>
+
+    <div class="boutonOeuvreAlper">
+        <a href="#popin38">
+            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
+        </a>
+    </div>
+    
+    <div class="TextAlper">
+        <a id="TitreAlper">
+            2023 : ALPER YESILTAS<br>
+        </a>
+        <a id="SousTitreAlper">
+            Quand les filtres numériques<br>
+            jouent avec notre perception…<br><br>
+        </a>
+        <a id="ContenuAlper">
+            Enfants, nous rêvions tous déjà de savoir à quoi nous ressemblerions une fois adultes.<br>
+            Dans sa série intitulée Young Age(d), <span id="changeColor">Alper Yesiltas photographe turc,</span> utilise, en base graphique, les filtres numériques mais aussi le logiciel Remini pour améliorer la qualité des photos ainsi que Lightroom et l’application VSCO pour retravailler les images en post-production.<br>
+            Le titre de son oeuvre parle d’elle-même : Young Age(d) est un mixte de « jeune âge » et de « jeune âgé »… Tout un programme !<br><br>
+            Déjà en 2022, l’artiste avait imaginé sa série Comme si rien ne s’était passé en vieillissant les visages de célébrités disparues (Mickael Jackson, Lady Diana, Freddie Mercury, Amy Winehouse…). Cette série de portraits est particulièrement bluffante car elle donne l’impression que toutes les personnes sélectionnées sont passées devant l’objectif du photographe. Il fait revivre les disparus.<br><br>
+            Aujourd’hui, la jeune génération d’artistes essaie de contrebalancer les effets du temps. Si la « jeunesse numérique » lutte contre les effets du viellissement à l’aide d’outils technologiques, les jeunes artistes veulent réhabilter la sagesse et la bienveillance associées au « Bel âge ».
+
+        </a>
+    </div>
+
+    <div class="TextOeuvreAlper">
+        <a id="TitreOeuvreAlper">
+            Alper Yesiltas,<br>
+        </a>
+        <a id="SousTitreOeuvreAlper">
+            Série Young Age(d)<br>
+        </a>
+
+        <a id="SousTexteOeuvreAlper">
+            Robert Pattinson, 2023<br>
+        </a>
+    </div>
+
+    <div class="TextOeuvreAlper2">
+        <a id="TitreOeuvreAlper">
+            Alper Yesiltas,<br>
+        </a>
+        <a id="SousTitreOeuvreAlper">
+            Série Young Age(d)<br>
+        </a>
+
+        <a id="SousTexteOeuvreAlper">
+            Greta Thunberg, 2023<br>
+        </a>
+    </div>
+
+    <div class="TextOeuvreAlper3">
+        <a id="TitreOeuvreAlper">
+            Alper Yesiltas,<br>
+        </a>
+
+        <a id="SousTitreOeuvreAlper">
+            Comme si rien ne s’était passé<br>
+        </a>
+
+        <a id="SousTexteOeuvreAlper">
+            Mickael Jackson, 2022<br>
+        </a>
+    </div>
+
+    <div class="TextOeuvreAlper4">
+        <a id="TitreOeuvreAlper">
+            Alper Yesiltas,<br>
+        </a>
+
+        <a id="SousTitreOeuvreAlper">
+            Comme si rien ne s’était passé<br>
+        </a>
+
+        <a id="SousTexteOeuvreAlper">
+            Janis Joplin, 2022<br>
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin37">
 
     <div class="pince">
         <img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
@@ -817,495 +2178,1469 @@
         <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
     </div>
 
-    <div class="imgOeuvre">
-        <img src="./Assets/Oeuvre_1/DeVinci-Homme-de-Vitruve.png" alt="Description de l'image">
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
     </div>
-	
-	<div class="scotch">
-		<img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
-	</div>
-
-	<div class="boutonOeuvre">
-		<a href="#popin15">
-			<img src="./Assets/Elements/rond+.png" alt="Description de l'image">
-		</a>
-	</div>
 
 	<div class="backArrow">
-		<a href="#popin13">
+		<a href="#popin36">
 			<img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
 		</a>
 	</div>
 
 	<div class="nextArrow">
-		<a href="#popin15">
+		<a href="#popin38">
 			<img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
 		</a>
 	</div>
 
 	<div class="close">
 		<a href="#popin0">
-			<img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+			<img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
 		</a>
 	</div>
 
-	<div class="citation">
-		<a href="#popin13">
-			<img src="./Assets/Elements/citationOrale.png" alt="Description de l'image">
-		</a>
-	</div>
+    <div class="boutonOeuvreAlper">
+        <a href="#popin38">
+            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
+        </a>
+    </div>
 
-	<div class="enSavoirPlus1-2">
+    <div class="imgOeuvreAlper">
+    	<img src="./Assets/Salle2/4oeuvre.png" alt="Description de l'image">
+    </div>
+
+	<div class="enSavoirPlusAlper">
         <img src="./Assets/Elements/enSavoir+.png" alt="Description de l'image">
     </div>
 
-	<div class="blocNoteImage">
+	<div class="blocNoteAlper">
 		<img src="./Assets/Elements/blocNotes.svg" alt="Description de l'image">
 	</div>
 
-	<div class="blocNoteImageLine">
+	<div class="blocNoteLigneAlper">
+		<img src="./Assets/Elements/cadrillageBleu.svg" alt="Description de l'image">
+	</div>
+		<div class="blocNoteContenuAlper">
+			<a id="ContenuBlocAlper">
+				La vieillesse est progressive pour une seule raison : qu’elle nous soit supportable. Et pourtant : en 2019, Snapchat introduit Time Machine (Machine temporelle), un nouveau filtre vieillissant façon FaceApp.<br>
+                Dans les faits, la fonctionnalité propose à ses utilisateurs de se faire vieillir en faisant simplement glisser un curseur sur leur écran. Comme Snapchat l’indique dans son communiqué de presse, le filtre repose sur l’utilisation d’une technologie de machine learning qui rend « un voyage dans le temps possible grâce auquel les années fondent ou s’accumulent au gré de vos envies ».
+			</a>          
+		</div>
+
+        <div class="TextOeuvreAlper">
+            <a id="TitreOeuvreAlper">
+                Alper Yesiltas,<br>
+            </a>
+            <a id="SousTitreOeuvreAlper">
+                Série Young Age(d)<br>
+            </a>
+    
+            <a id="SousTexteOeuvreAlper">
+                Robert Pattinson, 2023<br>
+            </a>
+        </div>
+    
+        <div class="TextOeuvreAlper2">
+            <a id="TitreOeuvreAlper">
+                Alper Yesiltas,<br>
+            </a>
+            <a id="SousTitreOeuvreAlper">
+                Série Young Age(d)<br>
+            </a>
+    
+            <a id="SousTexteOeuvreAlper">
+                Greta Thunberg, 2023<br>
+            </a>
+        </div>
+    
+        <div class="TextOeuvreAlper3">
+            <a id="TitreOeuvreAlper">
+                Alper Yesiltas,<br>
+            </a>
+    
+            <a id="SousTitreOeuvreAlper">
+                Comme si rien ne s’était passé<br>
+            </a>
+    
+            <a id="SousTexteOeuvreAlper">
+                Mickael Jackson, 2022<br>
+            </a>
+        </div>
+    
+        <div class="TextOeuvreAlper4">
+            <a id="TitreOeuvreAlper">
+                Alper Yesiltas,<br>
+            </a>
+    
+            <a id="SousTitreOeuvreAlper">
+                Comme si rien ne s’était passé<br>
+            </a>
+    
+            <a id="SousTexteOeuvreAlper">
+                Janis Joplin, 2022<br>
+            </a>
+        </div>
+</div>
+
+<div class="popin" id="popin38">
+    <div class="imgFullAlper">
+        <img src="./Assets/Salle2/Robert.png" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin37">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin39">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>    
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin39">
+    <div class="imgFullAlper2">
+        <img src="./Assets/Salle2/Greta.png" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin38">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin40">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>    
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin40">
+    <div class="imgFullAlper3">
+        <img src="./Assets/Salle2/Michael.png" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin39">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin41">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>    
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin41">
+    <div class="imgFullAlper4">
+        <img src="./Assets/Salle2/Janis.png" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin40">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio2()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+
+<!-- Module 1 - Salle 3 -->
+
+<!-- Video Basquiat -->
+
+<div class="popin" id="popin42">
+
+    <video controls class="videoBasquiat" id="Video2">
+        <source  src="./Assets/Salle3/gray.mp4" type="video/mp4">
+    </video>
+
+    <div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <img src="./Assets/Elements/retourNoir.svg" alt="Description de l'image">
+    </div>
+    <div class="nextArrow">
+        <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
+    </div>
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio3()" src="./Assets/Elements/croixBlanc.svg" onclick="pauseVideo2()" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+<!-- Marco Melgrati Blonde -->
+
+<div class="popin" id="popin43">
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <img src="./Assets/Elements/retourNoir.svg" alt="Description de l'image">
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin44">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio3()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+
+    <div class="boutonOeuvreMelgratiBlonde">
+        <a href="#popin44">
+            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="imgOeuvreMelgratiBlonde">
+    	<img src="./Assets/Salle3/blonde.png" alt="Description de l'image">
+    </div>
+
+    <div class="pinceMelgratiBlonde">
+    	<img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
+    </div>
+
+    <div class="TextOeuvreMelgratiBlonde">
+        <a id="TitreOeuvreMelgratiBlonde">
+            Marco Melgrati,<br>
+        </a>
+        <a id="SousTitreOeuvreMelgratiBlonde">
+            Insta, 2022<br>
+        </a>
+
+        <a id="SousTexteOeuvreMelgratiBlonde">
+            Gouache sur papier aquarelle<br>
+            © Marco Melgrati<br>
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin44">
+    <div class="imgFullMelgratiBlonde">
+        <img src="./Assets/Salle3/blonde.png" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin43">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio3()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+<!-- Paula Modersohn Becker -->
+
+
+<div class="popin" id="popin45">
+
+    <div class="pince">
+    	<img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <img src="./Assets/Elements/retourNoir.svg" alt="Description de l'image"> 
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin46">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio3()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="boutonOeuvrePMB">
+        <a href="#popin47">
+            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="imgOeuvrePMB">
+    	<img src="./Assets/Salle3/femme.png" alt="Description de l'image">
+    </div>
+
+    <div class="citationEcrite">
+        <a href="#popin46">
+            <img src="./Assets/Elements/citationEcrite.png" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="TextPMB">
+        <a id="TitrePMB">
+            PAULA MODERSOHN-BECKER (1876-1907)<br>
+        </a>
+        <a id="SousTitrePMB">
+            Narcisse, libre et émancipé<br><br>
+        </a>
+        <a id="ContenuPMB">
+        Sans le savoir, Paula Modersohn-Becker a été <span id="changeColor">précurseur de l’image de la matérnité</span>. En mettant en scène sa grossesse sous forme d’autoportrait, on ne peut s’empêcher de constater qu’aujourd’hui, les célébrités et les anonymes théâtralisent leur ventre arrondi sur les réseaux sociaux : le corps enfanté entre féminisme et marketing de soi !<br>
+        La femme enceinte se montre et s’assume, parfois dans des poses très sulfureuses : cliché nu de profil pour mettre en valeur la silhouette nouvellement bombée, selfie pris pendant l’allaitement, poitrine rebondie.<br><br>
+        « Instagram a bouleversé notre vision du corps humain, en particulier féminin. Grâce au réseau, et malgré les règles qui y sont encore très pudibondes, les femmes, en particulier les stars, sont désormais leur propre directrice artistique. Elles peuvent gérer leur iconographie de manière très précise et reprendre la main sur leur image, ce qui n’était pas le cas avant. C’est d’autant plus vrai pour les mannequins, influenceuses ou actrices, puisque leur corps est leur métier. »
+        </a>
+    </div>
+
+    <div class="TextOeuvrePMB">
+        <a id="TitreOeuvrePMB">
+            Paula Modersohn-Becker,<br>
+        </a>
+
+        <a id="SousTitreOeuvrePMB">
+            Autoportrait au 6e anniversaire de mariage, 1906<br><br>
+        </a>
+
+        <a id="SousTexteOeuvrePMB">
+            Autoportrait au 6e anniversaire de mariage est un autoportrait grandeur nature, et <span id="changeColor">le premier autoportrait nu effectué par une femme</span>, sur lequel elle se représente le regard droit, portant son collier d’ambre qui ne la quittait jamais dans les dernières années, et tenant son ventre d’un air tendre et doucement ironique. Solidement campée sur ses jambes telle une idole primitive. Elle est enceinte, et c’est la première fois qu’une artiste se représente ainsi, avec un ventre rond devenant le centre de gravité du tableau.<br>
+            En fait, Paula n’est pas encore enceinte dans cet autoportrait, il s’agit d’une prédiction ou d’un souhait.<br><br>
+            L’année précédente, Paula Modersohn-Becker avait pris la décision de quitter son mari et de s’installer à Paris. Elle est revenue. Un an plus tard, en novembre 1907, elle met au monde un petite fille.<br>
+            Elle mourra 18 jours plus tard, d’un accouchement difficile. Au moment de mourir, elle ne laisse échapper qu’un mot « Schade » ( dommage ).
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin46">
+
+    <div class="placementCarton">
+        <img src="./Assets/Elements/carton.png" alt="Description de l'image">
+    </div>
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+    <div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+    <div class="scotchCarton">
+        <img src="./Assets/Elements/scotchBlanc.png" alt="Description de l'image">
+    </div>
+    <div class="backArrow">
+        <a href="#popin45">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="nextArrow">
+        <a href="#popin47">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio3()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>   
+    <div class="TextCarton4">
+        <a id="ContenuCarton">
+            […] Et comme des fruits aussi tu voyais les femmes,<br>
+            tu voyais les enfants, modelés de l’intérieur dans<br>
+            les formes de leur existence.<br>
+        </a>
+        <a id="SousTextCarton">
+            Rainer Maria Rilke, 1908 (Requiem pour une amie)
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin47">
+    <div class="imgFullPMB">
+        <img src="./Assets/Salle3/femme.png" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin46">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio3()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+
+<!-- Jean Michel Basquiat -->
+
+
+<div class="popin" id="popin48">
+    <div class="pince">
+    	<img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <img src="./Assets/Elements/retourNoir.svg" alt="Description de l'image"> 
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin49">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio3()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="citationEcrite">
+        <a href="#popin49">
+            <img src="./Assets/Elements/citationEcrite.png" alt="Description de l'image">
+        </a>
+    </div>
+    
+    <div class="boutonOeuvreJMB">
+        <a href="#popin50">
+            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="imgOeuvreJMB">
+    	<img src="./Assets/Salle3/corps.png" alt="Description de l'image">
+    </div>
+    
+    <div class="TextJMB">
+        <a id="TitreJMB">
+            JEAN-MICHEL BASQUIAT (1960-1988),<br>
+        </a>
+        <a id="SousTitreJMB">
+            Une urgence de vivre, Narcisse et ses démons<br><br>
+        </a>
+        <a id="ContenuJMB">
+            Cet autoportrait brutal peint en 1982 est un exemple par excellence du style féroce et enragé de Basquiat, inspiré par plusieurs références, tels que des artistes contemporains comme Picasso ou Pollock, la musique jazz mais aussi l’abus d’héroïne.<br>
+            La figure inquiétante de cet autoportrait fait également penser à ces statuettes mystérieuses des idoles de l’Afrique ancienne. Dans cet autoportrait, on retrouve les rites de l’artiste : remplir la toile de motifs issus de son environnement immédiat. Les influences, du graffiti, de son héritage haïtien et portoricain, de la culture latino-américaine et afroaméricaine, de l’art aztèque, de l’art africain, de l’antiquité grecque et romainesont présents dans sa toile.<br>
+            Basquiat confronte souvent le racisme dans ses peintures en mettant en scène des figures noires qui affrontent des stéréotypes négatifs ou des injustices sociales. Ici, son corps est peint en un noir saturé, et montre son implication dans la défense de la cause noireaméricaine.<br><br
+            >Mort d’une overdose à l’âge de 27 ans, ce jeune ami de Warhol a élevé le street art au rang des beaux-arts. La stylisation primitive de cette figure toutes dents dehors, au nez épaté et aux dreadlocks en bataille, évoque l’image d’un chaman, d’un masque africain et d’un homme en colère. <span id="changeColor">Son portrait mêle révolte, indignation, bonheur et désespoir, tel un Narcisse se noyant dans le tourbillon de ses démons</span>.
+        </a>
+    </div>
+      
+     
+    <div class="TextOeuvreJMB">
+        <a id="TitreOeuvreJMB">
+            Jean-Michel Basquiat,<br>
+        </a>
+
+        <a id="SousTitreOeuvreJMB">
+            Self Portrait as a heel,<br>
+        </a>
+
+        <a id="SousTexteOeuvreJMB">
+            1982<br>
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin49">
+    <div class="placementCarton">
+        <img src="./Assets/Elements/carton.png" alt="Description de l'image">
+    </div>
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+    <div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+    <div class="scotchCarton">
+        <img src="./Assets/Elements/scotchBlanc.png" alt="Description de l'image">
+    </div>
+    <div class="backArrow">
+        <a href="#popin48">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="nextArrow">
+        <a href="#popin50">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio3()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>   
+    <div class="TextCarton5">
+        <a id="ContenuCarton">
+            <br>Je ne pense pas à l’art quand je travaille.<br>
+            J’essaie de penser à la vie.<br>
+        </a>
+        <a id="SousTextCarton">
+            <br>Jean-Michel Basquiat, 1985<br>
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin50">
+    <div class="imgFullJMB">
+        <img src="./Assets/Salle3/corps.png" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin49">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio3()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+
+<!-- Marco Melgrati Reflet -->
+
+<div class="popin" id="popin51">
+    <div class="pince">
+    	<img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <img src="./Assets/Elements/retourNoir.svg" alt="Description de l'image">   
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin52">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio3()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+
+    <div class="tromboneMMR">
+    	<img src="./Assets/Salle3/trombone.png" alt="Description de l'image">
+    </div>
+
+    <div class="imgOeuvreMMR">
+    	<img src="./Assets/Salle3/reflet1.png" alt="Description de l'image">
+    </div>
+
+    <div class="imgOeuvreMMR2">
+    	<img src="./Assets/Salle3/reflet2.png" alt="Description de l'image">
+    </div>
+
+    <div class="boutonOeuvreMMR">
+        <a href="#popin53">
+            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="citationEcrite">
+        <a href="#popin52">
+            <img src="./Assets/Elements/citationEcrite.png" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="TextMMR">
+        <a id="TitreMMR">
+            MARCO MELGRATI<br>
+        </a>
+        <a id="SousTitreMMR">
+            Narcisse du XXIe siècle<br><br>
+        </a>
+        <a id="ContenuMMR">
+            Dans la mythologie grecque, Narcisse est un chasseur originaire de Thespies, en Béotie. Il est le fi ls de la nymphe Liriope et du dieu fleuve Céphise. Narcisse est doté d’une grande beauté ce qui lui vaut d’avoir tous les hommes et femmes à ses pieds.<br>
+            La nymphe Écho tombe folle amoureuse de Narcisse. Mais elle est ignorée par ce dernier. Elle continue cependant à le suivre en répétant inlassablement la fi n des phrases de Narcisse. Elle finit par mourir de désespoir. Plus tard, la déesse Némésis (la Vengeance) venge les dizaines de jeunes filles auxquelles Narcisse a brisé le coeur en faisant tomber désespérément amoureux Narcisse de lui-même en le faisant se regarder dans un ruisseau… Cela lui est fatal, car, en voulant embrasser son reflet, il tombe dans l’eau et se noie.<br><br>
+            De nos jours,<span id="changeColor">« être narcissique » signifie « trop s’aimer soi-même pour aimer les autres »</span>.<br>
+            Aujourd’hui, de nombreux artistes dénoncent le « narcissisme » des utilisateurs de réseaux sociaux.<br>
+            Ici, l’artiste italien Marco Melgrati illustre son propos en reprenant la figure de Narcisse qui se noie <span id="changeColor">dans le reflet de son smartphone…</span><br><br>
+            <span id="changeColor">Le mythe de Narcisse a depuis les métamorphoses d’Ovide, traversé les époques. Toutefois, il semble que les réseaux sociaux aient ici un nouveau rôle à jouer. Ils sont devenus non seulement le nouveau miroir dans lequel on ne cesse de contempler notre reflet lissé et retouché par les filtres dans l’intention d’être vu par les autres, dans une sorte de nouveau théâtre de la représentation de soi. Mais surtout, ils apparaissent comme un nouveau moyen d’affirmation et de revendication</span>.
+        </a>
+    </div>
+
+    <div class="TextOeuvreMMR2">
+        <a id="TitreOeuvreMMR">
+            Marco Melgrati,<br>
+        </a>
+
+        <a id="SousTitreOeuvreMMR">
+            Narcisse, 2020<br>
+        </a>
+
+        <a id="SousTexteOeuvreMMR">
+            Photo DB<br>
+        </a>
+    </div>
+    <div class="TextOeuvreMMR">
+        <a id="TitreOeuvreMMR">
+            Le Caravage,<br>
+        </a>
+
+        <a id="SousTitreOeuvreMMR">
+            Narcisse amoureux de son image, 1597-1599<br>
+        </a>
+
+        <a id="SousTexteOeuvreMMR">
+            Dèjà au XVIème siècle, Le Caravage représentait Narcisse<br>
+            non pas traité de l’Antiquité mais dans une tenue contemporaine<br>
+            au peintre. Entièrement absorbé dans sa propre contemplation,<br>
+            la bouche entrouverte, Narcisse touche à peine la surface de<br>
+            l’eau qui n’est pas encore troublée par son mouvement, ce qui<br>
+            signifie qu’il n’a pas encore compris l’inéluctable destin<br>
+            qui est le sien…<br>
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin52">
+    <div class="placementCarton">
+        <img src="./Assets/Elements/carton.png" alt="Description de l'image">
+    </div>
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+    <div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+    <div class="scotchCarton">
+        <img src="./Assets/Elements/scotchBlanc.png" alt="Description de l'image">
+    </div>
+    <div class="backArrow">
+        <a href="#popin51">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="nextArrow">
+        <a href="#popin53">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio3()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>   
+    <div class="TextCarton6">
+        <a id="ContenuCarton">
+            Le seul Narcisse coupable est celui qui trouve les autres laids
+        </a>
+        <a id="SousTextCarton">
+            <br><br>Le Théatre de Jean Giraudoux : La folle de Chaillot (Édition 1951)<br>
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin53">
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin52">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin54">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>    
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio3()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="imgFullMMR">
+        <img src="./Assets/Salle3/reflet1.png" alt="Description de l'image">
+    </div>
+
+</div>
+
+<div class="popin" id="popin54">
+    <div class="imgFullMMR2">
+        <img src="./Assets/Salle3/reflet2.png" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin53">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img onclick="playAudio3()" src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+
+
+<!-- Module 2 - Salle 1 -->
+
+<!-- Frida Kahlo Colonne  -->
+
+<div class="popin" id="popin59">
+    <div class="pince">
+    	<img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <img src="./Assets/Elements/retourNoir.svg" alt="Description de l'image">
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin60">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+
+
+    <div class="close">
+        <a href="#popin0">
+            <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="citationEcrite">
+        <a href="#popin60">
+            <img src="./Assets/Elements/citationEcrite.png" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+
+    <div class="boutonOeuvreFrida">
+        <a href="#popin61">
+            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="imgOeuvreFrida">
+    	<img src="./Module_2/Salle_1/Oeuvre_1/la_colonne_brisee_1944.png" alt="Description de l'image">
+    </div>
+
+
+    <div class="TextFrida">
+        <a id="TitreFrida">
+            FRIDA KAHLO (1907-1954)<br>
+        </a>
+        <a id="SousTitreFrida">
+            Entre corps souffrant et corps politique<br>
+        </a>
+        <a id="ContenuFrida">
+            <br>Avant de se lancer dans la peinture, Frida, brillante élève, a un rêve : devenir médecin.
+            Atteinte de poliomyélite à 6 ans, elle perd en partie l’usage de sa jambe droite et son pied ne grandit plus. Ses camarades de classe la surnomment même
+            <span id="changeColor">« Frida la coja » (Frida la boîteuse)</span>.<br>
+            À 18 ans, elle est victime d’un terrible accident de bus et reste hospitalisée pendant des mois. Ses parents lui fabriquent un chevalet sur-mesure qu’elle peut utiliser en étant allongée pour protéger sa colonne vertébrale très fragile.
+            
+            
+            <br><br><span id="underlineColorFrida">L’autoportrait</span><br><br>
+            
+            L’autoportrait tient une place très importante dans l’oeuvre de Frida. On en compte au moins 55 sur les 150 tableaux qu’elle a peints. En se mettant elle-même en scène, <span id="changeColor">elle exprime ses souffrances</span> : sa peinture devient <span id="changeColor">porte-parole de sa douleur</span>.<br><br>
+            
+            Son intérêt, qui prend un tournat au fur et à mesure, est clair : <span id="changeColor">elle veut défendre la condition et l’émancipation des femmes mexicaines</span>. Dans cette société « machiste », elle veut porter la voix de toutes ces femmes silencieuses et soumises. Cette figure de
+            femme moderne lui colle à la peau. Elle n’hésite même plus en affichant publiquement sa bisexualité.
+        </a>
+    </div>
+    <div class="TextOeuvreFrida">
+		<a id="TitreOeuvreFrida">
+			Frida Kahlo,<br>
+            La Colonne brisée, 1944<br>
+		</a>
+		<a id="SousTexteOeuvreFrida">
+			Huile sur toile, 40 x 30.7 cm<br>
+            © Museo Dolores Olmedo<br>
+            Patiño / Mexique<br>
+		</a>
+	</div>
+</div>
+
+<div class="popin" id="popin60">
+    <div class="placementCarton">
+        <img src="./Assets/Elements/carton.png" alt="Description de l'image">
+    </div>
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+
+    <div class="fondCubeHD">
+        <img src="./Assets/Elements/cubeHD.png" alt="Description de l'image">
+    </div>
+
+    <div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+    <div class="scotchCarton">
+        <img src="./Assets/Elements/scotchBlanc.png" alt="Description de l'image">
+    </div>
+    <div class="backArrow">
+        <a href="#popin59">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="citationEcrite">
+        <img src="./Assets/Elements/citationEcrite.png" alt="Description de l'image">
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin61">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+    <div class="close">
+        <a href="#popin0">
+            <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>   
+    <div class="TextCarton6">
+        <a id="ContenuCarton">
+            Je peins des autoportraits parce que je me sens si souvent seule,<br>
+            parce que je suis la seule personne que je connais le mieux.
+        </a>
+        <a id="SousTextCarton">
+            <br><br>Frida Kahlo<br>
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin61">
+    <div class="imgFullFrida">
+        <img src="./Module_2/Salle_1/Oeuvre_1/la_colonne_brisee_1944_full.png" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin60">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="nextArrow">
+        <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+</div>
+
+<!-- Frida Kahlo Autoportrait -->
+
+<div class="popin" id="popin62">
+    
+
+    <div class="pince">
+    	<img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <img src="./Assets/Elements/retourNoir.svg" alt="Description de l'image">
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin63">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="imgOeuvreFridaAuto">
+    	<img src="./Module_2/Salle_1/Oeuvre_2/frida-kahlo-autoportrait-au-collier-d-epines-et-colibri.png" alt="Description de l'image">
+    </div>
+
+    <div class="boutonOeuvreFridaAuto">
+        <a href="#popin64">
+            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="enSavoirPlus">
+        <a href="#popin63">
+            <img src="./Assets/Elements/enSavoir+.png" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="TextFridaAuto">
+        <a id="TitreFridaAuto">
+            FRIDA KAHLO (1907-1954)<br>
+        </a>
+        <a id="SousTitreFridaAuto">
+            Entre corps souffrant et corps politique<br><br>
+        </a>
+        <a id="ContenuFridaAuto">
+            <span id="changeColor">Le collier</span> de Frida Kahlo est un colibri noir, mort.
+            Les ailes déployées font écho aux sourcils de notre artiste. En effet, le colibri mort, dans la tradition mexicaine, est un porte-bonheur évoquant l’espoir.
+            Le tableau est réalisé peu de temps après le divorce douloureux de Frida et Rivera, qu’apaisera, peut-être, le colibri. Ainsi, le colibri est attaché à <span id="changeColor">un collier d’épines</span>
+            évoquant ses souffrances, référence à la couronne d’épines du Christ sur la Croix.<br><br>
+
+            <span id="changeColor">Le singe</span> : assis sur l’épaule de Frida, il fait référence au singe apprivoisé, offert par Diego Rivera. Ainsi, comme un ange sur son épaule, on peut supposer qu’il le représente. Le singe semble joueur, tirant sur son collier, lui infligeant une douleur.<br><br>
+
+            <span id="changeColor">Le chat noir</span> : symbole de sa dépression, de sa malchance, car le chat noir porte malheur et évoque la mort.<br><br>
+
+            <span id="changeColor">Les papillons</span> : plus discrets, ils se nichent dans ses cheveux. Un symbole d’espoir qui représente sa renaissance espérée.
+        </a>
+    </div>
+
+    <div class="TextOeuvreFridaAuto">
+        <a id="TitreOeuvreFridaAuto">
+            Frida Kahlo,<br>
+        </a>
+
+        <a id="SousTitreOeuvreFridaAuto">
+            Autoportrait au collier<br>
+            d’épines et colibri, 1940<br>
+        </a>
+
+        <a id="SousTexteOeuvreFridaAuto">
+            Huile sur toile<br>
+            © Museo Dolores Olmedo<br>
+            Patiño / Mexique<br>
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin63">
+    <div class="pince">
+    	<img src="./Assets/Elements/pinceOeuvre.svg" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
+    <div class="scotch">
+        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+    </div>
+
+    <div class="backArrow">
+        <a href="#popin62">
+            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
+        </a>    
+    </div>
+
+    <div class="nextArrow">
+        <a href="#popin64">
+            <img src="./Assets/Elements/suivantBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+    <div class="close">
+        <a href="#popin0">
+            <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
+        </a>
+    </div>
+
+
+
+    <div class="imgOeuvreFridaAuto">
+    	<img src="./Module_2/Salle_1/Oeuvre_2/frida-kahlo-autoportrait-au-collier-d-epines-et-colibri.png" alt="Description de l'image">
+    </div>
+
+    <div class="boutonOeuvreFridaAuto">
+        <a href="#popin3">
+            <img src="./Assets/Elements/rond+.png" alt="Description de l'image">
+        </a>
+    </div>
+
+	<div class="enSavoirPlusFridaAuto">
+        <img src="./Assets/Elements/enSavoir+.png" alt="Description de l'image">
+    </div>
+
+	<div class="blocNoteFridaAuto">
+		<img src="./Assets/Elements/blocNotes.svg" alt="Description de l'image">
+	</div>
+
+	<div class="blocNoteLigneFridaAuto">
 		<img src="./Assets/Elements/cadrillageBleu.svg" alt="Description de l'image">
 	</div>
 
-	<div class="Titre">
-		<a id="Title">
-			ANGELICA DASS<br>
-		</a>
-		<a id="SubTitle">
-			l’immense mosaïque humaine<br><br>
-		</a>
-		<div class="blocNote">
-			<a id="blocNoteText">
-				Angélica Dass a expliqué que son but ultime est que Humanae<br>
-				agisse comme une plate-forme de discussion sur l’identité<br>
-				« indépendante de facteurs tels que la nationalité, l’origine,<br>
-				le statut économique, l’âge ou les normes esthétiques »<br>
-				Un ambitieux projet de la part de l’artiste, débuté en 2012 et qui<br>
-				évolue quotidiennement, qui milite contre les discriminations et<br>
-				les stéréotypes liés à la couleur de peau, en ayant à cœur de<br>
-				faire évoluer les mentalités.<br>
-				À ce jour, Angélica Dass a réunit dans son œuvre plus de 2 500<br>
-				carnations de peau.
-			</a>
-		</div>
-	</div>
-	<div class="TitreOeuvre">
-		<a id="TitleOeuvre">
-			Angélica Dass,<br>
-		</a>
-		<a id="SubTitleOeuvre">
-			Humanae,<br>
-		</a>
-		<a id="TextOeuvre">
-			Projet évolutif<br>
-			depuis 2012<br>
-		</a>
-	</div>
-</div>
-
-<div class="popin" id="popin15">
-    <div class="placementCarton">
-        <img src="./Assets/Elements/carton.png" alt="Description de l'image">
-    </div>
-    <div class="scotch">
-        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
-    </div>
-    <div class="venusInspiration">
-        <img src="./Assets/Oeuvre_4/Venus_de_Willendorf-Small.png" alt="Description de l'image">
-    </div>
-    <div class="tromboneVenus">
-        <img src="./Assets/Elements/trombone.svg" alt="Description de l'image">
-    </div>
-    <div class="inspiration">
-        <a href="#popin9">
-            <img src="./Assets/Elements/INSPIRATION.png" alt="Description de l'image">
+    <div class="TextFridaAuto">
+        <a id="TitreFridaAuto">
+            FRIDA KAHLO (1907-1954)<br>
+        </a>
+        <a id="SousTitreFridaAuto">
+            Entre corps souffrant et corps politique<br><br>
         </a>
     </div>
-    <div class="scotchB">
-        <img src="./Assets/Elements/scotchBlanc.svg" alt="Description de l'image">
+    <div class="blocNoteContenuFridaAuto">
+        <a id="ContenuBlocFridaAuto">
+            <br><br>Frida Kahlo questionne aussi les femmes
+            et leur rapport au corps.
+            D’abord le sien, celui qui a été mutilé à jamais,
+            l’empêchant d’ailleurs d’avoir un jour des enfants.
+            Assez lointaine, droite, elle ne laisse transparaître
+            aucune courbe dans les traits.<br><br>
+            
+            <span id="underlineColor">Ce n’est pas anodin : elle déteste son sourire et sa dentition.
+            Pour cette raison, elle ne se représente jamais
+            avec une esquisse au coin des lèvres.</span>
+        </a>
     </div>
+
+
+    <div class="TextOeuvreFridaAuto">
+        <a id="TitreOeuvreFridaAuto">
+            Frida Kahlo,<br>
+        </a>
+
+        <a id="SousTitreOeuvreFridaAuto">
+            Autoportrait au collier<br>
+            d’épines et colibri, 1940<br>
+        </a>
+
+        <a id="SousTexteOeuvreFridaAuto">
+            Huile sur toile<br>
+            © Museo Dolores Olmedo<br>
+            Patiño / Mexique<br>
+        </a>
+    </div>
+</div>
+
+<div class="popin" id="popin64">
+    <div class="imgFullFridaAuto">
+        <img src="./Module_2/Salle_1/Oeuvre_2/frida-kahlo-autoportrait-au-collier-d-epines-et-colibri_full.png" alt="Description de l'image">
+    </div>
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
+    </div>
+
     <div class="backArrow">
-        <a href="#popin9">
+        <a href="#popin63">
             <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
         </a>
     </div>
+
     <div class="nextArrow">
         <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
     </div>
+
     <div class="close">
         <a href="#popin0">
             <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
         </a>
     </div>
-    <div class="citation">
-        <img src="./Assets/Elements/citationEcrite.png" alt="Description de l'image">
-    </div>
-    <div class="textCarton">
-        <a id="textCa">
-            Pour moi, mes sculptures représentent le monde<br>
-            de la femme amplifiée, la folie des grandeurs des femmes,<br>
-            la femme dans le monde d’aujourd’hui,<br>
-            la femme au pouvoir.<br>
-        </a>
-        <a id="sousTextCa">
-            <br>Niki de Saint Phalle (1965)<br>
-        </a>
-    </div>
 </div>
 
-<div class="popin" id="popin16">
-    <div class="placementCarton">
-        <img src="./Assets/Elements/carton.png" alt="Description de l'image">
+<!-- Gustave Courbet - Vincent Van Gogh - Rembrandt van Rjin -->
+
+<div class="popin" id="popin65">
+    <div class="imgFullFrida">
+        <img src="./Module_2/Salle_1/Oeuvre_1/la_colonne_brisee_1944_full.png" alt="Description de l'image">
     </div>
-    <div class="scotch">
-        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
     </div>
-    <div class="venusInspiration">
-        <img src="./Assets/Oeuvre_4/Venus_de_Willendorf-Small.png" alt="Description de l'image">
-    </div>
-    <div class="tromboneVenus">
-        <img src="./Assets/Elements/trombone.svg" alt="Description de l'image">
-    </div>
-    <div class="inspiration">
-        <a href="#popin9">
-            <img src="./Assets/Elements/INSPIRATION.png" alt="Description de l'image">
-        </a>
-    </div>
-    <div class="scotchB">
-        <img src="./Assets/Elements/scotchBlanc.svg" alt="Description de l'image">
-    </div>
+
     <div class="backArrow">
-        <a href="#popin9">
+        <a href="#popin60">
             <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
         </a>
     </div>
+
     <div class="nextArrow">
         <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
     </div>
+
     <div class="close">
         <a href="#popin0">
             <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
         </a>
     </div>
-    <div class="citation">
-        <img src="./Assets/Elements/citationEcrite.png" alt="Description de l'image">
-    </div>
-    <div class="textCarton">
-        <a id="textCa">
-            Pour moi, mes sculptures représentent le monde<br>
-            de la femme amplifiée, la folie des grandeurs des femmes,<br>
-            la femme dans le monde d’aujourd’hui,<br>
-            la femme au pouvoir.<br>
-        </a>
-        <a id="sousTextCa">
-            <br>Niki de Saint Phalle (1965)<br>
-        </a>
-    </div>
 </div>
 
-<div class="popin" id="popin17">
-    <div class="placementCarton">
-        <img src="./Assets/Elements/carton.png" alt="Description de l'image">
+<div class="popin" id="popin66">
+    <div class="imgFullFrida">
+        <img src="./Module_2/Salle_1/Oeuvre_1/la_colonne_brisee_1944_full.png" alt="Description de l'image">
     </div>
-    <div class="scotch">
-        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
     </div>
-    <div class="venusInspiration">
-        <img src="./Assets/Oeuvre_4/Venus_de_Willendorf-Small.png" alt="Description de l'image">
-    </div>
-    <div class="tromboneVenus">
-        <img src="./Assets/Elements/trombone.svg" alt="Description de l'image">
-    </div>
-    <div class="inspiration">
-        <a href="#popin9">
-            <img src="./Assets/Elements/INSPIRATION.png" alt="Description de l'image">
-        </a>
-    </div>
-    <div class="scotchB">
-        <img src="./Assets/Elements/scotchBlanc.svg" alt="Description de l'image">
-    </div>
+
     <div class="backArrow">
-        <a href="#popin9">
+        <a href="#popin60">
             <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
         </a>
     </div>
+
     <div class="nextArrow">
         <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
     </div>
+
     <div class="close">
         <a href="#popin0">
             <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
         </a>
     </div>
-    <div class="citation">
-        <img src="./Assets/Elements/citationEcrite.png" alt="Description de l'image">
-    </div>
-    <div class="textCarton">
-        <a id="textCa">
-            Pour moi, mes sculptures représentent le monde<br>
-            de la femme amplifiée, la folie des grandeurs des femmes,<br>
-            la femme dans le monde d’aujourd’hui,<br>
-            la femme au pouvoir.<br>
-        </a>
-        <a id="sousTextCa">
-            <br>Niki de Saint Phalle (1965)<br>
-        </a>
-    </div>
 </div>
 
-<div class="popin" id="popin18">
-    <div class="placementCarton">
-        <img src="./Assets/Elements/carton.png" alt="Description de l'image">
+<div class="popin" id="popin67">
+    <div class="imgFullFrida">
+        <img src="./Module_2/Salle_1/Oeuvre_1/la_colonne_brisee_1944_full.png" alt="Description de l'image">
     </div>
-    <div class="scotch">
-        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
     </div>
-    <div class="venusInspiration">
-        <img src="./Assets/Oeuvre_4/Venus_de_Willendorf-Small.png" alt="Description de l'image">
-    </div>
-    <div class="tromboneVenus">
-        <img src="./Assets/Elements/trombone.svg" alt="Description de l'image">
-    </div>
-    <div class="inspiration">
-        <a href="#popin9">
-            <img src="./Assets/Elements/INSPIRATION.png" alt="Description de l'image">
-        </a>
-    </div>
-    <div class="scotchB">
-        <img src="./Assets/Elements/scotchBlanc.svg" alt="Description de l'image">
-    </div>
+
     <div class="backArrow">
-        <a href="#popin9">
+        <a href="#popin60">
             <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
         </a>
     </div>
+
     <div class="nextArrow">
         <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
     </div>
+
     <div class="close">
         <a href="#popin0">
             <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
         </a>
     </div>
-    <div class="citation">
-        <img src="./Assets/Elements/citationEcrite.png" alt="Description de l'image">
-    </div>
-    <div class="textCarton">
-        <a id="textCa">
-            Pour moi, mes sculptures représentent le monde<br>
-            de la femme amplifiée, la folie des grandeurs des femmes,<br>
-            la femme dans le monde d’aujourd’hui,<br>
-            la femme au pouvoir.<br>
-        </a>
-        <a id="sousTextCa">
-            <br>Niki de Saint Phalle (1965)<br>
-        </a>
-    </div>
 </div>
 
-<div class="popin" id="popin19">
-    <div class="placementCarton">
-        <img src="./Assets/Elements/carton.png" alt="Description de l'image">
+<div class="popin" id="popin68">
+    <div class="imgFullFrida">
+        <img src="./Module_2/Salle_1/Oeuvre_1/la_colonne_brisee_1944_full.png" alt="Description de l'image">
     </div>
-    <div class="scotch">
-        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
     </div>
-    <div class="venusInspiration">
-        <img src="./Assets/Oeuvre_4/Venus_de_Willendorf-Small.png" alt="Description de l'image">
-    </div>
-    <div class="tromboneVenus">
-        <img src="./Assets/Elements/trombone.svg" alt="Description de l'image">
-    </div>
-    <div class="inspiration">
-        <a href="#popin9">
-            <img src="./Assets/Elements/INSPIRATION.png" alt="Description de l'image">
-        </a>
-    </div>
-    <div class="scotchB">
-        <img src="./Assets/Elements/scotchBlanc.svg" alt="Description de l'image">
-    </div>
+
     <div class="backArrow">
-        <a href="#popin9">
+        <a href="#popin60">
             <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
         </a>
     </div>
+
     <div class="nextArrow">
         <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
     </div>
+
     <div class="close">
         <a href="#popin0">
             <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
         </a>
     </div>
-    <div class="citation">
-        <img src="./Assets/Elements/citationEcrite.png" alt="Description de l'image">
-    </div>
-    <div class="textCarton">
-        <a id="textCa">
-            Pour moi, mes sculptures représentent le monde<br>
-            de la femme amplifiée, la folie des grandeurs des femmes,<br>
-            la femme dans le monde d’aujourd’hui,<br>
-            la femme au pouvoir.<br>
-        </a>
-        <a id="sousTextCa">
-            <br>Niki de Saint Phalle (1965)<br>
-        </a>
-    </div>
 </div>
 
-<div class="popin" id="popin20">
-    <div class="placementCarton">
-        <img src="./Assets/Elements/carton.png" alt="Description de l'image">
+<div class="popin" id="popin69">
+    <div class="imgFullFrida">
+        <img src="./Module_2/Salle_1/Oeuvre_1/la_colonne_brisee_1944_full.png" alt="Description de l'image">
     </div>
-    <div class="scotch">
-        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
     </div>
-    <div class="venusInspiration">
-        <img src="./Assets/Oeuvre_4/Venus_de_Willendorf-Small.png" alt="Description de l'image">
-    </div>
-    <div class="tromboneVenus">
-        <img src="./Assets/Elements/trombone.svg" alt="Description de l'image">
-    </div>
-    <div class="inspiration">
-        <a href="#popin9">
-            <img src="./Assets/Elements/INSPIRATION.png" alt="Description de l'image">
-        </a>
-    </div>
-    <div class="scotchB">
-        <img src="./Assets/Elements/scotchBlanc.svg" alt="Description de l'image">
-    </div>
+
     <div class="backArrow">
-        <a href="#popin9">
+        <a href="#popin60">
             <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
         </a>
     </div>
+
     <div class="nextArrow">
         <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
     </div>
+
     <div class="close">
         <a href="#popin0">
             <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
         </a>
     </div>
-    <div class="citation">
-        <img src="./Assets/Elements/citationEcrite.png" alt="Description de l'image">
-    </div>
-    <div class="textCarton">
-        <a id="textCa">
-            Pour moi, mes sculptures représentent le monde<br>
-            de la femme amplifiée, la folie des grandeurs des femmes,<br>
-            la femme dans le monde d’aujourd’hui,<br>
-            la femme au pouvoir.<br>
-        </a>
-        <a id="sousTextCa">
-            <br>Niki de Saint Phalle (1965)<br>
-        </a>
-    </div>
 </div>
 
-<div class="popin" id="popin21">
-    <div class="placementCarton">
-        <img src="./Assets/Elements/carton.png" alt="Description de l'image">
+<div class="popin" id="popin70">
+    <div class="imgFullFrida">
+        <img src="./Module_2/Salle_1/Oeuvre_1/la_colonne_brisee_1944_full.png" alt="Description de l'image">
     </div>
-    <div class="scotch">
-        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
+
+	<div class="logoVal">
+        <img src="./Assets/Elements/logoVal.svg" alt="Description de l'image">
     </div>
-    <div class="venusInspiration">
-        <img src="./Assets/Oeuvre_4/Venus_de_Willendorf-Small.png" alt="Description de l'image">
-    </div>
-    <div class="tromboneVenus">
-        <img src="./Assets/Elements/trombone.svg" alt="Description de l'image">
-    </div>
-    <div class="inspiration">
-        <a href="#popin9">
-            <img src="./Assets/Elements/INSPIRATION.png" alt="Description de l'image">
-        </a>
-    </div>
-    <div class="scotchB">
-        <img src="./Assets/Elements/scotchBlanc.svg" alt="Description de l'image">
-    </div>
+
     <div class="backArrow">
-        <a href="#popin9">
+        <a href="#popin60">
             <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
         </a>
     </div>
+
     <div class="nextArrow">
         <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
     </div>
+
     <div class="close">
         <a href="#popin0">
             <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
         </a>
     </div>
-    <div class="citation">
-        <img src="./Assets/Elements/citationEcrite.png" alt="Description de l'image">
-    </div>
-    <div class="textCarton">
-        <a id="textCa">
-            Pour moi, mes sculptures représentent le monde<br>
-            de la femme amplifiée, la folie des grandeurs des femmes,<br>
-            la femme dans le monde d’aujourd’hui,<br>
-            la femme au pouvoir.<br>
-        </a>
-        <a id="sousTextCa">
-            <br>Niki de Saint Phalle (1965)<br>
-        </a>
-    </div>
-</div>
-
-<div class="popin" id="popin22">
-    <div class="placementCarton">
-        <img src="./Assets/Elements/carton.png" alt="Description de l'image">
-    </div>
-    <div class="scotch">
-        <img src="./Assets/Elements/scotch.svg" alt="Description de l'image">
-    </div>
-    <div class="venusInspiration">
-        <img src="./Assets/Oeuvre_4/Venus_de_Willendorf-Small.png" alt="Description de l'image">
-    </div>
-    <div class="tromboneVenus">
-        <img src="./Assets/Elements/trombone.svg" alt="Description de l'image">
-    </div>
-    <div class="inspiration">
-        <a href="#popin9">
-            <img src="./Assets/Elements/INSPIRATION.png" alt="Description de l'image">
-        </a>
-    </div>
-    <div class="scotchB">
-        <img src="./Assets/Elements/scotchBlanc.svg" alt="Description de l'image">
-    </div>
-    <div class="backArrow">
-        <a href="#popin9">
-            <img src="./Assets/Elements/retourBlanc.svg" alt="Description de l'image">
-        </a>
-    </div>
-    <div class="nextArrow">
-        <img src="./Assets/Elements/suivantNoir.svg" alt="Description de l'image">
-    </div>
-    <div class="close">
-        <a href="#popin0">
-            <img src="./Assets/Elements/croixBlanc.svg" alt="Description de l'image">
-        </a>
-    </div>
-    <div class="citation">
-        <img src="./Assets/Elements/citationEcrite.png" alt="Description de l'image">
-    </div>
-    <div class="textCarton">
-        <a id="textCa">
-            Pour moi, mes sculptures représentent le monde<br>
-            de la femme amplifiée, la folie des grandeurs des femmes,<br>
-            la femme dans le monde d’aujourd’hui,<br>
-            la femme au pouvoir.<br>
-        </a>
-        <a id="sousTextCa">
-            <br>Niki de Saint Phalle (1965)<br>
-        </a>
-    </div>
 </div>
 
 
 
+<!-- Module 2 - Salle 2 -->
 
+<!-- Nicolas Amiard Odalisque -->
+
+<!-- Nicolas Amiard Le dejeuner -->
+
+<!-- Nicolas Amiard La Joconde -->
+
+<!-- Valie Export -->
+
+<!-- Shannon Holt Herons -->
+
+<!-- Wim Delvoye -->
+
+<!-- Shelley Jackson -->
+
+<!-- Shannon Holt Crocodiles -->
+
+<!-- Shannon Holt Renard -->
+
+
+
+
+<!-- Module 2 - Salle 3 -->
+
+<!-- Orlan precolombienne  -->
+
+<!-- Orlan precolombienne N°2  -->
+
+<!-- Cindy Sherman Untitled #141 -->
+
+<!-- Man Ray  -->
+
+<!-- Souverain Maya  -->
+
+<!-- Dignitaire Maya  -->
+
+<!-- Cindy Sherman Untitled #584 -->
+
+
+
+
+
+
+
+<!-- Module 3 - Salle 1 -->
+
+<!-- Rineke Dijkstra  -->
+
+<!-- Sandro Botticelli  -->
+
+<!-- Rankin -->
+
+<!-- John Yuy  -->
+
+<!-- Johanna Jaskowska Cyborg#6  -->
+
+<!-- John Yuy Twitter  -->
+
+<!-- Johanna Jaskowska Cyborg#4 -->
+
+<!-- Johanna Jaskowska Cyborg#7 -->
+
+
+
+
+
+
+<!-- Module 3 - Salle 2 -->
+
+<!-- Nicolas Amiard  -->
+
+<!-- Hercule au repos  -->
+
+<!-- Ilya Volykhine -->
+
+<!-- Jamie Lee  -->
+
+<!-- Francesca Woodman  -->
+
+<!-- Robert Cornelius  -->
+
+<!-- Andy Warhol -->
+
+<!-- Kevin Lau -->
+
+
+
+
+
+
+<!-- Module 3 - Salle 3 -->
+
+<!-- Christian Boltanski  -->
+
+<!-- Banksy La fille au ballon  -->
+
+<!-- Jonathan Harris -->
+
+<!-- Yves Klein Performance  -->
+
+<!-- Yves Klein Anthropometrie  -->
+
+<!-- Bansky Les glaneuses  -->
+
+<!-- Jean François Millet  -->
 
 
 
