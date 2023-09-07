@@ -43,7 +43,7 @@ a[href="#"] {
     left: 25%;
 }
 
-#popin11,#popin12,#popin14,#popin16,#popin18,#popin19,#popin20,#popin21,#popin22,#popin23,#popin26,#popin28,#popin31,#popin33,#popin35,#popin38,#popin39,#popin40,#popin41,#popin42,#popin44,#popin47,#popin50,#popin53,#popin54,#popin56,#popin58,#popin61,#popin64 {
+#popin11,#popin12,#popin14,#popin16,#popin18,#popin19,#popin20,#popin21,#popin22,#popin23,#popin26,#popin28,#popin31,#popin33,#popin35,#popin38,#popin39,#popin40,#popin41,#popin42,#popin44,#popin47,#popin50,#popin53,#popin54,#popin56,#popin58,#popin61,#popin64,#popin66,#popin68,#popin70,#popin73,#popin74,#popin75,#popin77,#popin80,#popin82,#popin84,#popin86,#popin87,#popin91,#popin92,#popin93,#popin96,#popin98,#popin101,#popin103,#popin105,#popin107 {
 	background-image: url("");
 }
 
@@ -85,7 +85,7 @@ a[href="#"] {
     top: -11.5%;
     left: 8%;
     transform: scale(1.1);
-    z-index: 1;
+    z-index: 2;
 }
 
 .logoVal {
@@ -161,6 +161,20 @@ a[href="#"] {
     position: absolute;
     top: 0%;
     right: 0%;
+    z-index: 0;
+}
+
+.fondCubeBD {
+    position: absolute;
+    bottom: -1%;
+    right: 0%;
+    z-index: 0;
+}
+
+.fondCubeHG {
+    position: absolute;
+    top: 0%;
+    left: 0%;
     z-index: 0;
 }
 
@@ -2759,15 +2773,295 @@ a[href="#"] {
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Gustave Courbet Le Désespéré */
 
+.imgOeuvreGustave {
+    position: absolute;
+    top: -12%;
+    left: 0%;
+    
+}
+
+.boutonOeuvreGustave {
+    position: absolute;
+    top: -2%;
+    left: -3%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+
+
+.TextOeuvreGustave {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreGustave {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreGustave {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreGustave {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+
+.TextGustave {
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreGustave {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreGustave {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuGustave {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.imgFullGustave {
+    position: absolute;
+    top: -10%;
+    left: 20%;
+    transform: scale(1.2);
+}
+
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Vincent van Gogh Autoportrait à l'oreille bandée */
 
+.imgOeuvreVincent {
+    position: absolute;
+    top: -8%;
+    left: 2%;
+    transform: scale(1.1);
+}
 
+.boutonOeuvreVincent {
+    position: absolute;
+    top: -2%;
+    left: -3%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+
+
+.TextOeuvreVincent {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreVincent {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreVincent {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreVincent {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+
+.TextVincent {
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreVincent {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreVincent {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuVincent {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.imgFullVincent {
+    position: absolute;
+    top: 0%;
+    left: 20%;
+    transform: scale(1.2);
+}
 
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Rembrandt van Rijn Rembrandt aux yeux hagards */
+
+.imgOeuvreRijn {
+    position: absolute;
+    top: -10%;
+    left: 0%;
+}
+
+.boutonOeuvreRijn {
+    position: absolute;
+    top: -2%;
+    left: -3%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+
+
+.TextOeuvreRijn {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreRijn {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreRijn {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreRijn {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+
+
+.TextRijn {
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreRijn {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreRijn {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuRijn {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.imgFullRijn {
+    position: absolute;
+    top: 0%;
+    left: 20%;
+    transform: scale(1.2);
+}
+
+
+
+
+
+
 
 
 
@@ -2780,53 +3074,1484 @@ a[href="#"] {
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Nicolas Amiard */
 
+.imgOeuvreAmiard {
+    position: absolute;
+    top: -10%;
+    left: 0%;
+    z-index: 4;
+}
 
+.boutonOeuvreAmiard {
+    position: absolute;
+    top: -2%;
+    left: -3%;
+    transform: scale(0.3);
+    z-index: 5;
+}
+
+
+
+.TextOeuvreAmiard {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreAmiard {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreAmiard {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreAmiard {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+.TextOeuvreAmiard2 {
+	position: absolute;
+    top: 77%;
+    left: 25%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreAmiard2 {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreAmiard2 {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreAmiard2 {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+.TextOeuvreAmiard3 {
+	position: absolute;
+    top: 60%;
+    left: 25%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreAmiard3 {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreAmiard3 {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreAmiard3 {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+
+
+.TextAmiard {
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreAmiard {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreAmiard {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuAmiard {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+.imgFullAmiard {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: scale(1.2);
+}
+
+.imgFullAmiard2 {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    transform: scale(1.2);
+}
+
+.imgFullAmiard3 {
+    position: absolute;
+    top: 0%;
+    left: 30%;
+    transform: scale(1.2);
+}
+
+.blocNoteAmiard {
+	position: absolute;
+	top: 28%;
+	left: 45%;
+	z-index: 1;
+	transform: scale(1.3);
+}
+
+.blocNoteLigneAmiard {
+	position: absolute;
+	top: 38%;
+	left: 48%;
+	z-index: 2;
+	transform: scale(1.3);
+}
+
+.blocNoteContenuAmiard {
+	position: absolute;
+	top: 32%;
+	left: 47%;
+    right: 12%;
+	line-height: 1.1;
+	z-index: 3;
+	transform: rotate(-6.5deg);
+    text-align: justify;
+}
+
+#ContenuBlocAmiard {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 800px;
+    overflow-y: auto;
+    display: block;
+}
+
+.enSavoirPlusAmiard {
+	position: absolute;
+    top: 8%;
+    left: 12%;
+    transform: scale(0.3);
+    z-index: 3;
+}
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Valie export BODY SIGN ACTION B */
 
 
+.imgOeuvreValie {
+    position: absolute;
+    top: -8%;
+    left: 0%;
+}
+
+.boutonOeuvreValie {
+    position: absolute;
+    top: -2%;
+    left: -3%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.TextValie {
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreValie {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreValie {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuValie {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+.TextOeuvreValie {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreValie {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreValie {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreValie {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+.imgFullValie {
+    position: absolute;
+    top: -10%;
+    left: 20%;
+    transform: scale(1.2);
+}
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Shannon Holt Hérons */
+
+
+.imgOeuvreHerons {
+    position: absolute;
+    top: -8%;
+    left: 0%;
+}
+
+.boutonOeuvreHerons {
+    position: absolute;
+    top: -2%;
+    left: -3%;
+    transform: scale(0.3);
+    z-index: 5;
+}
+
+
+
+.TextHerons{
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreHerons {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreHerons {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuHerons {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.TextOeuvreHerons {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreHerons {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreHerons {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreHerons {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+.enSavoirPlusHerons {
+	position: absolute;
+    top: 8%;
+    left: 12%;
+    transform: scale(0.3);
+    z-index: 3;
+}
+
+
+
+.blocNoteHerons {
+	position: absolute;
+	top: 28%;
+	left: 45%;
+	z-index: 1;
+	transform: scale(1.3);
+}
+
+.blocNoteLigneHerons {
+	position: absolute;
+	top: 38%;
+	left: 48%;
+	z-index: 2;
+	transform: scale(1.3);
+}
+
+.blocNoteContenuHerons {
+	position: absolute;
+	top: 32%;
+	left: 47%;
+    right: 12%;
+	line-height: 1.1;
+	z-index: 3;
+	transform: rotate(-6.5deg);
+    text-align: justify;
+}
+
+#ContenuBlocHerons {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 800px;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+.imgFullHerons {
+    position: absolute;
+    top: -10%;
+    left: 20%;
+    transform: scale(1.2);
+}
+
+
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Wim Delvoye Tim, Tatooed skin */
 
+
+.imgOeuvreWim {
+    position: absolute;
+    top: -7%;
+    left: 10%;
+    transform: scale(1.1) rotate(-0deg);
+    z-index: 0;
+}
+
+.boutonOeuvreWim {
+	position: absolute;
+    top: 13%;
+    left: 4%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.pinceWim {
+	position: absolute;
+    top: -11.5%;
+    left: 42%;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+
+
+.TextOeuvreWim {
+    position: absolute;
+    top: 77%;
+    right: 20%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+#TitreOeuvreWim {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreWim {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreWim {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+.imgFullWim{
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    transform: scale(1.2);
+}
+
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Shelley Jackson Captures du projet Skin */
 
-/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
-/* Shannon Holt Crocodiles */
+.imgOeuvreShelley {
+    position: absolute;
+    top: 5%;
+    left: 18%;
+    transform: scale(1.25) rotate(-0deg);
+    z-index: 0;
+}
+
+.boutonOeuvreShelley {
+	position: absolute;
+    top: 3%;
+    left: 11%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.pinceShelley {
+	position: absolute;
+    top: -11.5%;
+    left: 27%;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+
+
+.TextOeuvreShelley {
+    position: absolute;
+    top: 77%;
+    right: 20%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+#TitreOeuvreShelley {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreShelley {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreShelley {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+.imgFullShelley{
+    position: absolute;
+    top: -10%;
+    left: 30%;
+    transform: scale(1.2);
+}
+
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
-/* Shannon Holt Renard */
+/* Shannon Holt Crocodiles / Renard */
+
+
+.imgOeuvreCroc {
+    position: absolute;
+    top: -4%;
+    left: 0%;
+    transform: scale(1.2) rotate(-0deg);
+    z-index: 1;
+}
+
+.boutonOeuvreCroc {
+	position: absolute;
+    top: 7%;
+    left: -8%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.pinceCroc {
+	position: absolute;
+    top: -11.5%;
+    left: 20%;
+    transform: scale(1.1);
+    z-index: 1;
+}
 
 
 
+.TextOeuvreCroc {
+    position: absolute;
+    top: 30%;
+    right: 30%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+#TitreOeuvreCroc {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreCroc {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreCroc {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+.imgFullCroc{
+    position: absolute;
+    top: 8%;
+    left: 5%;
+    transform: scale(1.2);
+}
+
+
+
+.imgOeuvreRenard {
+    position: absolute;
+    bottom: -8%;
+    left: 25%;
+    transform: scale(1.2) rotate(-0deg);
+    z-index: 0;
+}
+
+.boutonOeuvreRenard {
+	position: absolute;
+    bottom: 38%;
+    right: 26%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.pinceRenard {
+	position: absolute;
+    bottom: -10%;
+    left: 19%;
+    transform: scale(1.1) rotate(-100deg);
+    z-index: 1;
+}
+
+
+
+.TextOeuvreRenard {
+    position: absolute;
+    top: 77%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+#TitreOeuvreRenard {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreRenard {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreRenard {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+.imgFullRenard{
+    position: absolute;
+    top: 8%;
+    left: 5%;
+    transform: scale(1.2);
+}
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Module 2 Salle 3 */
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
-/* Orlan Self-hybridations précolombiennes */
+/* Orlan Self-hybridations précolombiennes / N°2 */
 
-/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
-/* Orlan Self-hybridations précolombiennes n°2 */
+.imgOeuvreOrlan {
+    position: absolute;
+    top: -6%;
+    left: 0%;
+    z-index: 1;
+    transform: scale(1.2);
+}
+
+.boutonOeuvreOrlan {
+    position: absolute;
+    top: 0%;
+    left: -7%;
+    transform: scale(0.3);
+    z-index: 5;
+}
+
+.imgOeuvreOrlan2 {
+    position: absolute;
+    top: 33%;
+    left: 20%;
+    z-index: 0;
+    transform: scale(1.2);
+}
+
+.boutonOeuvreOrlan2 {
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    transform: scale(0.3);
+    z-index: 5;
+}
+
+
+
+
+.TextOrlan{
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreOrlan {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreOrlan {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuOrlan {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+#underlineColorOrlan {
+	background-color: #FEF3A5;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+.TextOeuvreOrlan {
+	position: absolute;
+    top: 50%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreOrlan {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreOrlan {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreOrlan {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+
+.TextOeuvreOrlan2 {
+	position: absolute;
+    top: 77%;
+    left: 20%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreOrlan2 {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreOrlan2 {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreOrlan2 {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+.TextCarton8 {
+	position: absolute;
+    top: 35%;
+    left: 20%;
+    color: black;
+    text-align: center;
+    transform: scale(1.2) rotate(-6deg);
+    z-index: 5;
+}
+
+#ContenuCarton {
+	font-weight:200;
+	font-size: 40px;
+	font-family: "Hurricane";
+    color: black;
+    line-height: 1;
+}
+
+#SousTextCarton {
+	font-weight:bold;
+	font-size: 22px;
+	font-family: "PatrickHandSD";
+    color: black;
+}
+
+.imgFullOrlan{
+    position: absolute;
+    top: -10%;
+    left: 25%;
+    transform: scale(1.2);
+}
+
+
+.imgFullOrlan2{
+    position: absolute;
+    top: -10%;
+    left: 25%;
+    transform: scale(1.2);
+}
+
+.imgFullOrlan3{
+    position: absolute;
+    top: -10%;
+    left: 25%;
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Cindy Sherman Untitled #141 */
 
+
+
+.imgOeuvre141 {
+    position: absolute;
+    top: -8%;
+    left: 0%;
+}
+
+.boutonOeuvre141 {
+    position: absolute;
+    top: -2%;
+    left: -3%;
+    transform: scale(0.3);
+    z-index: 5;
+}
+
+
+
+.Text141{
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#Titre141 {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitre141 {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#Contenu141 {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.TextOeuvre141 {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvre141 {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvre141 {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvre141 {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+.blocNote141 {
+	position: absolute;
+	top: 12%;
+	left: -1%;
+	z-index: 1;
+	transform: scale(1.2);
+}
+
+.blocNoteLigne141 {
+	position: absolute;
+    top: 22%;
+    left: 3%;
+	z-index: 2;
+    line-height: 1.1;
+	transform: scale(1.15);
+}
+
+.blocNoteContenu141 {
+	position: absolute;
+    color: black;
+    top: 19%;
+    left: 2%;
+    right: 60%;
+	z-index: 3;
+    text-align: justify;
+    line-height: 1.02;
+	transform: rotate(-6.7deg) scale(0.95);
+}
+
+#ContenuBloc141 {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    letter-spacing: 1.1px;
+}
+
+
+
+
+
+.TextOeuvre141-2 {
+	position: absolute;
+    top: 25%;
+    right: 10%;
+    color: black;
+    
+    z-index: 1;
+    line-height: 0.7;
+}
+
+#TitreOeuvre141-2 {
+	font-weight:bold;
+	font-size: 14px;
+    text-align: justify;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvre141-2 {
+	font-weight:600;
+	font-size: 10px;
+    text-align: justify;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+
+.TextCarton7 {
+	position: absolute;
+    top: 40%;
+    left: 23%;
+    color: black;
+    text-align: center;
+    transform: scale(1.2) rotate(-6deg);
+    z-index: 5;
+}
+
+#ContenuCarton {
+	font-weight:200;
+	font-size: 40px;
+	font-family: "Hurricane";
+    color: black;
+    line-height: 1;
+}
+
+#SousTextCarton {
+	font-weight:bold;
+	font-size: 22px;
+	font-family: "PatrickHandSD";
+    color: black;
+}
+
+.imgFull141{
+    position: absolute;
+    top: -10%;
+    left: 20%;
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Man Ray Portrait de Rrose Sélavy */
+
+.imgOeuvreRrose {
+    position: absolute;
+    top: -10%;
+    left: 0%;
+}
+
+.boutonOeuvreRrose {
+    position: absolute;
+    top: -2%;
+    left: -3%;
+    transform: scale(0.3);
+    z-index: 5;
+}
+
+
+
+.TextRrose{
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreRrose {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreRrose {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuRrose {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.TextOeuvreRrose {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreRrose {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreRrose {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreRrose {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+.enSavoirPlusRrose {
+	position: absolute;
+    top: 8%;
+    left: 12%;
+    transform: scale(0.3);
+    z-index: 3;
+}
+
+
+
+.blocNoteRrose {
+	position: absolute;
+	top: 28%;
+	left: 45%;
+	z-index: 1;
+	transform: scale(1.3);
+}
+
+.blocNoteLigneRrose {
+	position: absolute;
+	top: 38%;
+	left: 48%;
+	z-index: 2;
+	transform: scale(1.3);
+}
+
+.blocNoteContenuRrose {
+	position: absolute;
+	top: 32%;
+	left: 47%;
+    right: 12%;
+	line-height: 1.1;
+	z-index: 3;
+	transform: rotate(-6.5deg);
+    text-align: justify;
+}
+
+#ContenuBlocRrose {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 800px;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+.imgFullRrose {
+    position: absolute;
+    top: -10%;
+    left: 20%;
+    transform: scale(1.2);
+}
+
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Portrait d’un souverain Maya, Bonampak */
 
+.imgOeuvreSouv {
+    position: absolute;
+    top: -3%;
+    left: 20%;
+    transform: scale(1.25) rotate(-0deg);
+    z-index: 0;
+}
+
+.boutonOeuvreSouv {
+	position: absolute;
+    top: 2%;
+    left: 13%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.pinceSouv {
+	position: absolute;
+    top: -11.5%;
+    left: 29%;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+
+
+.TextOeuvreSouv {
+    position: absolute;
+    top: 77%;
+    right: 20%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+#TitreOeuvreSouv {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreSouv {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreSouv {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+.imgFullSouv{
+    position: absolute;
+    top: -10%;
+    left: 20%;
+    transform: scale(1.2);
+}
+
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Buste d’un haut dignitaire maya */
 
+.imgOeuvreDigni {
+    position: absolute;
+    top: -3%;
+    left: 20%;
+    transform: scale(1.25) rotate(-0deg);
+    z-index: 0;
+}
+
+.boutonOeuvreDigni {
+	position: absolute;
+    top: 2%;
+    left: 13%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.pinceDigni {
+	position: absolute;
+    top: -11.5%;
+    left: 29%;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+
+
+.TextOeuvreDigni {
+    position: absolute;
+    top: 77%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+#TitreOeuvreDigni {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreDigni {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreDigni {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+.imgFullDigni{
+    position: absolute;
+    top: -10%;
+    left: 20%;
+    transform: scale(1.2);
+}
+
+
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Cindy Sherman Untitled #584 */
+
+.imgOeuvre584 {
+    position: absolute;
+    top: -10%;
+    left: 10%;
+    transform: scale(1.25) rotate(-0deg);
+    z-index: 0;
+}
+
+.boutonOeuvre584 {
+	position: absolute;
+    top: 10%;
+    left: -1%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.pince584 {
+	position: absolute;
+    top: -11.5%;
+    left: 29%;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+
+
+.TextOeuvre584 {
+    position: absolute;
+    top: 77%;
+    right: 20%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+#TitreOeuvre584 {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvre584 {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvre584 {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+.imgFull584{
+    position: absolute;
+    top: 10%;
+    left: 7%;
+    transform: scale(1.2);
+}
 
 
 

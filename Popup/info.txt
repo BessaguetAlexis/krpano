@@ -1,4 +1,6 @@
+----------------------------------------------------------------
 Landing
+
 
 W1 = spawn
 W2 = porte 1
@@ -7,8 +9,8 @@ W4 = porte 3
 W5 = text gauche
 
 ----------------------------------------------------------------
+Module 1 S1
 
-Salle 1
 
 W1 = porte entrée
 W2 = Angelica Dass
@@ -19,6 +21,7 @@ W6 = Leonard de vinci Rembrandt
 W7 = OMAH 
 W8 = porte sortie 2
 
+
 Oeuvre numérotée
 
 1 = Leonard de vinci Rembrandt
@@ -26,8 +29,8 @@ Oeuvre numérotée
 3 = Angelica Dass
 
 ----------------------------------------------------------------
+Module 1 S2
 
-Salle 2
 
 W1 = porte entrée
 W2 = Becca Saladin
@@ -47,8 +50,8 @@ Oeuvre numérotée
 3 = Vogue
 
 ----------------------------------------------------------------
+Module 1 S3
 
-Salle 3
 
 W1 = porte entrée
 W2 = Marco Melgrati Reflet
@@ -65,8 +68,73 @@ Oeuvre numérotée
 3 = Paula Modersohn Becker
 
 ----------------------------------------------------------------
+Module 2 S1
+
+W0 = porte entrée dos
+W1 = porte entrée face
+W2 = Frida Kahlo, La Colonne brisée
+W3 = Frida Kahlo, Autoportrait au collier d’épines et colibri
+W4 = Rembrandt van Rijn, Rembrandt aux yeux hagards
+W5 = Vincent van Gogh, Autoportrait à l’oreille bandée
+W6 = Gustave Courbet, Le Désespéré 
+W7 = cube vidéo
+W8 = porte sortie dos
+W9 = porte sortie face
+
+Oeuvre numérotée
+
+1 = Frida Kahlo, La Colonne brisée
+2 = Frida Kahlo, Autoportrait au collier d’épines et colibri
+3 = Rembrandt van Rijn, Rembrandt aux yeux hagards
+
 ----------------------------------------------------------------
+Module 2 S2
+
+W0 = porte entrée dos
+W1 = porte entrée face
+W2 = Nicolas Amiard
+W3 = Wim Delvoye Tim, Tatooed skin
+W4 = Valie Export, BODY SIGN ACTION B
+W5 = Shannon Holt, Crocodiles
+W6 = Shannon Holt, Renard
+W7 = Shannon Holt, Hérons
+W8 = Shelley Jackson, Captures du projet Skin
+W9 = porte sortie face
+W10 = porte sortie dos
+
+Oeuvre numérotée
+
+1 = Nicolas Amiard
+2 = Valie Export, BODY SIGN ACTION B
+3 = Shannon Holt, Hérons
+
+----------------------------------------------------------------
+Module 2 S3
+
+W0 = porte entrée dos
+W1 = porte entrée face
+W2 = Cindy Sherman,Untitled, #141 et Man Ray, Portrait de Rrose Sélavy
+W3 = cube vidéo
+W4 = Cindy Sherman Untitled #584
+W5 = Sculture Maya
+W6 = Orlan
+W7 = porte sortie face
+W8 = porte sortie dos
 
 
-<span id="changeColor">
-<span id="underlineColor">
+Oeuvre numérotée
+
+1 = Orlan
+2 = Cindy Sherman, Untitled, #141
+3 = Man Ray, Portrait de Rrose Sélavy
+
+----------------------------------------------------------------
+Module 3 S1
+
+
+----------------------------------------------------------------
+Module 3 S2
+
+
+----------------------------------------------------------------
+Module 3 S3
