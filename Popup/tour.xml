@@ -277,7 +277,7 @@
 
 <!-- landing -->
 
-    <action name="loadScene0-1" >
+    <action name="loadScene0-1" autorun="onstart">
 		loadscene(salle_0-1, null, MERGE);
         openurl("#popin0", "_self");  
 	</action>
@@ -1413,7 +1413,7 @@
         <hotspot name="spot8" style="hotspotBlanc" ath="96" atv="1" onclick="loadScene6-7()" />
 	</scene>
 
-    <action name="loadScene6-3" autorun="onstart">
+    <action name="loadScene6-3" >
 		loadscene(salle_6-3, null, MERGE);
         openurl("#popin0", "_self");
 	</action>
