@@ -43,7 +43,7 @@ a[href="#"] {
     left: 25%;
 }
 
-#popin11,#popin12,#popin14,#popin16,#popin18,#popin19,#popin20,#popin21,#popin22,#popin23,#popin26,#popin28,#popin31,#popin33,#popin35,#popin38,#popin39,#popin40,#popin41,#popin42,#popin44,#popin47,#popin50,#popin53,#popin54,#popin56,#popin58,#popin61,#popin64,#popin66,#popin68,#popin70,#popin73,#popin74,#popin75,#popin77,#popin80,#popin82,#popin84,#popin86,#popin87,#popin91,#popin92,#popin93,#popin96,#popin98,#popin101,#popin103,#popin105,#popin107 {
+#popin11,#popin12,#popin14,#popin16,#popin18,#popin19,#popin20,#popin21,#popin22,#popin23,#popin26,#popin28,#popin31,#popin33,#popin35,#popin38,#popin39,#popin40,#popin41,#popin42,#popin44,#popin47,#popin50,#popin53,#popin54,#popin56,#popin58,#popin61,#popin64,#popin66,#popin68,#popin70,#popin73,#popin74,#popin75,#popin77,#popin80,#popin82,#popin84,#popin86,#popin87,#popin91,#popin92,#popin93,#popin96,#popin98,#popin101,#popin103,#popin105,#popin107,#popin110,#popin113,#popin117,#popin120,#popin121,#popin123,#popin125,#popin129,#popin130,#popin132,#popin133,#popin135,#popin136,#popin137,#popin138,#popin139,#popin141,#popin143,#popin145,#popin146,#popin147,#popin148,#popin150,#popin153,#popin156,#popin158,#popin160,#popin162,#popin164,#popin165 {
 	background-image: url("");
 }
 
@@ -79,6 +79,13 @@ a[href="#"] {
 
 /* Elements generaux */
 
+#Italic {
+    font-style: italic;
+}
+
+#Normal {
+    font-style: normal;
+}
 
 .pince {
 	position: absolute;
@@ -243,11 +250,16 @@ a[href="#"] {
 	font-family: "Overpass";
 }
 
+#SousTitreOeuvreLeonard2 {
+	font-weight:600;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
 #SousTexteOeuvreLeonard {
 	font-weight:600;
 	font-size: 10px;
-	font-style: italic;
-	font-family: "Overpass";
+    font-family: "Overpass";
 }
 
 
@@ -443,6 +455,8 @@ a[href="#"] {
 	font-family: "Overpass";
 }
 
+
+
 #SousTitreOeuvreRembrandt {
 	font-weight:600;
 	font-style: italic;
@@ -453,7 +467,6 @@ a[href="#"] {
 #SousTexteOeuvreRembrandt {
 	font-weight:600;
 	font-size: 10px;
-	font-style: italic;
 	font-family: "Overpass";
 }
 
@@ -654,6 +667,7 @@ a[href="#"] {
 }
 
 #TitreOeuvreNiki {
+    letter-spacing: 0.8px;
 	font-weight:bold;
 	font-size: 14px;
 	font-family: "Overpass";
@@ -829,6 +843,8 @@ a[href="#"] {
 }
 
 #SousTextCarton {
+    position: absolute;
+    right: 0%;
 	font-weight:bold;
 	font-size: 22px;
 	font-family: "PatrickHandSD";
@@ -2472,6 +2488,16 @@ a[href="#"] {
 }
 
 .TextCarton6 {
+	position: absolute;
+    top: 40%;
+    left: 15%;
+    color: black;
+    text-align: center;
+    transform: scale(1.2) rotate(-6deg);
+    z-index: 5;
+}
+
+.TextCarton6-2 {
 	position: absolute;
     top: 40%;
     left: 15%;
@@ -4571,26 +4597,448 @@ a[href="#"] {
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Rineke Dijkstra Série Beach portrait */
 
+
+.imgOeuvreFrancesca {
+    position: absolute;
+    top: -11%;
+    left: -5%;
+}
+
+.boutonOeuvreFrancesca {
+    position: absolute;
+    top: 2%;
+    left: -8%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+
+
+.TextOeuvreFrancesca {
+	position: absolute;
+    top: 65%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreFrancesca {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreCornelius {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreFrancesca {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+
+.TextFrancesca {
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreFrancesca {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreFrancesca {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuFrancesca {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.imgFullFrancesca {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Sandro Botticelli La Naissance de Vénus */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Rankin Shereen & Mahalia */
 
-/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
-/* John Yuyi */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
-/* Johanna Jaskowska Cyborg#6 */
+/* John Yuyi / Johanna Jaskowska Cyborg#6 */
+
+
+
+.imgOeuvreJYJJC2 {
+    position: absolute;
+    top: -1%;
+    left: 5%;
+    z-index: 1;
+    transform: scale(1.2);
+}
+
+.boutonOeuvreJYJJC {
+    position: absolute;
+    top: -5%;
+    left: 0%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.imgOeuvreJYJJC {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    z-index: 0;
+    transform: scale(1.2);
+}
+
+.pinceJYJJC {
+	position: absolute;
+    top: -11.5%;
+    left: 8%;
+    transform: scale(1.1);
+    z-index: 3;
+}
+
+.tromboneJYJJC {
+    position: absolute;
+    top: 32%;
+    left: 7%;
+    transform: scale(0.9) rotate(10deg);
+    z-index: 3;
+}
+
+
+
+.TextJYJJC {
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+
+#TitreJYJJC {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreJYJJC {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuJYJJC {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+.TextOeuvreJYJJC {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+.TextOeuvreJYJJC2 {
+	position: absolute;
+    top: 77%;
+    left: 25%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreJYJJC {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreJYJJC {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreJYJJC {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+.imgFullJYJJC {
+    position: absolute;
+    top: 0%;
+    left: 25%;
+    transform: scale(1.2);
+}
+
+.imgFullJYJJC2 {
+    position: absolute;
+    top: 0%;
+    left: 20%;
+    transform: scale(1.2);
+}
+
+#underlineColorJYJJC {
+	background-color: #FEF3A5;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Jonh Yuyi Twitter */
 
-/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
-/* Johanna Jaskowska Cyborg#4 */
+.imgOeuvreJYTwitter {
+    position: absolute;
+    top: -1%;
+    left: 13%;
+    transform: scale(1.25) rotate(-0deg);
+    z-index: 0;
+}
+
+.boutonOeuvreJYTwitter {
+	position: absolute;
+    top: 3%;
+    left: 4%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.pinceJYTwitter {
+	position: absolute;
+    top: -11.5%;
+    left: 29%;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+
+
+.TextOeuvreJYTwitter {
+    position: absolute;
+    top: 77%;
+    right: 20%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+#TitreOeuvreJYTwitter {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreJYTwitter {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreJYTwitter {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+.imgFullJYTwitter{
+    position: absolute;
+    top: 5%;
+    left: 20%;
+    transform: scale(1.2);
+}
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
-/* Johanna Jaskowska Cyborg#7 */
+/* Johanna Jaskowska Cyborg#4 / Cyborg#7 */
+
+
+.imgOeuvreCyborg {
+    position: absolute;
+    top: -10%;
+    left: 13%;
+    transform: scale(1.25) rotate(-0deg);
+    z-index: 0;
+}
+
+.boutonOeuvreCyborg {
+	position: absolute;
+    top: 4%;
+    left: 2%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.pinceCyborg {
+	position: absolute;
+    top: -11.5%;
+    left: 29%;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+
+
+.TextOeuvreCyborg {
+    position: absolute;
+    top: 77%;
+    right: 20%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+#TitreOeuvreCyborg {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreCyborg {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreCyborg {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+.imgFulCyborg{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    transform: scale(1.2);
+}
 
 
 
@@ -4604,29 +5052,551 @@ a[href="#"] {
 /* Module 3 Salle 2 */
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
-/* Nicolas Amiard La Grande Odalisque d’Ingres */
+/* Nicolas Amiard La Grande Odalisque d’Ingres / Hercule au repos*/
+
+
+
+.HerculeCarton {
+    position: absolute;
+	top: 15%;
+	right: -9%;
+    transform: scale(1.2);
+	z-index: 0;
+}
+
+
+.boutonOeuvreHercule {
+	position: absolute;
+    top: 3%;
+    left: -10.5%;
+    transform: scale(0.3);
+    z-index: 1;
+}
+
+.imgOeuvreHercule {
+    position: absolute;
+	top: 0%;
+	left: -4%;
+    transform: scale(1.2);
+	z-index: 0;
+}
+
+
+.imgFullHercule {
+    position: absolute;
+    top: 0%;
+    left: 25%;
+    transform: scale(1.2);
+}
+
+.imgFullHercule2 {
+    position: absolute;
+    top: 0%;
+    left: 30%;
+    transform: scale(1.2);
+}
+
+
+.imgOeuvreHercule2 {
+    position: absolute;
+    top: 1%;
+    left: 20%;
+    transform: scale(1.25) rotate(-0deg);
+    z-index: 0;
+}
+
+.boutonOeuvreHercule2 {
+	position: absolute;
+    top: 1%;
+    left: 13%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.TextOeuvreHercule {
+    position: absolute;
+    top: 77%;
+    right: 5%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+.inspirationHercule {
+    position: absolute;
+    top: -20%;
+    right: -40%;
+    transform: scale(0.2);
+    z-index: 3;
+}
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
-/* Nicolas Amiard Hercule au repos */
+/* Ilya Volykhine Toute son attention / Jamie Lee Fabuleux cheveux chérie */
 
-/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
-/* Ilya Volykhine Toute son attention */
 
-/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
-/* Jamie Lee Fabuleux cheveux chérie */
+
+.imgOeuvreIlya {
+    position: absolute;
+    top: -1%;
+    left: 5%;
+    z-index: 1;
+    transform: scale(1.2);
+}
+
+.boutonOeuvreIlya {
+    position: absolute;
+    top: -5%;
+    left: 0%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.imgOeuvreIlya2 {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    z-index: 0;
+    transform: scale(1.2);
+}
+
+.pinceIlya {
+	position: absolute;
+    top: -11.5%;
+    left: 8%;
+    transform: scale(1.1);
+    z-index: 3;
+}
+
+.tromboneIlya {
+    position: absolute;
+    top: 32%;
+    left: 7%;
+    transform: scale(0.9) rotate(10deg);
+    z-index: 3;
+}
+
+
+
+.TextIlya {
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreIlya {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreIlya {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuIlya {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+.TextOeuvreIlya {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+.TextOeuvreIlya2 {
+	position: absolute;
+    top: 77%;
+    left: 25%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreIlya {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreIlya {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreIlya {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+.imgFullIlya {
+    position: absolute;
+    top: 0%;
+    left: 25%;
+    transform: scale(1.2);
+}
+
+.imgFullIlya2 {
+    position: absolute;
+    top: 0%;
+    left: 20%;
+    transform: scale(1.2);
+}
+
+#underlineColorIlya {
+	background-color: #FEF3A5;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Francesca Woodman Autoportrait à 13 ans */
 
+
+.imgOeuvreFrancesca {
+    position: absolute;
+    top: -11%;
+    left: -5%;
+}
+
+.boutonOeuvreFrancesca {
+    position: absolute;
+    top: 2%;
+    left: -8%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+
+
+.TextOeuvreFrancesca {
+	position: absolute;
+    top: 65%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreFrancesca {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreCornelius {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreFrancesca {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+
+.TextFrancesca {
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreFrancesca {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreFrancesca {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuFrancesca {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.imgFullFrancesca {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Robert Cornelius Autoportrait */
+
+.imgOeuvreCornelius {
+    position: absolute;
+    top: 1%;
+    left: 15%;
+    transform: scale(1.25) rotate(-0deg);
+    z-index: 0;
+}
+
+.boutonOeuvreCornelius {
+	position: absolute;
+    top: 1%;
+    left: 8%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.pinceCornelius {
+	position: absolute;
+    top: -11.5%;
+    left: 29%;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+
+
+.TextOeuvreCornelius {
+    position: absolute;
+    top: 77%;
+    right: 20%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+#TitreOeuvreCornelius {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreCornelius {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreCornelius {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+.imgFullCornelius{
+    position: absolute;
+    top: 0%;
+    left: 25%;
+    transform: scale(1.2);
+}
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Andy Warhol Self-Portrait */
 
+.imgOeuvreWarhol {
+    position: absolute;
+    top: -10%;
+    left: 13%;
+    transform: scale(1.25) rotate(-0deg);
+    z-index: 0;
+}
+
+.boutonOeuvreWarhol {
+	position: absolute;
+    top: 4%;
+    left: 2%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.pinceWarhol {
+	position: absolute;
+    top: -11.5%;
+    left: 29%;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+
+
+.TextOeuvreWarhol {
+    position: absolute;
+    top: 77%;
+    right: 20%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+#TitreOeuvreWarhol {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreWarhol {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreWarhol {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+.imgFullWarhol{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    transform: scale(1.2);
+}
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Kevin Lau Réseaux */
 
+.imgOeuvreReseaux {
+    position: absolute;
+    top: -2%;
+    left: 15%;
+    transform: scale(1.25) rotate(-0deg);
+    z-index: 0;
+}
+
+.boutonOeuvreReseaux {
+	position: absolute;
+    top: 2%;
+    left: 6%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.pinceReseaux {
+	position: absolute;
+    top: -11.5%;
+    left: 29%;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+
+
+.TextOeuvreReseaux {
+    position: absolute;
+    top: 77%;
+    right: 20%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+#TitreOeuvreReseaux {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreReseaux {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreReseaux {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+.imgFullReseaux{
+    position: absolute;
+    top: 8%;
+    left: 20%;
+    transform: scale(1.2);
+}
 
 
 
@@ -4637,21 +5607,719 @@ a[href="#"] {
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Christian Boltanski Vitrine de réféence */
 
+
+.imgOeuvreBoltanski {
+    position: absolute;
+    top: -9%;
+    left: -7%;
+    transform: scale(1.2);
+}
+
+.boutonOeuvreBoltanski {
+    position: absolute;
+    top: 5%;
+    left: -13%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+
+
+.TextOeuvreBoltanski {
+	position: absolute;
+    top: 65%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreBoltanski {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreBoltanski {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreBoltanski {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+
+.TextBoltanski {
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreBoltanski {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreBoltanski {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuBoltanski {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.imgFullBoltanski {
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Banksy La Fille au ballon / L’Amour est dans la poubelle */
+
+
+
+
+.TextBanksy{
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreBanksy {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreBanksy {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuBanksy {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.TextOeuvreBanksy {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreBanksy {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreBanksy {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreBanksy {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+
+.boutonOeuvreBanksy {
+	position: absolute;
+    top: 1%;
+    left: -6%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.imgOeuvreBanksy {
+	position: absolute;
+    top: -10%;
+    left: -2%;
+    transform: scale(1.1);
+    z-index: 0;
+}
+
+.enSavoirPlusBanksy {
+	position: absolute;
+    top: 8%;
+    left: 12%;
+    transform: scale(0.3);
+    z-index: 3;
+}
+
+
+
+.blocNoteBanksy {
+	position: absolute;
+	top: 28%;
+	left: 45%;
+	z-index: 1;
+	transform: scale(1.3);
+}
+
+.blocNoteLigneBanksy {
+	position: absolute;
+	top: 38%;
+	left: 48%;
+	z-index: 2;
+	transform: scale(1.3);
+}
+
+.blocNoteContenuBanksy {
+	position: absolute;
+	top: 32%;
+	left: 47%;
+    right: 12%;
+	line-height: 1.1;
+	z-index: 3;
+	transform: rotate(-6.5deg);
+    text-align: justify;
+}
+
+#ContenuBlocBanksy {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 800px;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+.imgFullBanksy {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    transform: scale(1.2);
+}
+
+
+
+#underlineColorBanksy {
+	background-color: #FEF3A5;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Jonathan Harris We Feel Fine */
 
+
+
+.TextHarris{
+	position: absolute;
+    top: 10%;
+    left: 45%;
+    right: 10%;
+    color: black;
+    z-index: 1;
+    text-align: justify;
+}
+
+#TitreHarris {
+	font-weight:800;
+	font-size: 25px;
+	font-family: "Overpass";
+}
+
+#SousTitreHarris {
+	font-weight:500;
+	font-size: 22px;
+	font-family: "Overpass";
+    line-height: 0.6;
+}
+
+#ContenuHarris {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+
+.TextOeuvreHarris {
+	position: absolute;
+    top: 77%;
+    left: 7%;
+    color: black;
+    z-index: 1;
+    line-height: 0.8;
+}
+
+#TitreOeuvreHarris {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreHarris {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreHarris {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+
+
+.boutonOeuvreHarris {
+	position: absolute;
+    top: 2%;
+    left: -10%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.imgOeuvreHarris {
+	position: absolute;
+    top: -10%;
+    left: -5%;
+    transform: scale(1.1);
+    z-index: 0;
+}
+
+.enSavoirPlusHarris {
+	position: absolute;
+    top: 8%;
+    left: 12%;
+    transform: scale(0.3);
+    z-index: 3;
+}
+
+
+
+.blocNoteHarris {
+	position: absolute;
+	top: 28%;
+	left: 45%;
+	z-index: 1;
+	transform: scale(1.3);
+}
+
+.blocNoteLigneHarris {
+	position: absolute;
+	top: 38%;
+	left: 48%;
+	z-index: 2;
+	transform: scale(1.3);
+}
+
+.blocNoteContenuHarris {
+	position: absolute;
+	top: 32%;
+	left: 47%;
+    right: 12%;
+	line-height: 1.1;
+	z-index: 3;
+	transform: rotate(-6.5deg);
+    text-align: justify;
+}
+
+#ContenuBlocHarris {
+	font-weight:200;
+	font-size: 20px;
+	font-family: "PatrickHand";
+    color: black;
+    max-height: 330px;
+    overflow-y: auto;
+    display: block;
+    letter-spacing: 1.1px;
+}
+
+
+.imgFullHarris {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: scale(1.2);
+}
+
+
+
+#underlineColorHarris {
+	background-color: #FEF3A5;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Yves Klein, performance */
+
+
+
+.imgOeuvrePerfor {
+    position: absolute;
+    top: -7%;
+    left: 15%;
+    transform: scale(1.25) rotate(-0deg);
+    z-index: 0;
+}
+
+.boutonOeuvrePerfor {
+	position: absolute;
+    top: 2%;
+    left: 6%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.pincePerfor {
+	position: absolute;
+    top: -11.5%;
+    left: 29%;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+
+
+.TextOeuvrePerfor {
+    position: absolute;
+    top: 77%;
+    right: 20%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+#TitreOeuvrePerfor {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvrePerfor {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvrePerfor {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+.imgFullPerfor{
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    transform: scale(1.2);
+}
+
+
+
+
+
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Yves Klein Anthropométrie de l’époque bleue */
 
+
+.imgOeuvreAnthro {
+    position: absolute;
+    top: -9%;
+    left: 1%;
+    transform: scale(1.25) rotate(-0deg);
+    z-index: 0;
+}
+
+.boutonOeuvreAnthro {
+	position: absolute;
+    top: 8%;
+    left: -10%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.pinceAnthro {
+	position: absolute;
+    top: -11.5%;
+    left: 29%;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+
+
+.TextOeuvreAnthro {
+    position: absolute;
+    top: 77%;
+    right: 20%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+#TitreOeuvreAnthro {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreAnthro {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreAnthro {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+.imgFullAnthro{
+    position: absolute;
+    top: 15%;
+    left: 0%;
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Banksy Les Glaneuses */
+
+
+.imgOeuvreGlaneuse {
+    position: absolute;
+    top: -4%;
+    left: 15%;
+    transform: scale(1.25) rotate(-0deg);
+    z-index: 0;
+}
+
+.boutonOeuvreGlaneuse {
+	position: absolute;
+    top: 2%;
+    left: 6%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.pinceGlaneuse {
+	position: absolute;
+    top: -11.5%;
+    left: 29%;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+
+
+.TextOeuvreGlaneuse {
+    position: absolute;
+    top: 77%;
+    right: 20%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+#TitreOeuvreGlaneuse {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreGlaneuse {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreGlaneuse {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+.imgFullGlaneuse{
+    position: absolute;
+    top: 8%;
+    left: 15%;
+    transform: scale(1.2);
+}
+
+
+
+
+
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Jean-François Millet Les Glaneuses */
 
+.imgOeuvreMillet {
+    position: absolute;
+    top: -5%;
+    left: 11%;
+    transform: scale(1.25) rotate(-0deg);
+    z-index: 0;
+}
+
+.boutonOeuvreMillet {
+	position: absolute;
+    top: 3%;
+    left: 2%;
+    transform: scale(0.3);
+    z-index: 2;
+}
+
+.pinceMillet {
+	position: absolute;
+    top: -11.5%;
+    left: 29%;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+
+
+.TextOeuvreMillet {
+    position: absolute;
+    top: 77%;
+    right: 20%;
+    color: black;
+    z-index: 1;
+    line-height: 0.7;
+}
+
+#TitreOeuvreMillet {
+	font-weight:bold;
+	font-size: 14px;
+	font-family: "Overpass";
+}
+
+#SousTitreOeuvreMillet {
+	font-weight:600;
+	font-style: italic;
+	font-size: 12px;
+	font-family: "Overpass";
+}
+
+#SousTexteOeuvreMillet {
+	font-weight:600;
+	font-size: 10px;
+	font-style: italic;
+	font-family: "Overpass";
+}
+
+.imgFullMillet{
+    position: absolute;
+    top: 8%;
+    left: 15%;
+    transform: scale(1.2);
+}

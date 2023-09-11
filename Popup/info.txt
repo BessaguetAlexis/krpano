@@ -131,10 +131,40 @@ Oeuvre numérotée
 ----------------------------------------------------------------
 Module 3 S1
 
+W0 = porte entrée dos
+W1 = porte entrée face
+W2 = Rineke Dijkstra et Sandro Botticelli 108 - 111
+W3 = Rankin 114
+W4 = Twitter 122
+W5 = Cyborg 6 et John Yuy 118
+W6 = cube 165
+W7 = porte sortie face
+W8 = porte sortie dos
 
 ----------------------------------------------------------------
 Module 3 S2
 
+W1 = porte entrée dos
+W2 = porte entrée face
+W3 = Robert Cornelius 47
+W4 = Nicolas Amiard 44
+W5 = Andy Warhol 48
+W6 = Francesca Woodman 46
+W7 = Jamie Lee et Ilya Volykhine 45
+W8 = Kevin Lau 49
+W9 = porte sortie face
+W10 = porte sortie dos
 
 ----------------------------------------------------------------
 Module 3 S3
+
+W0 = porte entrée dos
+W1 = porte entrée face
+W2 = Jean-François Millet 56
+W3 = cube vidéo 57
+W4 = Banksy 51-55
+W5 = Jonathan Harris 52
+W6 = Christian Boltanski 50
+W7 = Yves Klein 53-54
+W8 = porte sortie dos
+W9 = porte sortie face
